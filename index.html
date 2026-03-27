@@ -1,103 +1,3737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLP-1 Price Finder — Find Your Best Price on GLP-1 Medications</title>
+    <meta name="description" content="Compare real GLP-1 prices across every program, telehealth platform, and pharmacy. Find the cheapest semaglutide and tirzepatide option for your situation — no insurance required.">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+    /* ── TOKENS ── */
+    :root {
+        --white: #ffffff;
+        --off: #f8fafc;
+        --ink: #0f172a;
+        --ink-mid: #334155;
+        --ink-dim: #64748b;
+        --ink-faint: #94a3b8;
+        --teal: #0ea5e9;
+        --teal-lt: #f0f9ff;
+        --teal-mid: #bae6fd;
+        --teal-border: #7dd3fc;
+        --amber: #92400e;
+        --amber-lt: #fffbeb;
+        --amber-border: #fde68a;
+        --red: #991b1b;
+        --red-lt: #fef2f2;
+        --green: #166534;
+        --green-lt: #f0fdf4;
+        --border: #e2e8f0;
+        --border-dark: #cbd5e1;
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+        --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.05);
+        --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
+    }/* ── RESET ── */
+    *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-GLP-1 Price Finder
-Home
-Compare Prices
-Guides
-About
-Find My Price →
+    html {
+        scroll-behavior: smooth;
+    }
 
-UPDATED MARCH 2026
-Find your real price on GLP-1 medications
-Retail prices hit $1,300/month. But cash-pay programs, telehealth platforms, and manufacturer deals have pushed the real floor to $99–$199. We find your best option in 3 questions.
-Find My Price → Read the Guides ✓ No ads ✓ No sponsored rankings ✓ Prices verified March 2026 ✓ Not affiliated with any manufacturer
-$99
-Lowest monthly option
-11
-Programs compared
-62%
-Of claims denied in 2024
-80%
-Of appeals succeed
-WHAT WE DO
-The only GLP-1 price tool
-built for cash-pay patients
-GoodRx is broad. We go deep on GLP-1s only — better data, better UX, and we understand the nuances that a general tool never will.
-💊
-Dose-accurate pricing
-Prices vary significantly by dose. Our slider shows exactly what you'll pay at starting, maintenance, and max doses — not a vague range.
-📍
-Compounders near you
-Enter your zip and we surface local 503A/503B compounding pharmacies alongside major chains — with real cash-pay prices.
-⚕️
-HRT availability flagged
-Many patients manage GLP-1s and hormone therapy together. We flag every platform that offers both in one place.
-🏥
-Insurance navigation
-Know which ICD-10 diagnosis codes get GLP-1s covered. Our appeal guide walks you through the exact process step by step.
-✅
-Vetted sources only
-No grey-market peptides. No unverified compounders. Every option is FDA-approved or sourced from licensed 503A/503B pharmacies.
-🔄
-Updated monthly
-Prices in this space change fast. We verify every program, manufacturer deal, and telehealth price monthly so you don't have to.
-1
-Oral Wegovy — NovoCare
-Manufacturer direct · FDA approved · No injection
-BEST MATCH
-$149
-/month
-2
-Noom Med / GoodRx
-Telehealth + coaching · Rx included
-$99
-/month
-3
-Wegovy — NovoCare Intro
-Brand injection · Starting doses · 2 months
-$199
-/month
-4
-Lilly Cares Foundation
-Patient assistance · Income-qualified
-FREE
-if qualified
-YOUR RESULTS ARE PERSONALIZED
-These are sample results. Yours depend on your situation.
-Insurance status, which drug, and what dose you're on all change what you actually pay. Answer 3 questions and we rank every real option for you — dose-accurate, current pricing.
-Get My Personalized Results →
-RESOURCE GUIDES
-Everything you need to know
+    body {
+        font-family: 'DM Sans', sans-serif;
+        background: var(--white);
+        color: var(--ink);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+    }
 
-PRICE GUIDE
-Cheapest Semaglutide Without Insurance in 2026
-From $99/month to $1,349 retail — here's every legitimate low-cost option, ranked by monthly price.
-Read guide →
+    img {
+        max-width: 100%;
+        display: block;
+    }
 
-INSURANCE GUIDE
-How to Appeal a GLP-1 Insurance Denial — and Win
-62% of claims are denied. Up to 80% of appeals succeed. Includes every ICD-10 code that gets coverage approved.
-Read guide →
+    a {
+        color: var(--teal);
+        text-decoration: none;
+    }
 
-BREAKING
-Generic Semaglutide 2026: What's Real, What's Not
-No FDA-approved generic exists in the US yet. Here's what's actually changed — and what to do right now.
-Read guide →
-Get price alerts when programs change
-New GLP-1 programs launch constantly. We'll email you when prices drop, new options appear, or the Medicare demo opens in July 2026.
+    a:hover {
+        text-decoration: underline;
+    }
 
-Notify Me
-No spam. Unsubscribe anytime. We never sell your data.
+    button {
+        cursor: pointer;
+        font-family: 'DM Sans', sans-serif;
+    }/* ── LAYOUT ── */
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
 
-GLP-1 Price Finder
-An independent price comparison and navigation tool for cash-pay patients seeking GLP-1 medications. Not affiliated with any manufacturer, pharmacy, or telehealth platform.
-TOOLS
-Price Comparison Tool
-Insurance Appeal Guide
-Telehealth Guide
-INFO
-About
-Disclaimer
-Affiliate Disclosure
-⚠️ This site is for informational purposes only and does not constitute medical advice. Prices verified March 2026. We may earn referral fees from telehealth platforms — this does not affect our rankings or pricing data.
-Privacy
-Terms
+    .container-narrow {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }/* ══════════════════════════════════════
+       NAVBAR
+    ══════════════════════════════════════ */
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+        height: 60px;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav-logo {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--ink);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .nav-logo-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--teal);
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .nav-link {
+        font-size: 13.5px;
+        font-weight: 500;
+        color: var(--ink-mid);
+        padding: 6px 12px;
+        border-radius: 6px;
+        border: none;
+        background: none;
+        transition: all .15s;
+    }
+
+    .nav-link:hover {
+        background: var(--off);
+        color: var(--ink);
+        text-decoration: none;
+    }
+
+    .nav-link.active {
+        color: var(--teal);
+    }
+
+    .nav-cta {
+        font-size: 13.5px;
+        font-weight: 600;
+        color: var(--white);
+        background: var(--teal);
+        border: none;
+        padding: 7px 16px;
+        border-radius: 7px;
+        transition: all .15s;
+        margin-left: 4px;
+    }
+
+    .nav-cta:hover {
+        background: #0d6460;
+        transform: translateY(-1px);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .nav-mobile-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        border: none;
+        background: none;
+        padding: 4px;
+    }
+
+    .nav-mobile-toggle span {
+        width: 22px;
+        height: 2px;
+        background: #0f172a;
+        border-radius: 2px;
+        display: block;
+    }/* ══════════════════════════════════════
+       PAGES
+    ══════════════════════════════════════ */
+    .page {
+        display: none;
+    }
+
+    .page.active {
+        display: block;
+    }/* ══════════════════════════════════════
+       HOME PAGE
+    ══════════════════════════════════════ */
+
+    /* Hero */
+    .hero {
+        padding: 80px 0 72px;
+        background: linear-gradient(180deg, var(--off) 0%, var(--white) 100%);
+        border-bottom: 1px solid var(--border);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle at 20% 50%, rgba(15, 118, 110, 0.04) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(15, 118, 110, 0.03) 0%, transparent 40%);
+        pointer-events: none;
+    }
+
+    .hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: var(--teal-lt);
+        border: 1px solid var(--teal-border);
+        border-radius: 100px;
+        padding: 5px 14px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        color: var(--teal);
+        margin-bottom: 22px;
+    }
+
+    .hero-eyebrow-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--teal);
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            opacity: 1;
+            transform:scale(1)
+        }
+
+        50% {
+            opacity: .4;
+            transform: scale(.7)
+        }
+    }
+
+    .hero h1 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: clamp(2.2rem, 5vw, 3.4rem);
+        font-weight: 700;
+        line-height: 1.1;
+        color: var(--ink);
+        margin-bottom: 18px;
+        letter-spacing: -.02em;
+    }
+
+    .hero h1 em {
+        font-style: italic;
+        color: var(--teal);
+    }
+
+    .hero-sub {
+        font-size: 17px;
+        color: var(--ink-mid);
+        font-weight: 300;
+        max-width: 520px;
+        margin: 0 auto 36px;
+        line-height: 1.65;
+    }
+
+    .hero-actions {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: var(--teal);
+        color: var(--white);
+        font-size: 15px;
+        font-weight: 600;
+        padding: 13px 28px;
+        border-radius: 9px;
+        border: none;
+        transition: all .18s;
+        box-shadow: 0 2px 8px rgba(15, 118, 110, 0.25);
+    }
+
+    .btn-primary:hover {
+        background: #0d6460;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(15, 118, 110, 0.3);
+        text-decoration: none;
+        color: var(--white);
+    }
+
+    .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: var(--white);
+        color: var(--ink);
+        font-size: 15px;
+        font-weight: 500;
+        padding: 13px 24px;
+        border-radius: 9px;
+        border: 1.5px solid var(--border-dark);
+        transition: all .18s;
+    }
+
+    .btn-secondary:hover {
+        border-color: var(--teal);
+        color: var(--teal);
+        transform: translateY(-1px);
+        text-decoration: none;
+    }
+
+    .hero-trust {
+        margin-top: 40px;
+        font-size: 12.5px;
+        color: var(--ink-faint);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .hero-trust span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }/* Stats bar */
+    .stats-bar {
+        background: #0f172a;
+        padding: 20px 0;
+    }
+
+    .stats-bar .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .stat {
+        text-align: center;
+    }
+
+    .stat-num {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--white);
+    }
+
+    .stat-label {
+        font-size: 11.5px;
+        color: #a8a29e;
+        font-weight: 400;
+        margin-top: 2px;
+    }/* Features */
+    .features {
+        padding: 72px 0;
+    }
+
+    .section-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        color: var(--teal);
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        font-weight: 700;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+
+    .section-sub {
+        font-size: 15.5px;
+        color: var(--ink-mid);
+        font-weight: 300;
+        line-height: 1.65;
+        max-width: 520px;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 48px;
+    }
+
+    .feature-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 26px 24px;
+        transition: all .2s;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .feature-card:hover {
+        border-color: var(--teal-border);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+    }
+
+    .feature-icon {
+        font-size: 28px;
+        margin-bottom: 14px;
+    }
+
+    .feature-title {
+        font-weight: 600;
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .feature-desc {
+        font-size: 13.5px;
+        color: var(--ink-dim);
+        font-weight: 300;
+        line-height: 1.6;
+    }/* Price preview */
+    .price-preview {
+        background: var(--off);
+        padding: 72px 0;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .preview-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+        margin-top: 48px;
+    }
+
+    .preview-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .preview-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        box-shadow: var(--shadow-sm);
+        animation: fadeSlideUp .5s ease both;
+    }
+
+    .preview-card:nth-child(1) {
+        animation-delay: .05s
+    }
+
+    .preview-card:nth-child(2) {
+        animation-delay: .12s
+    }
+
+    .preview-card:nth-child(3) {
+        animation-delay: .19s
+    }
+
+    .preview-card:nth-child(4) {
+        animation-delay: .26s
+    }
+
+    @keyframes fadeSlideUp {
+        from {
+            opacity: 0;
+            transform:translateY(12px)
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+
+    .preview-card.best {
+        border-color: var(--teal);
+        background: var(--teal-lt);
+    }
+
+    .preview-rank {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--ink-faint);
+        min-width: 20px;
+    }
+
+    .preview-rank.first {
+        color: var(--teal);
+    }
+
+    .preview-info {
+        flex: 1;
+    }
+
+    .preview-name {
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+
+    .preview-type {
+        font-size: 11.5px;
+        color: var(--ink-dim);
+        font-weight: 300;
+    }
+
+    .preview-price {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--ink);
+        text-align: right;
+    }
+
+    .preview-period {
+        font-size: 10.5px;
+        color: var(--ink-faint);
+        font-weight: 300;
+    }
+
+    .preview-best-badge {
+        font-size: 9.5px;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        background: var(--teal);
+        color: var(--white);
+        padding: 2px 8px;
+        border-radius: 4px;
+        margin-top: 4px;
+        display: inline-block;
+    }
+
+    .preview-cta {
+    }
+
+    .preview-cta h3 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        line-height: 1.25;
+    }
+
+    .preview-cta p {
+        font-size: 14.5px;
+        color: var(--ink-mid);
+        font-weight: 300;
+        margin-bottom: 24px;
+        line-height: 1.65;
+    }/* Articles section */
+    .articles-section {
+        padding: 72px 0;
+    }
+
+    .articles-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .article-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        transition: all .2s;
+    }
+
+    .article-card:hover {
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+    }
+
+    .article-card-top {
+        height: 6px;
+    }
+
+    .article-card-top.teal {
+        background: var(--teal);
+    }
+
+    .article-card-top.amber {
+        background: #d97706;
+    }
+
+    .article-card-top.rose {
+        background: #e11d48;
+    }
+
+    .article-card-body {
+        padding: 22px;
+    }
+
+    .article-cat {
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        color: var(--teal);
+        margin-bottom: 8px;
+    }
+
+    .article-cat.amber {
+        color: #d97706;
+    }
+
+    .article-cat.rose {
+        color: #e11d48;
+    }
+
+    .article-title-sm {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 8px;
+        color: var(--ink);
+    }
+
+    .article-excerpt {
+        font-size: 13px;
+        color: var(--ink-dim);
+        font-weight: 300;
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+
+    .article-read-more {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--teal);
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        border: none;
+        background: none;
+    }
+
+    .article-read-more:hover {
+        text-decoration: none;
+        gap: 8px;
+    }/* Email capture */
+    .email-section {
+        background: #0f172a;
+        padding: 64px 0;
+        text-align: center;
+    }
+
+    .email-section h2 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: var(--white);
+        margin-bottom: 10px;
+    }
+
+    .email-section p {
+        font-size: 15px;
+        color: #a8a29e;
+        font-weight: 300;
+        margin-bottom: 28px;
+    }
+
+    .email-form {
+        display: flex;
+        gap: 10px;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .email-input {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1.5px solid rgba(255, 255, 255, 0.15);
+        border-radius: 8px;
+        padding: 12px 16px;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        color: var(--white);
+        outline: none;
+        transition: border-color .18s;
+    }
+
+    .email-input:focus {
+        border-color: var(--teal-border);
+    }
+
+    .email-input::placeholder {
+        color: rgba(255, 255, 255, 0.35);
+    }
+
+    .email-submit {
+        background: var(--teal);
+        color: var(--white);
+        border: none;
+        border-radius: 8px;
+        padding: 12px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: all .18s;
+        white-space: nowrap;
+    }
+
+    .email-submit:hover {
+        background: #0d6460;
+    }
+
+    .email-note {
+        font-size: 12px;
+        color: #78716c;
+        margin-top: 12px;
+    }/* Footer */
+    footer {
+        background: var(--off);
+        border-top: 1px solid var(--border);
+        padding: 40px 0 28px;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 36px;
+    }
+
+    .footer-brand .logo {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--ink);
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+        font-size: 13px;
+        color: var(--ink-dim);
+        font-weight: 300;
+        line-height: 1.65;
+        max-width: 280px;
+    }
+
+    .footer-col h4 {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        color: var(--ink-mid);
+        margin-bottom: 12px;
+    }
+
+    .footer-col a {
+        display: block;
+        font-size: 13.5px;
+        color: var(--ink-dim);
+        font-weight: 300;
+        margin-bottom: 8px;
+        transition: color .15s;
+    }
+
+    .footer-col a:hover {
+        color: var(--teal);
+        text-decoration: none;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid var(--border);
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+        color: var(--ink-faint);
+        font-weight: 300;
+        line-height: 1.6;
+        max-width: 600px;
+    }
+
+    .footer-bottom-links {
+        display: flex;
+        gap: 16px;
+    }
+
+    .footer-bottom-links a {
+        font-size: 12px;
+        color: var(--ink-faint);
+    }/* ══════════════════════════════════════
+       COMPARE PAGE (Tool)
+    ══════════════════════════════════════ */
+    .compare-hero {
+        background: var(--off);
+        border-bottom: 1px solid var(--border);
+        padding: 48px 0 40px;
+        text-align: center;
+    }
+
+    .compare-hero h1 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .compare-hero p {
+        font-size: 15px;
+        color: var(--ink-mid);
+        font-weight: 300;
+    }
+
+    .tool-wrap {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 40px 24px 80px;
+    }/* Inline the tool styles here */
+
+    .quiz-card {
+        background: var(--white);
+        border: 1.5px solid var(--border);
+        border-radius: 16px;
+        padding: 36px 40px;
+        margin-bottom: 20px;
+        box-shadow: var(--shadow-sm);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .quiz-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--teal), var(--teal-mid));
+    }
+
+    .q-step {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        color: var(--teal);
+        margin-bottom: 8px;
+    }
+
+    .q-title {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+        line-height: 1.25;
+    }
+
+    .q-hint {
+        font-size: 13.5px;
+        color: var(--ink-dim);
+        font-weight: 300;
+        margin-bottom: 22px;
+        line-height: 1.55;
+    }
+
+    .q-opts {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .q-opt {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        background: var(--off);
+        border: 1.5px solid var(--border);
+        border-radius: 10px;
+        padding: 13px 16px;
+        cursor: pointer;
+        transition: all .18s;
+        color: var(--ink);
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .q-opt:hover {
+        border-color: var(--teal);
+        background: var(--teal-lt);
+    }
+
+    .q-opt.sel {
+        border-color: var(--teal);
+        background: var(--teal-lt);
+    }
+
+    .q-opt-ico {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        background: var(--white);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        flex-shrink: 0;
+    }
+
+    .q-opt-txt strong {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 1px;
+    }
+
+    .q-opt-txt small {
+        font-size: 12px;
+        color: var(--ink-dim);
+        font-weight: 300;
+    }
+
+    .q-chk {
+        margin-left: auto;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1.5px solid var(--border-dark);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        color: var(--teal);
+        transition: all .18s;
+        flex-shrink: 0;
+    }
+
+    .q-opt.sel .q-chk {
+        background: var(--teal);
+        border-color: var(--teal);
+        color: var(--white);
+    }/* Progress */
+    .progress {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 28px;
+    }
+
+    .pdot {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1.5px solid var(--border-dark);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--ink-faint);
+        transition: all .3s;
+    }
+
+    .pdot.active {
+        border-color: var(--teal);
+        background: var(--teal-lt);
+        color: var(--teal);
+    }
+
+    .pdot.done {
+        border-color: var(--teal);
+        background: var(--teal);
+        color: var(--white);
+    }
+
+    .pdot.done span {
+        display: none;
+    }
+
+    .pdot.done::after {
+        content: '✓';
+        font-size: 13px;
+    }
+
+    .pline {
+        flex: 1;
+        max-width: 60px;
+        height: 1px;
+        background: var(--border-dark);
+        transition: background .3s;
+    }
+
+    .pline.done {
+        background: var(--teal);
+    }/* Nav buttons */
+    .q-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 22px;
+    }
+
+    .q-back {
+        background: none;
+        border: none;
+        color: var(--ink-dim);
+        font-size: 13.5px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 8px 0;
+        transition: color .15s;
+    }
+
+    .q-back:hover {
+        color: var(--ink);
+    }
+
+    .q-next {
+        background: var(--teal);
+        color: var(--white);
+        border: none;
+        border-radius: 9px;
+        padding: 12px 26px;
+        font-size: 14.5px;
+        font-weight: 600;
+        transition: all .18s;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .q-next:hover {
+        background: #0d6460;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 14px rgba(15, 118, 110, 0.3);
+    }
+
+    .q-next:disabled {
+        opacity: .35;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+    }/* Dose slider */
+    .dose-wrap {
+        margin-top: 20px;
+        background: var(--off);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 18px 20px;
+    }
+
+    .dose-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    .dose-lbl {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--ink);
+    }
+
+    .dose-val {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--teal);
+        background: var(--teal-lt);
+        border: 1px solid var(--teal-border);
+        border-radius: 6px;
+        padding: 3px 12px;
+    }
+
+    .dose-track {
+        position: relative;
+        height: 6px;
+        background: var(--border-dark);
+        border-radius: 100px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .dose-fill {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background: var(--teal);
+        border-radius: 100px;
+        transition: width .2s;
+    }
+
+    .dose-thumb {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--teal);
+        border: 2px solid var(--white);
+        box-shadow: 0 0 0 2px var(--teal), var(--shadow-sm);
+        cursor: grab;
+        transition: left .2s;
+    }
+
+    .dose-steps {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dose-step {
+        font-size: 10px;
+        color: var(--ink-faint);
+    }
+
+    .dose-note {
+        font-size: 12px;
+        color: var(--ink-dim);
+        margin-top: 8px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.5;
+    }/* Results */
+    #results-section {
+        display: none;
+    }
+
+    .results-head {
+        text-align: center;
+        padding: 40px 0 28px;
+    }
+
+    .results-head h2 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.9rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .results-head p {
+        font-size: 13.5px;
+        color: var(--ink-dim);
+    }
+
+    .results-meta {
+        display: flex;
+        gap: 7px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 14px;
+    }
+
+    .rmeta-tag {
+        background: var(--teal-lt);
+        border: 1px solid var(--teal-border);
+        border-radius: 100px;
+        padding: 3px 12px;
+        font-size: 12px;
+        color: var(--teal);
+        font-weight: 500;
+    }
+
+    .rsec-head {
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin: 28px 0 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .rcard {
+        background: var(--white);
+        border: 1.5px solid var(--border);
+        border-radius: 14px;
+        padding: 20px 24px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        box-shadow: var(--shadow-sm);
+        transition: all .2s;
+        position: relative;
+        animation: fadeUp .4s ease both;
+    }
+
+    .rcard:hover {
+        border-color: var(--teal-border);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
+    }
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform:translateY(14px)
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0)
+        }
+    }
+
+    .rcard:nth-child(1) {
+        animation-delay:.04s
+    }
+
+    .rcard:nth-child(2) {
+        animation-delay:.09s
+    }
+
+    .rcard:nth-child(3) {
+        animation-delay:.14s
+    }
+
+    .rcard:nth-child(4) {
+        animation-delay:.19s
+    }
+
+    .rcard:nth-child(5) {
+        animation-delay: .24s
+    }
+
+    .rcard.top {
+        border-color: var(--teal);
+        background: var(--teal-lt);
+    }
+
+    .top-badge {
+        position: absolute;
+        top: -1px;
+        right: 16px;
+        background: var(--teal);
+        color: var(--white);
+        font-size: 9.5px;
+        font-weight: 700;
+        letter-spacing: .07em;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 0 0 7px 7px;
+    }
+
+    .rrank {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--ink-faint);
+        min-width: 22px;
+        margin-top: 2px;
+    }
+
+    .rrank.first {
+        color: var(--teal);
+    }
+
+    .rinfo {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .rname {
+        font-weight: 600;
+        font-size: 15px;
+        margin-bottom: 3px;
+    }
+
+    .rtype {
+        font-size: 12px;
+        color: var(--ink-dim);
+        margin-bottom: 9px;
+        font-weight: 300;
+    }
+
+    .rtags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-bottom: 9px;
+    }
+
+    .rtag {
+        font-size: 10.5px;
+        font-weight: 600;
+        padding: 2px 9px;
+        border-radius: 100px;
+        border: 1px solid;
+    }
+
+    .rtag-rx {
+        color: #1d4ed8;
+        border-color: #bfdbfe;
+        background: #eff6ff;
+    }
+
+    .rtag-hrt {
+        color: #7c3aed;
+        border-color: #ddd6fe;
+        background: #f5f3ff;
+    }
+
+    .rtag-coach {
+        color: #166534;
+        border-color: #bbf7d0;
+        background: #f0fdf4;
+    }
+
+    .rtag-brand {
+        color: #991b1b;
+        border-color: #fecaca;
+        background: #fef2f2;
+    }
+
+    .rtag-comp {
+        color: #92400e;
+        border-color: #fde68a;
+        background: #fffbeb;
+    }
+
+    .rtag-ins {
+        color: #0369a1;
+        border-color: #bae6fd;
+        background: #f0f9ff;
+    }
+
+    .rtag-free {
+        color: #166534;
+        border-color: #bbf7d0;
+        background: #f0fdf4;
+    }
+
+    .hrt-line {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        color: #7c3aed;
+        background: #f5f3ff;
+        border: 1px solid #ddd6fe;
+        border-radius: 6px;
+        padding: 4px 10px;
+        margin-bottom: 8px;
+        width: fit-content;
+    }
+
+    .dose-callout {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        color: var(--teal);
+        background: var(--teal-lt);
+        border: 1px solid var(--teal-border);
+        border-radius: 6px;
+        padding: 4px 10px;
+        margin-bottom: 8px;
+        width: fit-content;
+        font-weight: 500;
+    }
+
+    .dose-callout.amber {
+        color: var(--amber);
+        background: var(--amber-lt);
+        border-color: var(--amber-border);
+    }
+
+    .btn-visit {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: none;
+        border: 1.5px solid var(--border-dark);
+        border-radius: 7px;
+        padding: 6px 13px;
+        font-size: 12.5px;
+        font-weight: 500;
+        color: var(--ink-mid);
+        cursor: pointer;
+        transition: all .18s;
+        font-family: 'DM Sans', sans-serif;
+        text-decoration: none;
+    }
+
+    .btn-visit:hover {
+        border-color: var(--teal);
+        color: var(--teal);
+        text-decoration: none;
+    }
+
+    .rprice {
+        text-align: right;
+        flex-shrink: 0;
+        min-width: 90px;
+    }
+
+    .pamount {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.65rem;
+        font-weight: 700;
+        color: var(--ink);
+        line-height: 1;
+    }
+
+    .pamount.free {
+        color: var(--green);
+    }
+
+    .pper {
+        font-size: 11px;
+        color: var(--ink-faint);
+        margin-top: 2px;
+    }
+
+    .pnote {
+        font-size: 10.5px;
+        color: #d97706;
+        margin-top: 4px;
+        line-height: 1.4;
+    }/* Zip section */
+    .zip-section {
+        background: var(--off);
+        border: 1.5px solid var(--border);
+        border-radius: 16px;
+        padding: 26px 30px;
+        margin: 32px 0;
+    }
+
+    .zip-head {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    .zip-sub {
+        font-size: 13px;
+        color: var(--ink-dim);
+        font-weight: 300;
+        margin-bottom: 16px;
+        line-height: 1.55;
+    }
+
+    .zip-row {
+        display: flex;
+        gap: 10px;
+    }
+
+    .zip-input {
+        flex: 1;
+        background: var(--white);
+        border: 1.5px solid var(--border-dark);
+        border-radius: 8px;
+        padding: 10px 14px;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 15px;
+        color: var(--ink);
+        outline: none;
+        transition: border-color .18s;
+    }
+
+    .zip-input:focus {
+        border-color: var(--teal);
+    }
+
+    .zip-btn {
+        background: #0f172a;
+        color: var(--white);
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 13.5px;
+        font-weight: 600;
+        transition: all .18s;
+        white-space: nowrap;
+    }
+
+    .zip-btn:hover {
+        background: #2d2926;
+    }
+
+    #pharma-results {
+        margin-top: 18px;
+    }
+
+    .pharma-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 14px 16px;
+        margin-bottom: 9px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        animation: fadeUp .35s ease both;
+    }
+
+    .pharma-ico {
+        width: 34px;
+        height: 34px;
+        border-radius: 7px;
+        background: var(--off);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        flex-shrink: 0;
+    }
+
+    .pharma-info {
+        flex: 1;
+    }
+
+    .pharma-name {
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+
+    .pharma-addr {
+        font-size: 12px;
+        color: var(--ink-dim);
+        margin-bottom: 7px;
+        font-weight: 300;
+    }
+
+    .pharma-price {
+        font-size: 12.5px;
+        color: var(--teal);
+        font-weight: 500;
+    }
+
+    .chain-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+        margin-top: 8px;
+    }
+
+    .chain-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 9px;
+        padding: 12px 14px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .chain-name {
+        flex: 1;
+        font-weight: 500;
+        font-size: 13px;
+    }
+
+    .chain-price {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--ink);
+    }
+
+    .chain-note {
+        font-size: 10.5px;
+        color: var(--ink-faint);
+    }/* Disclaimer */
+    .tool-disc {
+        font-size: 12px;
+        color: var(--ink-faint);
+        line-height: 1.65;
+        padding: 16px 18px;
+        background: var(--amber-lt);
+        border: 1px solid var(--amber-border);
+        border-radius: 10px;
+        margin: 24px 0;
+    }
+
+    .btn-restart {
+        display: block;
+        margin: 0 auto 48px;
+        background: none;
+        border: 1.5px solid var(--border-dark);
+        color: var(--ink-dim);
+        border-radius: 9px;
+        padding: 11px 24px;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 13.5px;
+        cursor: pointer;
+        transition: all .18s;
+    }
+
+    .btn-restart:hover {
+        border-color: var(--teal);
+        color: var(--teal);
+    }/* ══════════════════════════════════════
+       ARTICLES PAGE
+    ══════════════════════════════════════ */
+    .articles-hero {
+        background: var(--off);
+        border-bottom: 1px solid var(--border);
+        padding: 48px 0 36px;
+    }
+
+    .articles-hero h1 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .articles-hero p {
+        font-size: 15px;
+        color: var(--ink-mid);
+        font-weight: 300;
+    }
+
+    .article-tabs {
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 0 0;
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .article-tab {
+        padding: 14px 20px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--ink-dim);
+        border: none;
+        background: none;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        white-space: nowrap;
+        font-family: 'DM Sans', sans-serif;
+        transition: all .15s;
+    }
+
+    .article-tab:hover {
+        color: var(--ink);
+    }
+
+    .article-tab.on {
+        color: var(--teal);
+        border-bottom-color: var(--teal);
+    }
+
+    .article-content {
+        display: none;
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 52px 24px 80px;
+    }
+
+    .article-content.on {
+        display: block;
+    }
+
+    .art-cat {
+        display: inline-block;
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        color: var(--teal);
+        background: var(--teal-lt);
+        border-radius: 4px;
+        padding: 3px 10px;
+        margin-bottom: 14px;
+    }
+
+    .art-h1 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 700;
+        line-height: 1.12;
+        margin-bottom: 14px;
+    }
+
+    .art-deck {
+        font-size: 16px;
+        color: var(--ink-mid);
+        font-weight: 300;
+        line-height: 1.65;
+        border-left: 3px solid var(--teal);
+        padding-left: 16px;
+        margin-bottom: 18px;
+    }
+
+    .art-meta {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 12px;
+        color: var(--ink-faint);
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 36px;
+    }
+
+    .art-meta-dot {
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: var(--border-dark);
+    }
+
+    .art-body h2 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 40px 0 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .art-body h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 24px 0 8px;
+    }
+
+    .art-body p {
+        font-size: 15px;
+        color: var(--ink);
+        margin-bottom: 16px;
+        line-height: 1.78;
+        font-weight: 300;
+    }
+
+    .art-body strong {
+        font-weight: 600;
+    }
+
+    .art-body ul {
+        margin: 12px 0 18px;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .art-body ul li {
+        font-size: 14.5px;
+        font-weight: 300;
+        color: var(--ink);
+        padding: 5px 0 5px 20px;
+        position: relative;
+        line-height: 1.65;
+    }
+
+    .art-body ul li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: var(--teal);
+        font-size: 12px;
+    }
+
+    .art-box {
+        border-radius: 10px;
+        padding: 16px 20px;
+        margin: 24px 0;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .art-box-lbl {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    .art-box.teal {
+        background: var(--teal-lt);
+        border-left: 3px solid var(--teal);
+        color: var(--ink);
+    }
+
+    .art-box.teal .art-box-lbl {
+        color: var(--teal);
+    }
+
+    .art-box.amber {
+        background: var(--amber-lt);
+        border-left: 3px solid #d97706;
+        color: var(--ink);
+    }
+
+    .art-box.amber .art-box-lbl {
+        color: #d97706;
+    }
+
+    .art-tbl {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 13.5px;
+    }
+
+    .art-tbl th {
+        background: #0f172a;
+        color: var(--white);
+        padding: 9px 14px;
+        text-align: left;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+    }
+
+    .art-tbl td {
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--border);
+        font-weight: 300;
+        vertical-align: top;
+        color: var(--ink);
+    }
+
+    .art-tbl tr:nth-child(even) td {
+        background: var(--off);
+    }
+
+    .art-tbl tr:last-child td {
+        border-bottom: none;
+    }
+
+    .art-tbl .price {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--teal);
+        white-space: nowrap;
+    }
+
+    .art-tbl .best td {
+        background: var(--teal-lt) !important;
+    }
+
+    .art-tbl .best td:first-child {
+        border-left: 3px solid var(--teal);
+    }
+
+    .icd-code {
+        font-family: monospace;
+        font-weight: 700;
+        color: var(--teal);
+        font-size: 12px;
+    }
+
+    .ctag {
+        display: inline-block;
+        font-size: 9.5px;
+        font-weight: 700;
+        padding: 1px 7px;
+        border-radius: 100px;
+        margin-left: 4px;
+    }
+
+    .ctag-yes {
+        background: var(--green-lt);
+        color: var(--green);
+    }
+
+    .ctag-no {
+        background: var(--red-lt);
+        color: var(--red);
+    }
+
+    .ctag-maybe {
+        background: var(--amber-lt);
+        color: var(--amber);
+    }
+
+    .ctag-new {
+        background: #ede9fe;
+        color: #5b21b6;
+    }
+
+    .art-steps {
+        list-style: none;
+        counter-reset: s;
+        margin: 18px 0;
+    }
+
+    .art-steps li {
+        counter-increment: s;
+        display: flex;
+        gap: 13px;
+        margin-bottom: 12px;
+        padding: 14px 17px;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .art-steps li::before {
+        content: counter(s);
+        min-width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: var(--teal);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .art-steps li strong {
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    .art-steps li p {
+        font-size: 13px;
+        color: var(--ink-dim);
+        margin: 0;
+        font-weight: 300;
+        line-height: 1.6;
+    }
+
+    .art-cta {
+        background: #0f172a;
+        color: var(--white);
+        border-radius: 13px;
+        padding: 28px 32px;
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    .art-cta h3 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin-bottom: 7px;
+    }
+
+    .art-cta p {
+        font-size: 13.5px;
+        color: #a8a29e;
+        margin-bottom: 18px;
+        font-weight: 300;
+    }
+
+    .art-disc {
+        font-size: 11.5px;
+        color: var(--ink-faint);
+        line-height: 1.65;
+        padding: 14px 16px;
+        background: var(--off);
+        border-radius: 8px;
+        margin-top: 36px;
+    }
+
+    .price-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 16px 0 22px;
+    }
+
+    .price-pill {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 12px 16px;
+        min-width: 140px;
+        flex: 1;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .pp-name {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--ink-dim);
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+    }
+
+    .pp-price {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--teal);
+        line-height: 1;
+    }
+
+    .pp-note {
+        font-size: 11px;
+        color: var(--ink-faint);
+        margin-top: 3px;
+        font-weight: 300;
+    }/* ══════════════════════════════════════
+       ABOUT PAGE
+    ══════════════════════════════════════ */
+    .about-page {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 60px 24px 80px;
+    }
+
+    .about-page h1 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 14px;
+    }
+
+    .about-page p {
+        font-size: 15px;
+        color: var(--ink-mid);
+        font-weight: 300;
+        line-height: 1.75;
+        margin-bottom: 16px;
+    }
+
+    .about-page h2 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 36px 0 12px;
+    }/* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
+    @media (max-width: 768px) {
+        .features-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .preview-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .articles-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 28px;
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        .nav-mobile-toggle {
+            display: flex;
+        }
+
+        .chain-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .zip-row {
+            flex-direction: column;
+        }
+
+        .quiz-card {
+            padding: 24px 18px;
+        }
+
+        .rcard {
+            flex-wrap: wrap;
+        }
+
+        .rprice {
+            text-align: left;
+            width: 100%;
+        }
+
+        .email-form {
+            flex-direction: column;
+        }
+
+        .price-pills {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero h1 {
+            font-size: 1.9rem;
+        }
+
+        .hero-actions {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .stats-bar .container {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <!-- ══════════════════════════════════════
+       NAVBAR
+    ══════════════════════════════════════ -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-logo">
+                <div class="nav-logo-dot"></div>
+
+                      GLP-1 Price Finder
+                    
+            </div>
+            <div class="nav-links">
+                <button class="nav-link active" onclick="showPage('home',this)">Home</button>
+                <button class="nav-link" onclick="showPage('compare',this)">Compare Prices</button>
+                <button class="nav-link" onclick="showPage('articles',this)">Guides</button>
+                <button class="nav-link" onclick="showPage('about',this)">About</button>
+                <button class="nav-cta" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Find My Price →</button>
+            </div>
+            <button class="nav-mobile-toggle" onclick="toggleMobileNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ══════════════════════════════════════
+       HOME PAGE
+    ══════════════════════════════════════ -->
+    <div class="page active" id="page-home">
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-eyebrow">
+                    <span class="hero-eyebrow-dot"></span>
+                    Updated March 2026
+                </div>
+                <h1>
+                    Find your 
+                    <em>real</em>
+                     price
+                    <br>
+                    on GLP-1 medications
+                </h1>
+                <p class="hero-sub">Retail prices hit $1,300/month. But cash-pay programs, telehealth platforms, and manufacturer deals have pushed the real floor to $99–$199. We find your best option in 3 questions.</p>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">
+                              Find My Price → 
+                            </button>
+                    <button class="btn-secondary" onclick="showPage('articles',document.querySelector('.nav-link:nth-child(3)'))">
+                              Read the Guides
+                            </button>
+                </div>
+                <div class="hero-trust">
+                    <span>✓ No ads</span>
+                    <span>✓ No sponsored rankings</span>
+                    <span>✓ Prices verified March 2026</span>
+                    <span>✓ Not affiliated with any manufacturer</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <div class="stats-bar">
+            <div class="container">
+                <div class="stat">
+                    <div class="stat-num">$99</div>
+                    <div class="stat-label">Lowest monthly option</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">11</div>
+                    <div class="stat-label">Programs compared</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">62%</div>
+                    <div class="stat-label">Of claims denied in 2024</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">80%</div>
+                    <div class="stat-label">Of appeals succeed</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <div class="section-label">What we do</div>
+                <div class="section-title">
+                    The only GLP-1 price tool
+                    <br>
+                    built for cash-pay patients
+                </div>
+                <p class="section-sub">GoodRx is broad. We go deep on GLP-1s only — better data, better UX, and we understand the nuances that a general tool never will.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">💊</div>
+                        <div class="feature-title">Dose-accurate pricing</div>
+                        <div class="feature-desc">Prices vary significantly by dose. Our slider shows exactly what you'll pay at starting, maintenance, and max doses — not a vague range.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📍</div>
+                        <div class="feature-title">Compounders near you</div>
+                        <div class="feature-desc">Enter your zip and we surface local 503A/503B compounding pharmacies alongside major chains — with real cash-pay prices.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚕️</div>
+                        <div class="feature-title">HRT availability flagged</div>
+                        <div class="feature-desc">Many patients manage GLP-1s and hormone therapy together. We flag every platform that offers both in one place.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏥</div>
+                        <div class="feature-title">Insurance navigation</div>
+                        <div class="feature-desc">Know which ICD-10 diagnosis codes get GLP-1s covered. Our appeal guide walks you through the exact process step by step.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✅</div>
+                        <div class="feature-title">Vetted sources only</div>
+                        <div class="feature-desc">No grey-market peptides. No unverified compounders. Every option is FDA-approved or sourced from licensed 503A/503B pharmacies.</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <div class="feature-title">Updated monthly</div>
+                        <div class="feature-desc">Prices in this space change fast. We verify every program, manufacturer deal, and telehealth price monthly so you don't have to.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Price Preview -->
+        <section class="price-preview">
+            <div class="container">
+                <div class="preview-grid">
+                    <div class="preview-cards">
+                        <div class="preview-card best">
+                            <div class="preview-rank first">1</div>
+                            <div class="preview-info">
+                                <div class="preview-name">Oral Wegovy — NovoCare</div>
+                                <div class="preview-type">Manufacturer direct · FDA approved · No injection</div>
+                                <div class="preview-best-badge">Best Match</div>
+                            </div>
+                            <div style="text-align:right">
+                                <div class="preview-price">$149</div>
+                                <div class="preview-period">/month</div>
+                            </div>
+                        </div>
+                        <div class="preview-card">
+                            <div class="preview-rank">2</div>
+                            <div class="preview-info">
+                                <div class="preview-name">Noom Med / GoodRx</div>
+                                <div class="preview-type">Telehealth + coaching · Rx included</div>
+                            </div>
+                            <div style="text-align:right">
+                                <div class="preview-price">$99</div>
+                                <div class="preview-period">/month</div>
+                            </div>
+                        </div>
+                        <div class="preview-card">
+                            <div class="preview-rank">3</div>
+                            <div class="preview-info">
+                                <div class="preview-name">Wegovy — NovoCare Intro</div>
+                                <div class="preview-type">Brand injection · Starting doses · 2 months</div>
+                            </div>
+                            <div style="text-align:right">
+                                <div class="preview-price">$199</div>
+                                <div class="preview-period">/month</div>
+                            </div>
+                        </div>
+                        <div class="preview-card">
+                            <div class="preview-rank">4</div>
+                            <div class="preview-info">
+                                <div class="preview-name">Lilly Cares Foundation</div>
+                                <div class="preview-type">Patient assistance · Income-qualified</div>
+                            </div>
+                            <div style="text-align:right">
+                                <div class="preview-price" style="color:var(--green);font-size:1.1rem">FREE</div>
+                                <div class="preview-period">if qualified</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-cta">
+                        <div class="section-label">Your results are personalized</div>
+                        <h3>
+                            These are sample results.
+                            <br>
+                            Yours depend on your situation.
+                        </h3>
+                        <p>Insurance status, which drug, and what dose you're on all change what you actually pay. Answer 3 questions and we rank every real option for you — dose-accurate, current pricing.</p>
+                        <button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Get My Personalized Results →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles preview -->
+        <section class="articles-section">
+            <div class="container">
+                <div class="section-label">Resource guides</div>
+                <div class="section-title">Everything you need to know</div>
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <div class="article-card-top teal"></div>
+                        <div class="article-card-body">
+                            <div class="article-cat">Price Guide</div>
+                            <div class="article-title-sm">Cheapest Semaglutide Without Insurance in 2026</div>
+                            <div class="article-excerpt">From $99/month to $1,349 retail — here's every legitimate low-cost option, ranked by monthly price.</div>
+                            <button class="article-read-more" onclick="showArticle(0)">Read guide →</button>
+                        </div>
+                    </div>
+                    <div class="article-card">
+                        <div class="article-card-top amber"></div>
+                        <div class="article-card-body">
+                            <div class="article-cat amber">Insurance Guide</div>
+                            <div class="article-title-sm">How to Appeal a GLP-1 Insurance Denial — and Win</div>
+                            <div class="article-excerpt">62% of claims are denied. Up to 80% of appeals succeed. Includes every ICD-10 code that gets coverage approved.</div>
+                            <button class="article-read-more" onclick="showArticle(2)">Read guide →</button>
+                        </div>
+                    </div>
+                    <div class="article-card">
+                        <div class="article-card-top rose"></div>
+                        <div class="article-card-body">
+                            <div class="article-cat rose">Breaking</div>
+                            <div class="article-title-sm">Generic Semaglutide 2026: What's Real, What's Not</div>
+                            <div class="article-excerpt">No FDA-approved generic exists in the US yet. Here's what's actually changed — and what to do right now.</div>
+                            <button class="article-read-more" onclick="showArticle(4)">Read guide →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Email -->
+        <section class="email-section">
+            <div class="container-narrow">
+                <h2>Get price alerts when programs change</h2>
+                <p>New GLP-1 programs launch constantly. We'll email you when prices drop, new options appear, or the Medicare demo opens in July 2026.</p>
+                <div class="email-form">
+                    <input class="email-input" type="email" placeholder="your@email.com">
+                    <button class="email-submit" onclick="handleEmailSubmit(this)">Notify Me</button>
+                </div>
+                <p class="email-note">No spam. Unsubscribe anytime. We never sell your data.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <div class="nav-logo-dot"></div>
+                            GLP-1 Price Finder
+                        </div>
+                        <p>An independent price comparison and navigation tool for cash-pay patients seeking GLP-1 medications. Not affiliated with any manufacturer, pharmacy, or telehealth platform.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Tools</h4>
+                        <a href="#" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'));return false">Price Comparison Tool</a>
+                        <a href="#" onclick="showArticle(2);return false">Insurance Appeal Guide</a>
+                        <a href="#" onclick="showArticle(3);return false">Telehealth Guide</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Info</h4>
+                        <a href="#" onclick="showPage('about',document.querySelector('.nav-link:nth-child(4)'));return false">About</a>
+                        <a href="#" onclick="showPage('about',document.querySelector('.nav-link:nth-child(4)'));return false">Disclaimer</a>
+                        <a href="#" onclick="showPage('about',document.querySelector('.nav-link:nth-child(4)'));return false">Affiliate Disclosure</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>⚠️ This site is for informational purposes only and does not constitute medical advice. Prices verified March 2026. We may earn referral fees from telehealth platforms — this does not affect our rankings or pricing data.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#" onclick="showPage('about',document.querySelector('.nav-link:nth-child(4)'));return false">Privacy</a>
+                        <a href="#" onclick="showPage('about',document.querySelector('.nav-link:nth-child(4)'));return false">Terms</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /home -->
+
+    <!-- ══════════════════════════════════════
+       COMPARE PAGE
+    ══════════════════════════════════════ -->
+    <div class="page" id="page-compare">
+        <div class="compare-hero">
+            <div class="container-narrow">
+                <h1>GLP-1 Price Comparison Tool</h1>
+                <p>Answer 3 questions. Get personalized, dose-accurate pricing across every real option.</p>
+            </div>
+        </div>
+        <div class="tool-wrap">
+
+            <!-- Progress -->
+            <div class="progress">
+                <div class="pdot active" id="d1">
+                    <span>1</span>
+                </div>
+                <div class="pline" id="l1"></div>
+                <div class="pdot" id="d2">
+                    <span>2</span>
+                </div>
+                <div class="pline" id="l2"></div>
+                <div class="pdot" id="d3">
+                    <span>3</span>
+                </div>
+            </div>
+
+            <!-- Q1 -->
+            <div class="quiz-card" id="s1">
+                <div class="q-step">Question 1 of 3</div>
+                <div class="q-title">What's your insurance situation?</div>
+                <p class="q-hint">This determines which programs and pricing tiers you can access.</p>
+                <div class="q-opts">
+                    <button class="q-opt" onclick="pick(1,'none',this)">
+                        <div class="q-opt-ico">🚫</div>
+                        <div class="q-opt-txt">
+                            <strong>No insurance</strong>
+                            <small>Paying fully out of pocket</small>
+                        </div>
+                        <div class="q-chk">✓</div>
+                    </button>
+                    <button class="q-opt" onclick="pick(1,'covered',this)">
+                        <div class="q-opt-ico">✅</div>
+                        <div class="q-opt-txt">
+                            <strong>Insurance covers it</strong>
+                            <small>But my copay is still too high</small>
+                        </div>
+                        <div class="q-chk">✓</div>
+                    </button>
+                    <button class="q-opt" onclick="pick(1,'denied',this)">
+                        <div class="q-opt-ico">❌</div>
+                        <div class="q-opt-txt">
+                            <strong>Insurance denied me</strong>
+                            <small>Prior auth failed or excluded</small>
+                        </div>
+                        <div class="q-chk">✓</div>
+                    </button>
+                    <button class="q-opt" onclick="pick(1,'medicare',this)">
+                        <div class="q-opt-ico">🏥</div>
+                        <div class="q-opt-txt">
+                            <strong>Medicare / Medicaid</strong>
+                            <small>Government coverage</small>
+                        </div>
+                        <div class="q-chk">✓</div>
+                    </button>
+                </div>
+                <div class="q-nav">
+                    <div></div>
+                    <button class="q-next" id="n1" onclick="goStep(2)" disabled>Next →</button>
+                </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="quiz-card" id="s2" style="display:none">
+                <div class="q-step">Question 2 of 3</div>
+                <div class="q-title">Which medication?</div>
+                <p class="q-hint">Pricing varies significantly by drug — and by dose within each drug.</p>
+                <div class="q-opts">
+                    <button class="q-opt" onclick="pick(2,'sema',this)">
+                        <div class="q-opt-ico">💉</div>
+                        <div class="q-opt-txt">
+                            <strong>Semaglutide</strong>
+                            <small>Ozempic / Wegovy injection or pill</small>
+                        </div>
+                        <div class="q-chk">✓</div>
+                    </button>
+                    <button class="q-opt" onclick="pick(2,'tirz',this)">
+                        <div class="q-opt-ico">💉</div>
+                        <div class="q-opt-txt">
+                            <strong>Tirzepatide</strong>
+                            <small>Mounjaro / Zepbound — dual-action</small>
+                        </div>
+                        <div class="q-chk">✓</div>
+                    </button>
+                    <button class="q-opt" onclick="pick(2,'oral',this)">
+                        <div class="q-opt-ico">💊</div>
+                        <div class="q-opt-txt">
+                            <strong>Oral / pill only</strong>
+                            <small>No injections — oral Wegovy pill</small>
+                        </div>
+                        <div class="q-chk">✓</div>
+                    </button>
+                    <button class="q-opt" onclick="pick(2,'unsure',this)">
+                        <div class="q-opt-ico">🤔</div>
+                        <div class="q-opt-txt">
+                            <strong>Not sure — show all</strong>
+                            <small>We'll display every option</small>
+                        </div>
+                        <div class="q-chk">✓</div>
+                    </button>
+                </div>
+                <div class="dose-wrap" id="dose-wrap" style="display:none">
+                    <div class="dose-row">
+                        <div class="dose-lbl">📊 Select your dose stage</div>
+                        <div class="dose-val" id="dose-label">Starting</div>
+                    </div>
+                    <div class="dose-track" id="dose-track">
+                        <div class="dose-fill" id="dose-fill" style="width:0%"></div>
+                        <div class="dose-thumb" id="dose-thumb" style="left:0%"></div>
+                    </div>
+                    <div class="dose-steps" id="dose-steps"></div>
+                    <p class="dose-note" id="dose-note"></p>
+                </div>
+                <div class="q-nav">
+                    <button class="q-back" onclick="goStep(1)">← Back</button>
+                    <button class="q-next" id="n2" onclick="goStep(3)" disabled>Next →</button>
+                </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="quiz-card" id="s3" style="display:none">
+                <div class="q-step">Question 3 of 3</div>
+                <div class="q-title">What matters most?</div>
+                <p class="q-hint">We'll sort your results by this priority.</p>
+                <div class="q-opts">
+                    <button class="q-opt" onclick="pick(3,'price',this)">
+                        <div class="q-opt-ico">💰</div>
+                        <div class="q-opt-txt">
+                            <strong>Lowest monthly cost</strong>
+                            <small>Show me the cheapest legal option, period</small>
+                        </div>
+                        <div class="q-chk">✓</div>
+                    </button>
+                    <button class="q-opt" onclick="pick(3,'brand',this)">
+                        <div class="q-opt-ico">🏷️</div>
+                        <div class="q-opt-txt">
+                            <strong>Brand-name only</strong>
+                            <small>FDA-approved pens — Wegovy, Zepbound</small>
+                        </div>
+                        <div class="q-chk">✓</div>
+                    </button>
+                    <button class="q-opt" onclick="pick(3,'telehealth',this)">
+                        <div class="q-opt-ico">🩺</div>
+                        <div class="q-opt-txt">
+                            <strong>Telehealth + Rx included</strong>
+                            <small>All-in-one — doctor visit + medication</small>
+                        </div>
+                        <div class="q-chk">✓</div>
+                    </button>
+                    <button class="q-opt" onclick="pick(3,'hrt',this)">
+                        <div class="q-opt-ico">⚕️</div>
+                        <div class="q-opt-txt">
+                            <strong>Platform that also offers HRT</strong>
+                            <small>Manage GLP-1 and hormones in one place</small>
+                        </div>
+                        <div class="q-chk">✓</div>
+                    </button>
+                </div>
+                <div class="q-nav">
+                    <button class="q-back" onclick="goStep(2)">← Back</button>
+                    <button class="q-next" id="n3" onclick="showResults()" disabled>Show My Options →</button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div id="results-section">
+                <div class="results-head">
+                    <h2>Your Best GLP-1 Options</h2>
+                    <p>Ranked by fit and price · March 2026 pricing</p>
+                    <div class="results-meta" id="rmeta"></div>
+                </div>
+                <div id="rlist"></div>
+
+                <!-- Zip finder -->
+                <div class="zip-section">
+                    <div class="rsec-head">🏪 Find pharmacies near you</div>
+                    <div class="zip-head">Compounding pharmacies + big chains by zip code</div>
+                    <div class="zip-sub">Enter your zip to see local 503A/503B compounding pharmacies and cash prices at major chains for your medication.</div>
+                    <div class="zip-row">
+                        <input class="zip-input" id="zipInput" placeholder="Enter zip code (e.g. 90210)" maxlength="5" oninput="this.value=this.value.replace(/\D/g,'')">
+                        <button class="zip-btn" onclick="findPharmacies()">Find Pharmacies</button>
+                    </div>
+                    <div id="pharma-results"></div>
+                </div>
+
+                <div class="tool-disc">
+                    ⚠️ 
+                    <strong>Important:</strong>
+                     Prices are verified estimates as of March 2026 and may vary by pharmacy, dose, and location. This tool is for informational purposes only — not medical advice. We may earn a referral fee if you sign up through our links. This does not affect rankings or pricing data. Consult a licensed healthcare provider before starting any medication.
+                </div>
+                <button class="btn-restart" onclick="restart()">← Start Over</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- /compare -->
+
+    <!-- ══════════════════════════════════════
+       ARTICLES PAGE
+    ══════════════════════════════════════ -->
+    <div class="page" id="page-articles">
+        <div class="articles-hero">
+            <div class="container-narrow">
+                <h1>GLP-1 Resource Guides</h1>
+                <p>Everything you need to understand pricing, navigate insurance, and find access.</p>
+            </div>
+        </div>
+
+        <div class="article-tabs">
+            <button class="article-tab on" onclick="showArticle(0,this)">1 · Cheapest Semaglutide</button>
+            <button class="article-tab" onclick="showArticle(1,this)">2 · Drug Cost Comparison</button>
+            <button class="article-tab" onclick="showArticle(2,this)">3 · Appeal a Denial</button>
+            <button class="article-tab" onclick="showArticle(3,this)">4 · Telehealth Guide</button>
+            <button class="article-tab" onclick="showArticle(4,this)">5 · Generic Semaglutide</button>
+        </div>
+
+        <!-- Article 1 -->
+        <div class="article-content on" id="art-0">
+            <div class="art-cat">Price Guide</div>
+            <h1 class="art-h1">Cheapest Semaglutide Without Insurance in 2026</h1>
+            <p class="art-deck">Retail prices hit $1,300/month. But cash-pay programs, telehealth platforms, and manufacturer deals have pushed the real floor down to $99–$199 if you know where to look.</p>
+            <div class="art-meta">
+                <span>Updated March 2026</span>
+                <span class="art-meta-dot"></span>
+                <span>10 min read</span>
+            </div>
+            <div class="art-body">
+                <p>
+                    If you've been quoted over $1,000 a month for semaglutide, you're seeing the retail list price — not what people actually pay. The real out-of-pocket cost for cash-pay patients in 2026 ranges from 
+                    <strong>$99 to $499 per month</strong>
+                    , depending on which program you use, which drug, and what dose.
+                </p>
+                <h2>What Semaglutide Actually Costs in 2026</h2>
+                <div class="price-pills">
+                    <div class="price-pill">
+                        <div class="pp-name">Wegovy injection</div>
+                        <div class="pp-price">$1,349</div>
+                        <div class="pp-note">Retail list / month</div>
+                    </div>
+                    <div class="price-pill">
+                        <div class="pp-name">Oral Wegovy pill</div>
+                        <div class="pp-price">$149</div>
+                        <div class="pp-note">Cash-pay launch price</div>
+                    </div>
+                    <div class="price-pill">
+                        <div class="pp-name">Compounded sema.</div>
+                        <div class="pp-price">$99–299</div>
+                        <div class="pp-note">Via telehealth / 503A</div>
+                    </div>
+                    <div class="price-pill">
+                        <div class="pp-name">NovoCare PAP</div>
+                        <div class="pp-price">FREE</div>
+                        <div class="pp-note">If income-qualified</div>
+                    </div>
+                </div>
+                <h2>Every Option, Ranked by Monthly Cost</h2>
+                <table class="art-tbl">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Monthly Cost</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="best">
+                            <td>
+                                <strong>Oral Wegovy pill — NovoCare</strong>
+                            </td>
+                            <td class="price">$149</td>
+                            <td>FDA-approved, no injection, lowest-dose starting tier</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Compounded semaglutide — Noom Med</strong>
+                            </td>
+                            <td class="price">$99</td>
+                            <td>Microdose, Rx + coaching included. Not FDA-approved.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Wegovy injection — NovoCare intro</strong>
+                            </td>
+                            <td class="price">$199</td>
+                            <td>First 2 months at starting doses. Rises to $349 after.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Wegovy injection — NovoCare ongoing</strong>
+                            </td>
+                            <td class="price">$349</td>
+                            <td>Maintenance doses. Brand-name direct from Novo Nordisk.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Wegovy via Costco / Sam's Club</strong>
+                            </td>
+                            <td class="price">$499</td>
+                            <td>Cash-pay at warehouse clubs. No membership needed for Rx.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>NovoCare Patient Assistance</strong>
+                            </td>
+                            <td class="price">FREE</td>
+                            <td>Uninsured patients below income threshold. Apply at novocare.com.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>The Oral Wegovy Pill: A Game Changer</h2>
+                <p>
+                    In December 2025, the FDA approved the first oral GLP-1 pill for weight loss. Novo Nordisk launched it in January 2026 at 
+                    <strong>$149/month for starting doses</strong>
+                     — the cheapest brand-name semaglutide option ever offered in the US. Higher doses (9mg, 25mg) run $299/month. No injection required, no refrigeration needed.
+                </p>
+                <h2>Telehealth: Cheapest All-In Option</h2>
+                <table class="art-tbl">
+                    <thead>
+                        <tr>
+                            <th>Platform</th>
+                            <th>Monthly Cost</th>
+                            <th>Includes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="best">
+                            <td>
+                                <strong>Noom Med</strong>
+                            </td>
+                            <td class="price">$99</td>
+                            <td>Microdose GLP-1 + coaching + Rx</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Ro Body</strong>
+                            </td>
+                            <td class="price">$199–349</td>
+                            <td>Rx + telehealth + support</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Hims & Hers</strong>
+                            </td>
+                            <td class="price">$279+</td>
+                            <td>Rx + ongoing care</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>PlushCare</strong>
+                            </td>
+                            <td class="price">$249+</td>
+                            <td>Rx + insurance navigation</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="art-box amber">
+                    <span class="art-box-lbl">⚠️ Compounder warning</span>
+                    The FDA took enforcement action against 30+ telehealth companies in March 2026 for selling misbranded compounded GLP-1s. Only use platforms sourcing from licensed 503A or 503B pharmacies with verifiable credentials.
+                </div>
+                <div class="art-cta">
+                    <h3>Find your exact price in 3 questions</h3>
+                    <p>Our tool matches your situation to every real option — sorted by monthly cost.</p>
+                    <button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Use the Price Tool →</button>
+                </div>
+                <div class="art-disc">This article is for informational purposes only. Prices are estimates verified as of March 2026. Always consult a licensed healthcare provider before starting any medication. We may earn referral fees from platforms linked — this does not affect our rankings.</div>
+            </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="article-content" id="art-1">
+            <div class="art-cat">Cost Comparison</div>
+            <h1 class="art-h1">Ozempic vs. Wegovy vs. Mounjaro: Real Cost Breakdown for 2026</h1>
+            <p class="art-deck">Same active ingredient, wildly different prices. Here's what each drug actually costs — by insurance status, dose, and program.</p>
+            <div class="art-meta">
+                <span>Updated March 2026</span>
+                <span class="art-meta-dot"></span>
+                <span>12 min read</span>
+            </div>
+            <div class="art-body">
+                <p>Ozempic and Wegovy contain the same drug — semaglutide — but are approved for different uses and priced differently. Mounjaro and Zepbound contain tirzepatide, a newer dual-action drug that often delivers greater weight loss. Understanding the cost differences is one of the most important decisions when starting GLP-1 therapy.</p>
+                <h2>What's the Same, What's Different</h2>
+                <table class="art-tbl">
+                    <thead>
+                        <tr>
+                            <th>Drug</th>
+                            <th>Ingredient</th>
+                            <th>Approved For</th>
+                            <th>Form</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Ozempic</strong>
+                            </td>
+                            <td>Semaglutide</td>
+                            <td>Type 2 diabetes</td>
+                            <td>Weekly injection</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Wegovy (injection)</strong>
+                            </td>
+                            <td>Semaglutide</td>
+                            <td>Weight loss, CVD risk</td>
+                            <td>Weekly injection</td>
+                        </tr>
+                        <tr class="best">
+                            <td>
+                                <strong>Wegovy (pill)</strong>
+                            </td>
+                            <td>Semaglutide</td>
+                            <td>Weight loss</td>
+                            <td>Daily pill — NEW 2026</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Mounjaro</strong>
+                            </td>
+                            <td>Tirzepatide</td>
+                            <td>Type 2 diabetes</td>
+                            <td>Weekly injection</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Zepbound</strong>
+                            </td>
+                            <td>Tirzepatide</td>
+                            <td>Weight loss, sleep apnea</td>
+                            <td>Weekly injection or vial</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Cash-Pay Prices Without Insurance</h2>
+                <table class="art-tbl">
+                    <thead>
+                        <tr>
+                            <th>Drug</th>
+                            <th>Retail Price</th>
+                            <th>Best Cash-Pay Price</th>
+                            <th>Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="best">
+                            <td>
+                                <strong>Oral Wegovy pill</strong>
+                            </td>
+                            <td>$900+</td>
+                            <td class="price">$149–299</td>
+                            <td>NovoCare / GoodRx</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Wegovy injection</strong>
+                            </td>
+                            <td>$1,349/mo</td>
+                            <td class="price">$199–349</td>
+                            <td>NovoCare</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Ozempic</strong>
+                            </td>
+                            <td>$935/mo</td>
+                            <td class="price">$350</td>
+                            <td>TrumpRx / NovoCare</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Zepbound (vials)</strong>
+                            </td>
+                            <td>$1,069/mo</td>
+                            <td class="price">$299–449</td>
+                            <td>LillyDirect (dose-dependent)</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Mounjaro</strong>
+                            </td>
+                            <td>$1,069/mo</td>
+                            <td class="price">$995+</td>
+                            <td>No direct cash program — use Zepbound instead</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="art-box teal">
+                    <span class="art-box-lbl">💡 Key insight</span>
+                    Mounjaro and Zepbound contain the same drug (tirzepatide) but Mounjaro has no direct cash-pay program. If you're paying out of pocket for tirzepatide, Zepbound vials via LillyDirect at $299–449/month are almost always the better choice.
+                </div>
+                <h2>Average Weight Loss by Drug</h2>
+                <ul>
+                    <li>
+                        <strong>Wegovy 2.4mg injection:</strong>
+                         ~15% body weight loss over 68 weeks
+                    </li>
+                    <li>
+                        <strong>Wegovy HD 7.2mg (approved March 2026):</strong>
+                         ~20.7% body weight loss over 72 weeks
+                    </li>
+                    <li>
+                        <strong>Oral Wegovy 25mg pill:</strong>
+                         ~13.6% body weight loss over 64 weeks
+                    </li>
+                    <li>
+                        <strong>Zepbound 10–15mg:</strong>
+                         ~20–21% body weight loss over 72 weeks
+                    </li>
+                </ul>
+                <div class="art-cta">
+                    <h3>Get personalized pricing for your situation</h3>
+                    <p>Answer 3 questions and see every option ranked for your insurance status and drug preference.</p>
+                    <button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Use the Price Tool →</button>
+                </div>
+                <div class="art-disc">Prices verified as of March 2026. Clinical data from manufacturer-published results. Not medical advice. Consult your healthcare provider before starting or changing any medication.</div>
+            </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="article-content" id="art-2">
+            <div class="art-cat">Insurance Guide</div>
+            <h1 class="art-h1">How to Appeal a GLP-1 Insurance Denial — and Win</h1>
+            <p class="art-deck">62% of GLP-1 claims were rejected in 2024. Up to 80% of appeals succeed when done correctly. Here's the step-by-step process, plus every ICD-10 code that helps get coverage approved.</p>
+            <div class="art-meta">
+                <span>Updated March 2026</span>
+                <span class="art-meta-dot"></span>
+                <span>15 min read</span>
+            </div>
+            <div class="art-body">
+                <div class="art-box teal">
+                    <span class="art-box-lbl">📊 By the numbers</span>
+                    62% of GLP-1 requests were denied in 2024. Up to 80% of well-documented appeals succeed. Only 15% of denied patients ever attempt an appeal — most give up money that should be theirs.
+                </div>
+                <h2>Why You Were Denied</h2>
+                <ul>
+                    <li>
+                        <strong>Not medically necessary</strong>
+                         — Insurer claims your condition doesn't warrant it
+                    </li>
+                    <li>
+                        <strong>Step therapy required</strong>
+                         — Must "fail" cheaper drugs first (Contrave, Qsymia, metformin)
+                    </li>
+                    <li>
+                        <strong>Plan exclusion</strong>
+                         — Weight loss drugs excluded from your plan entirely
+                    </li>
+                    <li>
+                        <strong>Wrong ICD-10 code</strong>
+                         — The diagnosis code submitted doesn't match a covered indication
+                    </li>
+                    <li>
+                        <strong>Missing prior authorization</strong>
+                         — PA wasn't submitted or was incomplete
+                    </li>
+                </ul>
+                <h2>ICD-10 Codes That Get GLP-1s Covered</h2>
+                <p>This is the most important section. Insurance coverage depends heavily on which diagnosis code appears on your prescription. The same medication can be approved or denied based on this single field.</p>
+                <table class="art-tbl">
+                    <thead>
+                        <tr>
+                            <th>ICD-10 Code</th>
+                            <th>Diagnosis</th>
+                            <th>Commercial</th>
+                            <th>Medicare</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="best">
+                            <td>
+                                <span class="icd-code">E11.9</span>
+                            </td>
+                            <td>Type 2 diabetes, unspecified</td>
+                            <td>
+                                <span class="ctag ctag-yes">✓ Covered</span>
+                            </td>
+                            <td>
+                                <span class="ctag ctag-yes">✓ Covered</span>
+                            </td>
+                            <td>Strongest path. Ozempic/Mounjaro at $25/mo with savings card.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="icd-code">E11.65</span>
+                            </td>
+                            <td>T2D with hyperglycemia</td>
+                            <td>
+                                <span class="ctag ctag-yes">✓ Covered</span>
+                            </td>
+                            <td>
+                                <span class="ctag ctag-yes">✓ Covered</span>
+                            </td>
+                            <td>Use when A1C is elevated — stronger documentation.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="icd-code">G47.33</span>
+                            </td>
+                            <td>Obstructive sleep apnea (OSA)</td>
+                            <td>
+                                <span class="ctag ctag-yes">✓ Covered</span>
+                            </td>
+                            <td>
+                                <span class="ctag ctag-yes">✓ Covered</span>
+                            </td>
+                            <td>Zepbound FDA-approved for OSA with obesity. Medicare covers this now.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="icd-code">I25.10</span>
+                            </td>
+                            <td>Atherosclerotic heart disease</td>
+                            <td>
+                                <span class="ctag ctag-yes">✓ Covered</span>
+                            </td>
+                            <td>
+                                <span class="ctag ctag-yes">✓ Covered</span>
+                            </td>
+                            <td>Wegovy approved for CVD risk reduction. Strong coverage path if you have established heart disease.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="icd-code">I21.9</span>
+                            </td>
+                            <td>Acute MI (heart attack history)</td>
+                            <td>
+                                <span class="ctag ctag-yes">✓ Covered</span>
+                            </td>
+                            <td>
+                                <span class="ctag ctag-yes">✓ Covered</span>
+                            </td>
+                            <td>Established CVD — supports Wegovy cardiovascular indication.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="icd-code">K75.81</span>
+                            </td>
+                            <td>MASH (metabolic liver disease)</td>
+                            <td>
+                                <span class="ctag ctag-yes">✓ Covered</span>
+                            </td>
+                            <td>
+                                <span class="ctag ctag-new">★ July 2026</span>
+                            </td>
+                            <td>Wegovy FDA-approved for noncirrhotic MASH. CMS BALANCE model includes this.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="icd-code">I10</span>
+                            </td>
+                            <td>Hypertension</td>
+                            <td>
+                                <span class="ctag ctag-maybe">~ Comorbidity</span>
+                            </td>
+                            <td>
+                                <span class="ctag ctag-new">★ July 2026</span>
+                            </td>
+                            <td>BMI ≥30 + hypertension qualifies for Medicare $50/mo demo starting July 2026.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="icd-code">E78.5</span>
+                            </td>
+                            <td>Dyslipidemia</td>
+                            <td>
+                                <span class="ctag ctag-maybe">~ Comorbidity</span>
+                            </td>
+                            <td>
+                                <span class="ctag ctag-new">★ July 2026</span>
+                            </td>
+                            <td>BMI ≥30 + dyslipidemia qualifies for Medicare July 2026 demo.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="icd-code">E66.01</span>
+                            </td>
+                            <td>Morbid obesity BMI ≥40</td>
+                            <td>
+                                <span class="ctag ctag-maybe">~ Plans vary</span>
+                            </td>
+                            <td>
+                                <span class="ctag ctag-no">✗ Not covered</span>
+                            </td>
+                            <td>Some commercial plans cover. Medicare excludes obesity as sole indication.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="icd-code">Z68.30–39</span>
+                            </td>
+                            <td>BMI 30.0–39.9 (adult)</td>
+                            <td>
+                                <span class="ctag ctag-maybe">~ Supporting</span>
+                            </td>
+                            <td>
+                                <span class="ctag ctag-new">★ Supporting</span>
+                            </td>
+                            <td>Always include alongside a comorbidity code. Cigna uses Z68 codes in automated workflows.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="art-box amber">
+                    <span class="art-box-lbl">🔑 Most powerful codes</span>
+                    <strong>G47.33 (sleep apnea) + E66</strong>
+                     is the most underused approval path. Zepbound is FDA-approved for sleep apnea — Medicare covers this even before July 2026. If you have obesity + OSA, this may be your fastest path.
+                    <br>
+                    <br>
+                    <strong>I25.10 (heart disease) + E66</strong>
+                     unlocks the Wegovy cardiovascular indication — covered by most commercial plans and Medicare for patients with prior MI, stroke, or CAD.
+                </div>
+                <h2>Step-by-Step Appeal Process</h2>
+                <ol class="art-steps">
+                    <li>
+                        <strong>Read the denial letter word for word</strong>
+                        <p>Note the exact denial reason and appeal deadline (usually 30–180 days). Missing the deadline forfeits your right to appeal.</p>
+                    </li>
+                    <li>
+                        <strong>Call your doctor immediately</strong>
+                        <p>Your doctor needs to submit a Letter of Medical Necessity (LMN). This is the single most important document in your appeal.</p>
+                    </li>
+                    <li>
+                        <strong>Gather documentation</strong>
+                        <p>A1C results, weight history, sleep study results, cardiac records, documentation of other treatments tried and failed.</p>
+                    </li>
+                    <li>
+                        <strong>Verify your ICD-10 codes</strong>
+                        <p>Ask your doctor to confirm the diagnosis code matches a covered indication. If you have multiple qualifying conditions (obesity + sleep apnea), ensure all codes are submitted.</p>
+                    </li>
+                    <li>
+                        <strong>Submit with complete documentation</strong>
+                        <p>Don't just resubmit the same request. Your appeal must directly address the denial reason with objective clinical evidence.</p>
+                    </li>
+                    <li>
+                        <strong>Request a peer-to-peer review</strong>
+                        <p>Ask your doctor to request a P2P review with the insurer's medical director. This often results in approval when the initial denial was automated.</p>
+                    </li>
+                    <li>
+                        <strong>Escalate to external review</strong>
+                        <p>If your internal appeal is denied, request independent external review. External reviews overturn denials in roughly 40% of cases — and insurers must honor the decision.</p>
+                    </li>
+                </ol>
+                <h2>Medicare Coverage Changes in 2026</h2>
+                <ul>
+                    <li>
+                        <strong>Currently covered:</strong>
+                         Wegovy for cardiovascular risk reduction, Zepbound for sleep apnea
+                    </li>
+                    <li>
+                        <strong>July 2026:</strong>
+                         Medicare GLP-1 Bridge launches — $50/month for eligible beneficiaries with BMI ≥30 + one qualifying comorbidity
+                    </li>
+                    <li>
+                        <strong>January 2027:</strong>
+                         BALANCE Model expands coverage in Medicare Part D and Medicaid
+                    </li>
+                </ul>
+                <div class="art-cta">
+                    <h3>Find your best cash-pay alternative</h3>
+                    <p>If the appeal doesn't pan out, see every affordable option for your situation.</p>
+                    <button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Use the Price Tool →</button>
+                </div>
+                <div class="art-disc">Informational only. Not legal or medical advice. ICD-10 codes and coverage criteria change by insurer. Always work with your healthcare provider and consult your plan documents.</div>
+            </div>
+        </div>
+
+        <!-- Article 4 -->
+        <div class="article-content" id="art-3">
+            <div class="art-cat">Access Guide</div>
+            <h1 class="art-h1">How to Get a GLP-1 Without an In-Person Doctor Visit</h1>
+            <p class="art-deck">You don't need to wait months for an appointment. Telehealth platforms can evaluate, prescribe, and ship your medication — sometimes within a week.</p>
+            <div class="art-meta">
+                <span>Updated March 2026</span>
+                <span class="art-meta-dot"></span>
+                <span>9 min read</span>
+            </div>
+            <div class="art-body">
+                <p>Getting a GLP-1 prescription used to require scheduling a primary care appointment, getting a referral to an endocrinologist, and waiting weeks. In 2026, that's no longer the reality. Telehealth platforms have made it possible to get evaluated, prescribed, and have medication shipped to your door — entirely online.</p>
+                <h2>How Telehealth GLP-1 Prescribing Works</h2>
+                <ol class="art-steps">
+                    <li>
+                        <strong>Complete an online health assessment</strong>
+                        <p>Most platforms ask about your weight, BMI, medical history, and health goals. Takes 10–20 minutes and replaces the in-office intake appointment.</p>
+                    </li>
+                    <li>
+                        <strong>A licensed provider reviews your case</strong>
+                        <p>A licensed physician, NP, or PA reviews your submission — some within hours. Better platforms conduct a video call for complex cases.</p>
+                    </li>
+                    <li>
+                        <strong>You receive a prescription electronically</strong>
+                        <p>If approved, your prescription goes directly to a partner pharmacy. You don't need to go anywhere.</p>
+                    </li>
+                    <li>
+                        <strong>Medication ships to your door</strong>
+                        <p>Most platforms ship within 3–7 business days. Refills are faster. Some offer same-week delivery.</p>
+                    </li>
+                </ol>
+                <h2>Best Telehealth Platforms (2026)</h2>
+                <table class="art-tbl">
+                    <thead>
+                        <tr>
+                            <th>Platform</th>
+                            <th>Starting Price</th>
+                            <th>HRT Available</th>
+                            <th>Drug Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="best">
+                            <td>
+                                <strong>Noom Med / GoodRx</strong>
+                            </td>
+                            <td class="price">$99/mo</td>
+                            <td>No</td>
+                            <td>Compounded semaglutide</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Ro Body</strong>
+                            </td>
+                            <td class="price">$199/mo</td>
+                            <td>Yes — via Ro Pharmacy</td>
+                            <td>Brand or compounded</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Hims & Hers</strong>
+                            </td>
+                            <td class="price">$279/mo</td>
+                            <td>Yes — via Hers</td>
+                            <td>Brand or compounded</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>PlushCare</strong>
+                            </td>
+                            <td class="price">$249/mo</td>
+                            <td>Yes</td>
+                            <td>Brand-name</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>LifeMD</strong>
+                            </td>
+                            <td class="price">$299/mo</td>
+                            <td>Yes</td>
+                            <td>Brand or compounded</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Medical Criteria You Need to Meet</h2>
+                <ul>
+                    <li>
+                        <strong>BMI ≥30</strong>
+                         (clinically classified as obesity), OR
+                    </li>
+                    <li>
+                        <strong>BMI ≥27</strong>
+                         plus at least one weight-related health condition (hypertension, type 2 diabetes, high cholesterol, sleep apnea, cardiovascular disease)
+                    </li>
+                </ul>
+                <div class="art-box amber">
+                    <span class="art-box-lbl">⚠️ What to watch for</span>
+                    In March 2026, the FDA took action against 30+ telehealth companies for selling compounded GLP-1s that were misbranded. Before using any platform, confirm they source from a named, licensed 503A or 503B pharmacy.
+                </div>
+                <h2>Timeline: Application to First Dose</h2>
+                <ul>
+                    <li>
+                        <strong>Day 1:</strong>
+                         Complete online health assessment (15–20 minutes)
+                    </li>
+                    <li>
+                        <strong>Day 1–2:</strong>
+                         Provider review and prescription issued if approved
+                    </li>
+                    <li>
+                        <strong>Day 2–3:</strong>
+                         Prescription sent to pharmacy and filled
+                    </li>
+                    <li>
+                        <strong>Day 3–7:</strong>
+                         Medication shipped and arrives at your door
+                    </li>
+                    <li>
+                        <strong>Ongoing:</strong>
+                         Monthly follow-up required for refills
+                    </li>
+                </ul>
+                <div class="art-cta">
+                    <h3>Compare telehealth platforms by price</h3>
+                    <p>Our tool shows real monthly costs filtered by your insurance status and drug preference.</p>
+                    <button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Compare Platforms →</button>
+                </div>
+                <div class="art-disc">Informational only. GLP-1 medications require a valid prescription. Platform availability and pricing subject to change. Not medical advice.</div>
+            </div>
+        </div>
+
+        <!-- Article 5 -->
+        <div class="article-content" id="art-4">
+            <div class="art-cat">Breaking News</div>
+            <h1 class="art-h1">Generic Semaglutide in 2026: What's Real, What's Not, and What to Do Now</h1>
+            <p class="art-deck">You've seen the headlines. But there's no FDA-approved generic semaglutide in the US — and what's being marketed as "generic" is often not what you think.</p>
+            <div class="art-meta">
+                <span>Updated March 2026</span>
+                <span class="art-meta-dot"></span>
+                <span>11 min read</span>
+            </div>
+            <div class="art-body">
+                <div class="art-box amber">
+                    <span class="art-box-lbl">⚠️ Critical distinction</span>
+                    As of March 2026, there is 
+                    <strong>no FDA-approved generic version of semaglutide in the United States.</strong>
+                     Novo Nordisk's patents are expected to protect the molecule through at least 2031–2032. What's marketed as "generic" semaglutide is almost always compounded semaglutide — which is not the same thing.
+                </div>
+                <h2>What's Actually Happened in 2026</h2>
+                <h3>Oral Wegovy pill launched (January 2026)</h3>
+                <p>
+                    The FDA approved an oral Wegovy pill in December 2025, which launched in January 2026 at 
+                    <strong>$149/month for starting doses</strong>
+                    . This is brand-name semaglutide in a new form — not generic, but the most affordable FDA-approved semaglutide option ever offered in the US.
+                </p>
+                <h3>Wegovy HD approved (March 19, 2026)</h3>
+                <p>The FDA approved Wegovy HD at 7.2mg, delivering 20.7% average weight loss in clinical trials — comparable to tirzepatide. A US launch in a single-dose pen is expected April 2026, approved under the FDA's new National Priority Voucher accelerated review program.</p>
+                <h3>India gets real generics — the US does not</h3>
+                <p>
+                    Semaglutide's patent expired in India on March 20, 2026. Indian manufacturers launched generic versions priced roughly 90% below brand-name. Canada is also expected to see generic semaglutide later in 2026. 
+                    <strong>These generics are not legally available in the United States.</strong>
+                </p>
+                <h2>When Will the US Get Generic Semaglutide?</h2>
+                <p>
+                    The honest answer: not for several years. Novo Nordisk's overlapping patents on semaglutide are expected to protect the molecule in the US through 
+                    <strong>2031–2032</strong>
+                    . A meaningful price drop from an FDA-approved biosimilar or generic is unlikely before 2033–2036.
+                </p>
+                <h2>Most Affordable Options Available Right Now</h2>
+                <table class="art-tbl">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Monthly Cost</th>
+                            <th>FDA Approved?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="best">
+                            <td>
+                                <strong>Oral Wegovy pill (1.5mg–4mg)</strong>
+                            </td>
+                            <td class="price">$149</td>
+                            <td>Yes — January 2026</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Oral Wegovy pill (9mg–25mg)</strong>
+                            </td>
+                            <td class="price">$299</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Wegovy injection — NovoCare</strong>
+                            </td>
+                            <td class="price">$199–349</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Zepbound vials — LillyDirect (2.5mg)</strong>
+                            </td>
+                            <td class="price">$299</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Medicare GLP-1 Bridge (July 2026)</strong>
+                            </td>
+                            <td class="price">$50</td>
+                            <td>Yes — launching July</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Lilly Cares PAP</strong>
+                            </td>
+                            <td class="price">FREE</td>
+                            <td>Yes — income qualified</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="art-cta">
+                    <h3>See all your current options — ranked by price</h3>
+                    <p>Our tool finds the lowest legal option for your situation right now.</p>
+                    <button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Find My Best Price →</button>
+                </div>
+                <div class="art-disc">Informational only. No FDA-approved generic semaglutide exists in the US as of March 2026. Consult a licensed healthcare provider before starting or changing any medication.</div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /articles -->
+
+    <!-- ══════════════════════════════════════
+       ABOUT PAGE
+    ══════════════════════════════════════ -->
+    <div class="page" id="page-about">
+        <div class="about-page">
+            <h1>About GLP-1 Price Finder</h1>
+            <p>GLP-1 Price Finder is an independent price comparison and navigation platform for cash-pay consumers seeking GLP-1 medications. We built this tool because navigating GLP-1 pricing is genuinely confusing — the same drug can cost $99 or $1,349 depending on which program you use, and most people have no idea the affordable options exist.</p>
+            <h2>Our Mission</h2>
+            <p>To be the most trustworthy, thorough, and transparent resource for GLP-1 pricing in the US. We verify pricing monthly, we don't accept payment to influence our rankings, and we clearly disclose every affiliate relationship.</p>
+            <h2>Editorial Standards</h2>
+            <p>All pricing data is verified from primary sources — manufacturer websites, telehealth platform pricing pages, and pharmacy direct programs. We update prices monthly. If something is outdated, email us and we'll fix it within 24 hours.</p>
+            <h2>Affiliate Disclosure</h2>
+            <p>GLP-1 Price Finder may earn referral fees when you click through to telehealth platforms and sign up. This is how we fund the research and development of this tool. Our affiliate relationships do not affect the rankings, pricing data, or recommendations in our comparison tool — options are ranked by fit and price, not by commission rate.</p>
+            <h2>Medical Disclaimer</h2>
+            <p>All content on this site is for informational purposes only and does not constitute medical advice, diagnosis, or treatment. Always consult a licensed healthcare provider before starting, stopping, or changing any medication. Prices shown are estimates and may vary by location, dose, and program availability.</p>
+            <h2>Contact</h2>
+            <p>
+                Questions, corrections, or partnership inquiries: 
+                <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4f272a2323200f28233f7e3f3d262c2a2926212b2a3d612c2022">[email&#160;protected]</a>
+            </p>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+    // ── STATE ──
+    const A = { q1:null, q2:null, q3:null, dose:0 };
+
+    // ── PAGE NAV ──
+    function showPage(pageId, btn) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+      document.getElementById('page-' + pageId).classList.add('active');
+      if (btn) btn.classList.add('active');
+      window.scrollTo(0,0);
+    }
+
+    function showArticle(idx, btn) {
+      document.querySelectorAll('.article-content').forEach(a => a.classList.remove('on'));
+      document.querySelectorAll('.article-tab').forEach(t => t.classList.remove('on'));
+      document.getElementById('art-' + idx).classList.add('on');
+      const tabs = document.querySelectorAll('.article-tab');
+      if (tabs[idx]) tabs[idx].classList.add('on');
+      if (!document.getElementById('page-articles').classList.contains('active')) {
+        showPage('articles', document.querySelector('.nav-link:nth-child(3)'));
+      }
+      window.scrollTo(0,0);
+    }
+
+    function toggleMobileNav() {
+      const links = document.querySelector('.nav-links');
+      links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+      links.style.flexDirection = 'column';
+      links.style.position = 'absolute';
+      links.style.top = '60px';
+      links.style.right = '24px';
+      links.style.background = '#fff';
+      links.style.border = '1px solid #e7e5e4';
+      links.style.borderRadius = '10px';
+      links.style.padding = '8px';
+      links.style.zIndex = '200';
+      links.style.boxShadow = '0 4px 16px rgba(0,0,0,0.1)';
+    }
+
+    // ── DOSE CONFIGS ──
+    const DOSES = {
+      sema: {
+        steps:['Starting\n0.25mg','Low\n0.5mg','Mid\n1mg','Maintenance\n1.7mg','Max\n2.4mg'],
+        prices:[199,199,349,349,349],
+        notes:['First 2 months intro price via NovoCare/GoodRx','Still intro-eligible dose','Moving to maintenance pricing','Standard maintenance — $349/mo cash','Max dose — same $349/mo cash pricing'],
+      },
+      tirz: {
+        steps:['Starting\n2.5mg','Low\n5mg','Mid\n7.5mg','Maintenance\n10mg','Max\n15mg'],
+        prices:[299,399,399,449,449],
+        notes:['Lowest dose via LillyDirect vials','Price jumps at 5mg+','Mid titration range','Common maintenance target','Highest dose — most potent'],
+      },
+      oral: {
+        steps:['Low\n1.5mg','Mid\n4mg','High\n9mg','Max\n25mg'],
+        prices:[149,149,299,299],
+        notes:['Oral Wegovy starting dose — most affordable','Same low-tier pricing','Higher dose — $299/mo','Maximum oral dose — $299/mo'],
+      },
+    };
+
+    // ── QUIZ ──
+    function pick(q, val, btn) {
+      const card = document.getElementById('s'+q);
+      card.querySelectorAll('.q-opt').forEach(b => b.classList.remove('sel'));
+      btn.classList.add('sel');
+      A['q'+q] = val;
+      document.getElementById('n'+q).disabled = false;
+      if (q===2) {
+        const dw = document.getElementById('dose-wrap');
+        if (val==='unsure') { dw.style.display='none'; A.dose=0; }
+        else { dw.style.display='block'; initSlider(val); }
+      }
+    }
+
+    function initSlider(drug) {
+      const cfg = DOSES[drug];
+      if (!cfg) return;
+      const steps = document.getElementById('dose-steps');
+      steps.innerHTML = cfg.steps.map(s=>`<span class="dose-step">${s.split('\n')[1]}</span>`).join('');
+      setDose(0, drug);
+      const track = document.getElementById('dose-track');
+      const n = cfg.steps.length - 1;
+      track.onclick = function(e) {
+        const rect = track.getBoundingClientRect();
+        const pct = Math.max(0, Math.min(1, (e.clientX-rect.left)/rect.width));
+        setDose(Math.round(pct*n), drug);
+      };
+    }
+
+    function setDose(idx, drug) {
+      const cfg = DOSES[drug || A.q2];
+      if (!cfg) return;
+      A.dose = idx;
+      const n = cfg.steps.length - 1;
+      const pct = n===0 ? 0 : (idx/n)*100;
+      document.getElementById('dose-fill').style.width = pct+'%';
+      document.getElementById('dose-thumb').style.left = pct+'%';
+      const parts = cfg.steps[idx].split('\n');
+      document.getElementById('dose-label').textContent = parts[0]+' '+parts[1];
+      document.getElementById('dose-note').textContent = '💡 '+cfg.notes[idx];
+    }
+
+    function goStep(step) {
+      const prev = step - 1;
+      if (prev > 0) {
+        document.getElementById('s'+prev).style.display = 'none';
+        const d = document.getElementById('d'+prev);
+        d.classList.remove('active'); d.classList.add('done');
+        if (prev < 3) document.getElementById('l'+prev).classList.add('done');
+      }
+      const card = document.getElementById('s'+step);
+      card.style.display = 'block';
+      document.getElementById('d'+step).classList.add('active');
+      document.getElementById('d'+step).classList.remove('done');
+    }
+
+    // ── OPTIONS DATA ──
+    const OPTIONS = [
+      {id:'novocare',name:'NovoCare Savings Program',type:'Manufacturer direct — Novo Nordisk',basePrices:{sema:349,tirz:null,oral:149,unsure:299},tags:['brand'],hrt:false,telehealth:false,ins:['covered','denied','none'],drugs:['sema','oral','unsure'],pri:{price:1,brand:1,telehealth:4,hrt:5},url:'https://www.novocare.com',hrtInfo:null,doseNote:null},
+      {id:'lilly',name:'LillyDirect Self-Pay',type:'Manufacturer direct — Eli Lilly',basePrices:{sema:null,tirz:299,oral:null,unsure:299},tags:['brand'],hrt:false,telehealth:false,ins:['covered','denied','none'],drugs:['tirz','unsure'],pri:{price:1,brand:1,telehealth:5,hrt:5},url:'https://www.lillydirect.com',hrtInfo:null,doseNote:'$299 for 2.5mg · $399–449 for 5mg–15mg'},
+      {id:'ro',name:'Ro Body',type:'Telehealth platform — brand + compounded',basePrices:{sema:199,tirz:199,oral:199,unsure:199},tags:['brand','compound','coach'],hrt:true,telehealth:true,ins:['none','denied','covered','medicare'],drugs:['sema','tirz','unsure'],pri:{price:2,brand:2,telehealth:1,hrt:1},url:'https://www.ro.co',hrtInfo:'Estrogen, progesterone, testosterone — all 50 states via Ro Pharmacy',doseNote:'Intro $199 for starting doses; $349/mo after + $145/mo membership'},
+      {id:'hims',name:'Hims & Hers Weight',type:'Telehealth platform — brand + compounded',basePrices:{sema:279,tirz:279,oral:279,unsure:279},tags:['brand','compound','coach'],hrt:true,telehealth:true,ins:['none','denied','covered'],drugs:['sema','tirz','unsure'],pri:{price:3,brand:3,telehealth:2,hrt:2},url:'https://www.hims.com',hrtInfo:'HRT via Hers — estrogen + progesterone, partnered with Novo Nordisk',doseNote:null},
+      {id:'noom',name:'Noom Med / GoodRx',type:'Telehealth + coaching — GLP-1 included',basePrices:{sema:99,tirz:null,oral:99,unsure:99},tags:['coach'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','oral','unsure'],pri:{price:1,brand:5,telehealth:1,hrt:4},url:'https://www.noom.com/noom-med/',hrtInfo:null,doseNote:'Microdose program — starting doses, medication included'},
+      {id:'plushcare',name:'PlushCare',type:'Telehealth + insurance navigation',basePrices:{sema:249,tirz:249,oral:249,unsure:249},tags:['brand','ins','coach'],hrt:true,telehealth:true,ins:['covered','denied','none'],drugs:['sema','tirz','unsure'],pri:{price:3,brand:3,telehealth:3,hrt:3},url:'https://www.plushcare.com',hrtInfo:'HRT — estrogen, progesterone, testosterone alongside GLP-1',doseNote:null},
+      {id:'costplus',name:'Cost Plus Drugs',type:'Discount pharmacy — brand name',basePrices:{sema:349,tirz:349,oral:null,unsure:349},tags:['brand'],hrt:false,telehealth:false,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:2,brand:2,telehealth:5,hrt:5},url:'https://costplusdrugs.com',hrtInfo:null,doseNote:null},
+      {id:'lillycares',name:'Lilly Cares Foundation',type:'Patient assistance — free if you qualify',basePrices:{sema:null,tirz:0,oral:null,unsure:0},tags:['brand','free'],hrt:false,telehealth:false,ins:['none','medicare'],drugs:['tirz','unsure'],pri:{price:0,brand:0,telehealth:6,hrt:6},url:'https://www.lillycares.com',hrtInfo:null,doseNote:'Requires income verification — free for qualifying patients'},
+      {id:'cms',name:'Medicare GLP-1 Bridge',type:'Medicare pilot — launching July 2026',basePrices:{sema:50,tirz:50,oral:null,unsure:50},tags:['brand','ins'],hrt:false,telehealth:false,ins:['medicare'],drugs:['sema','tirz','unsure'],pri:{price:0,brand:0,telehealth:6,hrt:6},url:'https://www.cms.gov',hrtInfo:null,doseNote:'$50/mo copay · Launching July 2026 — get on waitlist now'},
+      {id:'lifemd',name:'LifeMD',type:'Telehealth platform',basePrices:{sema:299,tirz:299,oral:299,unsure:299},tags:['brand','compound','coach'],hrt:true,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:4,brand:4,telehealth:4,hrt:2},url:'https://www.lifemd.com',hrtInfo:'HRT — estrogen and testosterone management alongside GLP-1',doseNote:null},
+    ];
+
+    function showResults() {
+      ['s1','s2','s3'].forEach(id => { const el = document.getElementById(id); if(el) el.style.display='none'; });
+      const d3 = document.getElementById('d3');
+      d3.classList.remove('active'); d3.classList.add('done');
+      document.getElementById('l2').classList.add('done');
+      document.getElementById('results-section').style.display = 'block';
+      renderResults();
+      window.scrollTo(0,0);
+    }
+
+    function getDosePrice() {
+      const drug = A.q2;
+      if (drug==='unsure') return null;
+      const cfg = DOSES[drug];
+      if (!cfg) return null;
+      return cfg.prices[A.dose];
+    }
+
+    function renderResults() {
+      const {q1,q2,q3} = A;
+      const dosePrice = getDosePrice();
+      const lmap = {none:'No insurance',covered:'Has insurance',denied:'Insurance denied',medicare:'Medicare/Medicaid',sema:'Semaglutide',tirz:'Tirzepatide',oral:'Oral pill',unsure:'All medications',price:'Lowest price first',brand:'Brand-name only',telehealth:'Telehealth + Rx',hrt:'GLP-1 + HRT'};
+      document.getElementById('rmeta').innerHTML = [q1,q2,q3].map(k=>`<div class="rmeta-tag">${lmap[k]||k}</div>`).join('');
+
+      let filtered = OPTIONS.filter(o => {
+        const insOk = o.ins.includes(q1);
+        const drugOk = q2==='unsure' || o.drugs.includes(q2) || o.drugs.includes('unsure');
+        return insOk && drugOk;
+      });
+
+      filtered.sort((a,b) => {
+        const pa = a.pri[q3]??5, pb = b.pri[q3]??5;
+        if (pa!==pb) return pa-pb;
+        const ap = a.basePrices[q2]??a.basePrices.unsure??999;
+        const bp = b.basePrices[q2]??b.basePrices.unsure??999;
+        return ap-bp;
+      });
+
+      if (q3==='hrt') filtered.sort((a,b) => {
+        if (a.hrt&&!b.hrt) return -1;
+        if (!a.hrt&&b.hrt) return 1;
+        return (a.pri.hrt??5)-(b.pri.hrt??5);
+      });
+
+      const list = document.getElementById('rlist');
+      list.innerHTML = '';
+      if (!filtered.length) { list.innerHTML='<div class="quiz-card"><p style="color:#78716c">No results matched your filters — try adjusting your selections.</p></div>'; return; }
+
+      filtered.forEach((o,i) => {
+        const isTop = i===0;
+        const rawPrice = o.basePrices[q2]??o.basePrices.unsure;
+        const showDosePrice = dosePrice && (o.id==='novocare'||o.id==='lilly') && q2!=='unsure';
+        const priceHTML = rawPrice===0
+          ? `<div class="pamount free">FREE</div><div class="pper">if you qualify</div>`
+          : rawPrice==null ? `<div class="pamount" style="font-size:1rem;color:#78716c">Via insurance</div>`
+          : `<div class="pamount">$${rawPrice}</div><div class="pper">/month est.</div>`;
+
+        const doseCallout = showDosePrice
+          ? `<div class="dose-callout">💊 At your dose: <strong>$${dosePrice}/mo</strong></div>`
+          : o.doseNote ? `<div class="dose-callout amber">⚡ ${o.doseNote}</div>` : '';
+
+        const tagHTML = [
+          o.hrt ? `<span class="rtag rtag-hrt">+ HRT available</span>` : '',
+          o.telehealth ? `<span class="rtag rtag-rx">Rx included</span>` : '',
+          o.tags.includes('coach') ? `<span class="rtag rtag-coach">Coaching</span>` : '',
+          o.tags.includes('brand')&&!o.tags.includes('compound') ? `<span class="rtag rtag-brand">Brand-name</span>` : '',
+          o.tags.includes('compound') ? `<span class="rtag rtag-comp">Compounded option</span>` : '',
+          o.tags.includes('ins') ? `<span class="rtag rtag-ins">Insurance nav</span>` : '',
+          o.tags.includes('free') ? `<span class="rtag rtag-free">May be free</span>` : '',
+        ].filter(Boolean).join('');
+
+        const hrtLine = o.hrt&&o.hrtInfo ? `<div class="hrt-line">⚕️ ${o.hrtInfo}</div>` : '';
+        const visitBtn = o.url
+          ? `<a href="${o.url}" target="_blank" class="btn-visit">Visit site ↗</a>`
+          : `<span style="font-size:11px;color:#d97706;display:block;margin-top:6px;">🔔 Set a Google Alert — launching soon</span>`;
+
+        list.innerHTML += `
+          <div class="rcard${isTop?' top':''}">
+            ${isTop?'<div class="top-badge">Best Match</div>':''}
+            <div class="rrank${isTop?' first':''}">${i+1}</div>
+            <div class="rinfo">
+              <div class="rname">${o.name}</div>
+              <div class="rtype">${o.type}</div>
+              <div class="rtags">${tagHTML}</div>
+              ${hrtLine}${doseCallout}
+              <div style="margin-top:8px;">${visitBtn}</div>
+            </div>
+            <div class="rprice">${priceHTML}</div>
+          </div>`;
+      });
+    }
+
+    // ── PHARMACY FINDER ──
+    const CHAINS = {
+      sema:[{name:'Costco',price:'$499',note:'Cash pay, no membership for Rx'},{name:'Walmart',price:'$350–499',note:'Via TrumpRx agreement'},{name:'CVS / Walgreens',price:'$900–1,200',note:'Use GoodRx coupon to reduce'},{name:"Sam's Club",price:'$499',note:'Comparable to Costco'}],
+      tirz:[{name:'LillyDirect / Walmart',price:'$299–449',note:'Zepbound vials direct, dose-dependent'},{name:'Costco',price:'$499',note:'Cash pay'},{name:'CVS / Walgreens',price:'$1,000–1,300',note:'Verify GoodRx discount'},{name:"Sam's Club",price:'$499',note:'Cash pay'}],
+      oral:[{name:'NovoCare Pharmacy',price:'$149–299',note:'Oral Wegovy pill, dose dependent'},{name:'CVS',price:'$900+',note:'Use GoodRx or NovoCare card'},{name:'Walgreens',price:'$900+',note:'Use savings card at point of sale'},{name:'Walmart',price:'TBD',note:'Oral Wegovy — check availability'}],
+      unsure:[{name:'Costco',price:'$499',note:'Best cash price for most GLP-1s'},{name:'Walmart',price:'~$350',note:'Via TrumpRx / LillyDirect'},{name:'CVS / Walgreens',price:'$850–1,300',note:'Always use GoodRx or savings card'},{name:"Sam's Club",price:'$499',note:'Comparable to Costco'}],
+    };
+
+    async function findPharmacies() {
+      const zip = document.getElementById('zipInput').value.trim();
+      if (zip.length !== 5) { alert('Please enter a valid 5-digit zip code.'); return; }
+      const div = document.getElementById('pharma-results');
+      div.innerHTML = '<p style="font-size:13px;color:#78716c;margin-top:12px;">Finding pharmacies near you...</p>';
+      await new Promise(r => setTimeout(r, 700));
+      const drug = A.q2||'unsure';
+      const chains = CHAINS[drug]||CHAINS.unsure;
+      const drugName = {sema:'semaglutide',tirz:'tirzepatide',oral:'semaglutide',unsure:'semaglutide'}[drug];
+
+      div.innerHTML = `
+        <div style="font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#78716c;margin:18px 0 10px;padding-bottom:8px;border-bottom:1px solid #e7e5e4;">🧪 Compounding pharmacies near ${zip}</div>
+        <div class="pharma-card"><div class="pharma-ico">🏺</div><div class="pharma-info"><div class="pharma-name">APC Compounding Pharmacy Locator</div><div class="pharma-addr">Alliance for Pharmacy Compounding — verified 503A/503B directory</div><div class="pharma-price">Find vetted compounders near ${zip} → typically $150–350/mo for ${drugName}</div><div style="margin-top:8px;"><a href="https://a4pc.org/find-a-compounder" target="_blank" class="btn-visit">Search APC Locator ↗</a></div></div></div>
+        <div class="pharma-card"><div class="pharma-ico">💊</div><div class="pharma-info"><div class="pharma-name">Empower Pharmacy (ships to ${zip})</div><div class="pharma-addr">503A + 503B certified · Ships to all 50 states</div><div class="pharma-price">Compounded ${drugName} · Rx required · ~$150–300/mo est.</div><div style="margin-top:8px;"><a href="https://www.empowerpharmacy.com" target="_blank" class="btn-visit">Visit Empower ↗</a></div></div></div>
+        <div class="pharma-card"><div class="pharma-ico">🔍</div><div class="pharma-info"><div class="pharma-name">GoodRx — Local Pharmacy Search near ${zip}</div><div class="pharma-addr">Brand-name ${drugName} with GoodRx discount pricing</div><div class="pharma-price">Prices vary by location — check your zip for exact savings</div><div style="margin-top:8px;"><a href="https://www.goodrx.com/${drugName}?zip=${zip}" target="_blank" class="btn-visit">Search near ${zip} ↗</a></div></div></div>
+        <div style="font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#78716c;margin:18px 0 10px;padding-bottom:8px;border-bottom:1px solid #e7e5e4;">🏪 Major chain cash prices for ${drugName}</div>
+        <div class="chain-grid">
+          ${chains.map(c=>`<div class="chain-card"><div style="flex:1"><div class="chain-name">${c.name}</div><div class="chain-note">${c.note}</div></div><div style="text-align:right"><div class="chain-price">${c.price}</div><div class="chain-note">/mo</div></div></div>`).join('')}
+        </div>
+        <p style="font-size:11px;color:#a8a29e;margin-top:10px;line-height:1.55;">💡 Always ask your pharmacist about manufacturer savings cards — NovoCare and LillyDirect cards can reduce brand-name costs to $99–349/mo even at retail chains.</p>
+      `;
+    }
+
+    // ── RESTART ──
+    function restart() {
+      A.q1=A.q2=A.q3=null; A.dose=0;
+      ['d1','d2','d3'].forEach((id,i) => {
+        const d = document.getElementById(id);
+        d.className = 'pdot';
+        d.innerHTML = `<span>${i+1}</span>`;
+      });
+      ['l1','l2'].forEach(id => document.getElementById(id).classList.remove('done'));
+      document.getElementById('d1').classList.add('active');
+      ['s2','s3'].forEach(id => { const el = document.getElementById(id); if(el) el.style.display='none'; });
+      const s1 = document.getElementById('s1');
+      if(s1) s1.style.display='block';
+      ['n1','n2','n3'].forEach(id => { const el = document.getElementById(id); if(el) el.disabled=true; });
+      document.querySelectorAll('.q-opt').forEach(b => b.classList.remove('sel'));
+      document.getElementById('dose-wrap').style.display='none';
+      document.getElementById('pharma-results').innerHTML='';
+      document.getElementById('zipInput').value='';
+      document.getElementById('results-section').style.display='none';
+    }
+
+    // ── EMAIL ──
+    function handleEmailSubmit(btn) {
+      const input = btn.previousElementSibling;
+      if (!input.val
