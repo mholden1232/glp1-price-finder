@@ -1,0 +1,508 @@
+HTML 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLP-1 Price Finder - Find Affordable GLP-1 Medications</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0066cc;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        
+        .nav-links a:hover {
+            color: #0066cc;
+        }
+        
+        /* Page Sections */
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        /* Home Page */
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #0066cc;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button {
+            background: #0066cc;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background: #0052a3;
+        }
+        
+        .trust-bar {
+            background: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        
+        .trust-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .trust-item h3 {
+            color: #0066cc;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .trust-item p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Features */
+        .features {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .features h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #1a1a1a;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            padding: 2rem;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            transition: box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h3 {
+            color: #0066cc;
+            margin-bottom: 1rem;
+        }
+        
+        /* Compare Tool */
+        .compare-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .quiz {
+            background: #f5f7fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        
+        .quiz-question {
+            margin-bottom: 1.5rem;
+        }
+        
+        .quiz-question label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        .quiz-question select,
+        .quiz-question input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .results {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+        }
+        
+        .result-card {
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            background: #fafafa;
+        }
+        
+        .result-card.top {
+            border-left: 4px solid #0066cc;
+            background: #f0f6ff;
+        }
+        
+        .price {
+            font-size: 1.5rem;
+            color: #0066cc;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+        
+        /* Guides */
+        .guides-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .article-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .article-tab {
+            padding: 0.75rem 1.5rem;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .article-tab.active {
+            background: #0066cc;
+            color: white;
+            border-color: #0066cc;
+        }
+        
+        .article-content {
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+        
+        .article-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .article-content h3 {
+            color: #0066cc;
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .article-content p {
+            margin-bottom: 1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+        
+        table th,
+        table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table th {
+            background: #f5f7fa;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        table tr:hover {
+            background: #f9f9f9;
+        }
+        
+        /* Eligibility Checker */
+        .eligibility-container {
+            background: #f0f6ff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .eligibility-result {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 6px;
+            display: none;
+        }
+        
+        .eligibility-result.approved {
+            background: #e6f5e6;
+            border-left: 4px solid #28a745;
+            color: #155724;
+        }
+        
+        .eligibility-result.maybe {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            color: #856404;
+        }
+        
+        .eligibility-result.denied {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            color: #721c24;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #0066cc;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        
+        .footer-section a:hover {
+            color: #0066cc;
+        }
+        
+        .footer-legal {
+            border-top: 1px solid #333;
+            padding-top: 2rem;
+            text-align: center;
+            color: #999;
+            font-size: 0.85rem;
+        }
+        
+        .email-signup {
+            background: #0066cc;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
+        .email-signup h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .email-signup input {
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 1rem;
+        }
+        
+        .email-signup button {
+            background: white;
+            color: #0066cc;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">GLP-1 Price Finder</div>
+            <ul class="nav-links">
+                <li><a onclick="showPage('home')">Home</a></li>
+                <li><a onclick="showPage('compare')">Compare</a></li>
+                <li><a onclick="showPage('guides')">Guides</a></li>
+                <li><a onclick="showPage('about')">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <div class="hero">
+            <h1>Find the Cheapest GLP-1 for Your Situation</h1>
+            <p>Compare prices across all legitimate options — telehealth, manufacturers, local pharmacies, and compounders. No insurance? No problem.</p>
+            <button class="cta-button" onclick="showPage('compare')">Start Comparing →</button>
+        </div>
+
+        <div class="trust-bar">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <h3>$99–$1,349/mo</h3>
+                    <p>Price range across all options</p>
+                </div>
+                <div class="trust-item">
+                    <h3>15+ Programs</h3>
+                    <p>Compared and updated monthly</p>
+                </div>
+                <div class="trust-item">
+                    <h3>80% Success</h3>
+                    <p>Insurance appeals overturn denials</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>How It Works</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Answer 3 Questions</h3>
+                    <p>Insurance status, medication type, dose preference — that's it.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Get Ranked Results</h3>
+                    <p>See every option sorted by price, with real monthly costs.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Find Local Pharmacies</h3>
+                    <p>Enter your zip code, find nearby compounders and chains.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Check Insurance Eligibility</h3>
+                    <p>See if your plan covers GLP-1s and what conditions qualify.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Learn How to Appeal</h3>
+                    <p>Denied coverage? We show you exactly how to fight back.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Access Free Programs</h3>
+                    <p>Patient assistance, manufacturer savings, state programs.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="email-signup">
+            <h3>Get Price Alerts</h3>
+            <p style="color: white; margin-bottom: 1rem;">When new programs launch or prices drop, we'll email you first.</p>
+            <input type="email" placeholder="your@email.com">
+            <button>Join Our List</button>
+        </div>
+    </div>
+
+    <!-- COMPARE PAGE -->
+    <div id="compare" class="page">
+        <div class="compare-container">
+            <h2 style="margin-bottom: 2rem;">Find Your Cheapest Option</h2>
+            
+            <div class="quiz">
+                <div class="quiz-question">
+                    <label​​​​​​​​​​​​​​​​
