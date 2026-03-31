@@ -2,14 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YM988G823B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YM988G823B');
-</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GLP-1 Price Finder — Find Your Best Price on GLP-1 Medications</title>
 <meta name="impact-site-verification" content="d8ffcc2f-a49f-4ef1-8bfa-7c05d0eaf5f5">
@@ -56,7 +48,7 @@ button { cursor:pointer; font-family:'DM Sans',sans-serif; }
 .container-narrow { max-width:760px; margin:0 auto; padding:0 24px; }
 
 /* ══════════════════════════════════════
-  NAVBAR
+   NAVBAR
 ══════════════════════════════════════ */
 .navbar {
   position: sticky; top:0; z-index:100;
@@ -96,13 +88,13 @@ button { cursor:pointer; font-family:'DM Sans',sans-serif; }
 .nav-mobile-toggle span { width:22px; height:2px; background:#0f172a; border-radius:2px; display:block; }
 
 /* ══════════════════════════════════════
-  PAGES
+   PAGES
 ══════════════════════════════════════ */
 .page { display:none; }
 .page.active { display:block; }
 
 /* ══════════════════════════════════════
-  HOME PAGE
+   HOME PAGE
 ══════════════════════════════════════ */
 
 /* Hero */
@@ -117,7 +109,7 @@ button { cursor:pointer; font-family:'DM Sans',sans-serif; }
   content:'';
   position:absolute; inset:0;
   background-image: radial-gradient(circle at 20% 50%, rgba(15,118,110,0.04) 0%, transparent 50%),
-  radial-gradient(circle at 80% 20%, rgba(15,118,110,0.03) 0%, transparent 40%);
+                    radial-gradient(circle at 80% 20%, rgba(15,118,110,0.03) 0%, transparent 40%);
   pointer-events:none;
 }
 .hero-eyebrow {
@@ -284,7 +276,7 @@ footer {
 .footer-bottom-links a { font-size:12px; color:var(--ink-faint); }
 
 /* ══════════════════════════════════════
-  COMPARE PAGE (Tool)
+   COMPARE PAGE (Tool)
 ══════════════════════════════════════ */
 .compare-hero {
   background:var(--off); border-bottom:1px solid var(--border);
@@ -427,7 +419,7 @@ footer {
 .btn-restart:hover { border-color:var(--teal); color:var(--teal); }
 
 /* ══════════════════════════════════════
-  ARTICLES PAGE
+   ARTICLES PAGE
 ══════════════════════════════════════ */
 .articles-hero { background:var(--off); border-bottom:1px solid var(--border); padding:48px 0 36px; }
 .articles-hero h1 { font-family:'Libre Baskerville',serif; font-size:2rem; font-weight:700; margin-bottom:8px; }
@@ -486,7 +478,7 @@ footer {
 .pp-note { font-size:11px; color:var(--ink-faint); margin-top:3px; font-weight:300; }
 
 /* ══════════════════════════════════════
-  ABOUT PAGE
+   ABOUT PAGE
 ══════════════════════════════════════ */
 .about-page { max-width:700px; margin:0 auto; padding:60px 24px 80px; }
 .about-page h1 { font-family:'Libre Baskerville',serif; font-size:2rem; font-weight:700; margin-bottom:14px; }
@@ -494,7 +486,7 @@ footer {
 .about-page h2 { font-family:'Libre Baskerville',serif; font-size:1.3rem; font-weight:700; margin:36px 0 12px; }
 
 /* ══════════════════════════════════════
-  RESPONSIVE
+   RESPONSIVE
 ══════════════════════════════════════ */
 @media(max-width:768px){
   .features-grid { grid-template-columns:1fr; }
@@ -521,778 +513,778 @@ footer {
 <body>
 
 <!-- ══════════════════════════════════════
-  NAVBAR
+   NAVBAR
 ══════════════════════════════════════ -->
 <nav class="navbar">
   <div class="container">
-  <div class="nav-logo" onclick="showPage('home',document.querySelector('.nav-link:nth-child(1)'))" style="cursor:pointer;">
-  <div class="nav-logo-dot"></div>
-  GLP-1 Price Finder
-  </div>
-  <div class="nav-links">
-  <button class="nav-link active" onclick="showPage('home',this)">Home</button>
-  <button class="nav-link" onclick="showPage('compare',this)">Compare Prices</button>
-  <button class="nav-link" onclick="showPage('articles',this)">Guides</button>
-  <button class="nav-link" onclick="showPage('about',this)">About</button>
-  <button class="nav-cta" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Find My Price →</button>
-  </div>
-  <button class="nav-mobile-toggle" onclick="toggleMobileNav()">
-  <span></span><span></span><span></span>
-  </button>
+    <div class="nav-logo" onclick="showPage('home',document.querySelector('.nav-link:nth-child(1)'))" style="cursor:pointer;">
+      <div class="nav-logo-dot"></div>
+      GLP-1 Price Finder
+    </div>
+    <div class="nav-links">
+      <button class="nav-link active" onclick="showPage('home',this)">Home</button>
+      <button class="nav-link" onclick="showPage('compare',this)">Compare Prices</button>
+      <button class="nav-link" onclick="showPage('articles',this)">Guides</button>
+      <button class="nav-link" onclick="showPage('about',this)">About</button>
+      <button class="nav-cta" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Find My Price →</button>
+    </div>
+    <button class="nav-mobile-toggle" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
 <!-- ══════════════════════════════════════
-  HOME PAGE
+   HOME PAGE
 ══════════════════════════════════════ -->
 <div class="page active" id="page-home">
 
   <!-- Hero -->
   <section class="hero">
-  <div class="container">
-  <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Updated March 2026</div>
-  <h1>Find your <em>real</em> price<br>on GLP-1 medications</h1>
-  <p class="hero-sub">Retail prices hit $1,300/month. But cash-pay programs, telehealth platforms, and manufacturer deals have pushed the real floor to $99–$199. We find your best option in 3 questions.</p>
-  <div class="hero-actions">
-  <button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">
-  Find My Price →  
-  </button>
-  <button class="btn-secondary" onclick="showPage('articles',document.querySelector('.nav-link:nth-child(3)'))">
-  Read the Guides
-  </button>
-  </div>
-  <div class="hero-trust">
-  <span>✓ No ads</span>
-  <span>✓ No sponsored rankings</span>
-  <span>✓ Prices verified March 2026</span>
-  <span>✓ Not affiliated with any manufacturer</span>
-  </div>
-  </div>
+    <div class="container">
+      <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Updated March 2026</div>
+      <h1>Find your <em>real</em> price<br>on GLP-1 medications</h1>
+      <p class="hero-sub">Retail prices hit $1,300/month. But cash-pay programs, telehealth platforms, and manufacturer deals have pushed the real floor to $99–$199. We find your best option in 3 questions.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">
+          Find My Price → 
+        </button>
+        <button class="btn-secondary" onclick="showPage('articles',document.querySelector('.nav-link:nth-child(3)'))">
+          Read the Guides
+        </button>
+      </div>
+      <div class="hero-trust">
+        <span>✓ No ads</span>
+        <span>✓ No sponsored rankings</span>
+        <span>✓ Prices verified March 2026</span>
+        <span>✓ Not affiliated with any manufacturer</span>
+      </div>
+    </div>
   </section>
 
   <!-- Stats -->
   <div class="stats-bar">
-  <div class="container">
-  <div class="stat"><div class="stat-num">$99</div><div class="stat-label">Lowest monthly option</div></div>
-  <div class="stat"><div class="stat-num">11</div><div class="stat-label">Programs compared</div></div>
-  <div class="stat"><div class="stat-num">62%</div><div class="stat-label">Of claims denied in 2024</div></div>
-  <div class="stat"><div class="stat-num">80%</div><div class="stat-label">Of appeals succeed</div></div>
-  </div>
+    <div class="container">
+      <div class="stat"><div class="stat-num">$99</div><div class="stat-label">Lowest monthly option</div></div>
+      <div class="stat"><div class="stat-num">11</div><div class="stat-label">Programs compared</div></div>
+      <div class="stat"><div class="stat-num">62%</div><div class="stat-label">Of claims denied in 2024</div></div>
+      <div class="stat"><div class="stat-num">80%</div><div class="stat-label">Of appeals succeed</div></div>
+    </div>
   </div>
 
   <!-- Features -->
   <section class="features">
-  <div class="container">
-  <div class="section-label">What we do</div>
-  <div class="section-title">The only GLP-1 price tool<br>built for cash-pay patients</div>
-  <p class="section-sub">GoodRx is broad. We go deep on GLP-1s only — better data, better UX, and we understand the nuances that a general tool never will.</p>
-  <div class="features-grid">
-  <div class="feature-card">
-  <div class="feature-icon">💊</div>
-  <div class="feature-title">Dose-accurate pricing</div>
-  <div class="feature-desc">Prices vary significantly by dose. Our slider shows exactly what you'll pay at starting, maintenance, and max doses — not a vague range.</div>
-  </div>
-  <div class="feature-card">
-  <div class="feature-icon">📍</div>
-  <div class="feature-title">Compounders near you</div>
-  <div class="feature-desc">Enter your zip and we surface local 503A/503B compounding pharmacies alongside major chains — with real cash-pay prices.</div>
-  </div>
-  <div class="feature-card">
-  <div class="feature-icon">⚕️</div>
-  <div class="feature-title">HRT availability flagged</div>
-  <div class="feature-desc">Many patients manage GLP-1s and hormone therapy together. We flag every platform that offers both in one place.</div>
-  </div>
-  <div class="feature-card">
-  <div class="feature-icon">🏥</div>
-  <div class="feature-title">Insurance navigation</div>
-  <div class="feature-desc">Know which ICD-10 diagnosis codes get GLP-1s covered. Our appeal guide walks you through the exact process step by step.</div>
-  </div>
-  <div class="feature-card">
-  <div class="feature-icon">✅</div>
-  <div class="feature-title">Vetted sources only</div>
-  <div class="feature-desc">No grey-market peptides. No unverified compounders. Every option is FDA-approved or sourced from licensed 503A/503B pharmacies.</div>
-  </div>
-  <div class="feature-card">
-  <div class="feature-icon">🔄</div>
-  <div class="feature-title">Updated monthly</div>
-  <div class="feature-desc">Prices in this space change fast. We verify every program, manufacturer deal, and telehealth price monthly so you don't have to.</div>
-  </div>
-  </div>
-  </div>
+    <div class="container">
+      <div class="section-label">What we do</div>
+      <div class="section-title">The only GLP-1 price tool<br>built for cash-pay patients</div>
+      <p class="section-sub">GoodRx is broad. We go deep on GLP-1s only — better data, better UX, and we understand the nuances that a general tool never will.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">💊</div>
+          <div class="feature-title">Dose-accurate pricing</div>
+          <div class="feature-desc">Prices vary significantly by dose. Our slider shows exactly what you'll pay at starting, maintenance, and max doses — not a vague range.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📍</div>
+          <div class="feature-title">Compounders near you</div>
+          <div class="feature-desc">Enter your zip and we surface local 503A/503B compounding pharmacies alongside major chains — with real cash-pay prices.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚕️</div>
+          <div class="feature-title">HRT availability flagged</div>
+          <div class="feature-desc">Many patients manage GLP-1s and hormone therapy together. We flag every platform that offers both in one place.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏥</div>
+          <div class="feature-title">Insurance navigation</div>
+          <div class="feature-desc">Know which ICD-10 diagnosis codes get GLP-1s covered. Our appeal guide walks you through the exact process step by step.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <div class="feature-title">Vetted sources only</div>
+          <div class="feature-desc">No grey-market peptides. No unverified compounders. Every option is FDA-approved or sourced from licensed 503A/503B pharmacies.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <div class="feature-title">Updated monthly</div>
+          <div class="feature-desc">Prices in this space change fast. We verify every program, manufacturer deal, and telehealth price monthly so you don't have to.</div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Price Preview -->
   <section class="price-preview">
-  <div class="container">
-  <div class="preview-grid">
-  <div class="preview-cards">
-  <div class="preview-card best">
-  <div class="preview-rank first">1</div>
-  <div class="preview-info">
-  <div class="preview-name">Oral Wegovy — NovoCare</div>
-  <div class="preview-type">Manufacturer direct · FDA approved · No injection</div>
-  <div class="preview-best-badge">Best Match</div>
-  </div>
-  <div style="text-align:right">
-  <div class="preview-price">$149</div>
-  <div class="preview-period">/month</div>
-  </div>
-  </div>
-  <div class="preview-card">
-  <div class="preview-rank">2</div>
-  <div class="preview-info">
-  <div class="preview-name">Noom Med / GoodRx</div>
-  <div class="preview-type">Telehealth + coaching · Rx included</div>
-  </div>
-  <div style="text-align:right">
-  <div class="preview-price">$99</div>
-  <div class="preview-period">/month</div>
-  </div>
-  </div>
-  <div class="preview-card">
-  <div class="preview-rank">3</div>
-  <div class="preview-info">
-  <div class="preview-name">Wegovy — NovoCare Intro</div>
-  <div class="preview-type">Brand injection · Starting doses · 2 months</div>
-  </div>
-  <div style="text-align:right">
-  <div class="preview-price">$199</div>
-  <div class="preview-period">/month</div>
-  </div>
-  </div>
-  <div class="preview-card">
-  <div class="preview-rank">4</div>
-  <div class="preview-info">
-  <div class="preview-name">Lilly Cares Foundation</div>
-  <div class="preview-type">Patient assistance · Income-qualified</div>
-  </div>
-  <div style="text-align:right">
-  <div class="preview-price" style="color:var(--green);font-size:1.1rem">FREE</div>
-  <div class="preview-period">if qualified</div>
-  </div>
-  </div>
-  </div>
-  <div class="preview-cta">
-  <div class="section-label">Your results are personalized</div>
-  <h3>These are sample results.<br>Yours depend on your situation.</h3>
-  <p>Insurance status, which drug, and what dose you're on all change what you actually pay. Answer 3 questions and we rank every real option for you — dose-accurate, current pricing.</p>
-  <button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Get My Personalized Results →</button>
-  </div>
-  </div>
-  </div>
+    <div class="container">
+      <div class="preview-grid">
+        <div class="preview-cards">
+          <div class="preview-card best">
+            <div class="preview-rank first">1</div>
+            <div class="preview-info">
+              <div class="preview-name">Oral Wegovy — NovoCare</div>
+              <div class="preview-type">Manufacturer direct · FDA approved · No injection</div>
+              <div class="preview-best-badge">Best Match</div>
+            </div>
+            <div style="text-align:right">
+              <div class="preview-price">$149</div>
+              <div class="preview-period">/month</div>
+            </div>
+          </div>
+          <div class="preview-card">
+            <div class="preview-rank">2</div>
+            <div class="preview-info">
+              <div class="preview-name">Noom Med / GoodRx</div>
+              <div class="preview-type">Telehealth + coaching · Rx included</div>
+            </div>
+            <div style="text-align:right">
+              <div class="preview-price">$99</div>
+              <div class="preview-period">/month</div>
+            </div>
+          </div>
+          <div class="preview-card">
+            <div class="preview-rank">3</div>
+            <div class="preview-info">
+              <div class="preview-name">Wegovy — NovoCare Intro</div>
+              <div class="preview-type">Brand injection · Starting doses · 2 months</div>
+            </div>
+            <div style="text-align:right">
+              <div class="preview-price">$199</div>
+              <div class="preview-period">/month</div>
+            </div>
+          </div>
+          <div class="preview-card">
+            <div class="preview-rank">4</div>
+            <div class="preview-info">
+              <div class="preview-name">Lilly Cares Foundation</div>
+              <div class="preview-type">Patient assistance · Income-qualified</div>
+            </div>
+            <div style="text-align:right">
+              <div class="preview-price" style="color:var(--green);font-size:1.1rem">FREE</div>
+              <div class="preview-period">if qualified</div>
+            </div>
+          </div>
+        </div>
+        <div class="preview-cta">
+          <div class="section-label">Your results are personalized</div>
+          <h3>These are sample results.<br>Yours depend on your situation.</h3>
+          <p>Insurance status, which drug, and what dose you're on all change what you actually pay. Answer 3 questions and we rank every real option for you — dose-accurate, current pricing.</p>
+          <button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Get My Personalized Results →</button>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Articles preview -->
   <section class="articles-section">
-  <div class="container">
-  <div class="section-label">Resource guides</div>
-  <div class="section-title">Everything you need to know</div>
-  <div class="articles-grid">
-  <div class="article-card">
-  <div class="article-card-top teal"></div>
-  <div class="article-card-body">
-  <div class="article-cat">Price Guide</div>
-  <div class="article-title-sm">How to Get Ozempic or Wegovy Cheap — Even Without Insurance</div>
-  <div class="article-excerpt">From $99/month to $1,349 retail — here's every real option in plain English, cheapest first.</div>
-  <button class="article-read-more" onclick="showArticle(0)">Read guide →</button>
-  </div>
-  </div>
-  <div class="article-card">
-  <div class="article-card-top amber"></div>
-  <div class="article-card-body">
-  <div class="article-cat amber">Insurance Guide</div>
-  <div class="article-title-sm">Insurance Denied Your GLP-1? Here's How to Fight Back</div>
-  <div class="article-excerpt">62% of claims are denied. But 80% of people who appeal actually win. Here's exactly what to do — step by step.</div>
-  <button class="article-read-more" onclick="showArticle(2)">Read guide →</button>
-  </div>
-  </div>
-  <div class="article-card">
-  <div class="article-card-top rose"></div>
-  <div class="article-card-body">
-  <div class="article-cat rose">Breaking</div>
-  <div class="article-title-sm">Is There a Generic Ozempic or Wegovy Yet?</div>
-  <div class="article-excerpt">You've seen the ads for "generic semaglutide." Here's the honest answer — and what you can do right now to pay less.</div>
-  <button class="article-read-more" onclick="showArticle(4)">Read guide →</button>
-  </div>
-  </div>
-  </div>
-  </div>
+    <div class="container">
+      <div class="section-label">Resource guides</div>
+      <div class="section-title">Everything you need to know</div>
+      <div class="articles-grid">
+        <div class="article-card">
+          <div class="article-card-top teal"></div>
+          <div class="article-card-body">
+            <div class="article-cat">Price Guide</div>
+            <div class="article-title-sm">How to Get Ozempic or Wegovy Cheap — Even Without Insurance</div>
+            <div class="article-excerpt">From $99/month to $1,349 retail — here's every real option in plain English, cheapest first.</div>
+            <button class="article-read-more" onclick="showArticle(0)">Read guide →</button>
+          </div>
+        </div>
+        <div class="article-card">
+          <div class="article-card-top amber"></div>
+          <div class="article-card-body">
+            <div class="article-cat amber">Insurance Guide</div>
+            <div class="article-title-sm">Insurance Denied Your GLP-1? Here's How to Fight Back</div>
+            <div class="article-excerpt">62% of claims are denied. But 80% of people who appeal actually win. Here's exactly what to do — step by step.</div>
+            <button class="article-read-more" onclick="showArticle(2)">Read guide →</button>
+          </div>
+        </div>
+        <div class="article-card">
+          <div class="article-card-top rose"></div>
+          <div class="article-card-body">
+            <div class="article-cat rose">Breaking</div>
+            <div class="article-title-sm">Is There a Generic Ozempic or Wegovy Yet?</div>
+            <div class="article-excerpt">You've seen the ads for "generic semaglutide." Here's the honest answer — and what you can do right now to pay less.</div>
+            <button class="article-read-more" onclick="showArticle(4)">Read guide →</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Email -->
   <section class="email-section">
-  <div class="container-narrow">
-  <h2>Get price alerts when programs change</h2>
-  <p>New GLP-1 programs launch constantly. We'll email you when prices drop, new options appear, or the Medicare demo opens in July 2026.</p>
-  <div class="email-form">
-  <input class="email-input" type="email" placeholder="<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0d7462787f4d68606c6461236e6260">[email&#160;protected]</a>">
-  <button class="email-submit" onclick="handleEmailSubmit(this)">Notify Me</button>
-  </div>
-  <p class="email-note">No spam. Unsubscribe anytime. We never sell your data.</p>
-  </div>
+    <div class="container-narrow">
+      <h2>Get price alerts when programs change</h2>
+      <p>New GLP-1 programs launch constantly. We'll email you when prices drop, new options appear, or the Medicare demo opens in July 2026.</p>
+      <div class="email-form">
+        <input class="email-input" type="email" placeholder="your@email.com">
+        <button class="email-submit" onclick="handleEmailSubmit(this)">Notify Me</button>
+      </div>
+      <p class="email-note">No spam. Unsubscribe anytime. We never sell your data.</p>
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-  <div class="container">
-  <div class="footer-grid">
-  <div class="footer-brand">
-  <div class="logo"><div class="nav-logo-dot"></div>GLP-1 Price Finder</div>
-  <p>An independent price comparison and navigation tool for cash-pay patients seeking GLP-1 medications. Not affiliated with any manufacturer, pharmacy, or telehealth platform.</p>
-  </div>
-  <div class="footer-col">
-  <h4>Tools</h4>
-  <a href="#" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'));return false">Price Comparison Tool</a>
-  <a href="#" onclick="showArticle(2);return false">Insurance Appeal Guide</a>
-  <a href="#" onclick="showArticle(3);return false">Telehealth Guide</a>
-  </div>
-  <div class="footer-col">
-  <h4>Info</h4>
-  <a href="#" onclick="showPage('about',document.querySelector('.nav-link:nth-child(4)'));return false">About</a>
-  <a href="#" onclick="showPage('about',document.querySelector('.nav-link:nth-child(4)'));return false">Disclaimer</a>
-  <a href="#" onclick="document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-terms').classList.add('active');window.scrollTo(0,0);return false">Affiliate Disclosure</a>
-  </div>
-  </div>
-  <div class="footer-bottom">
-  <p>⚠️ This site is for informational purposes only and does not constitute medical advice. Prices verified March 2026. We may earn referral fees from telehealth platforms — this does not affect our rankings or pricing data.</p>
-  <p style="font-size:11px;color:var(--ink-faint);margin-top:8px;">Impact-Site-Verification: d8ffcc2f-a49f-4ef1-8bfa-7c05d0eaf5f5</p>
-  <div class="footer-bottom-links">
-  <a href="#" onclick="document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-privacy').classList.add('active');window.scrollTo(0,0);return false">Privacy</a>
-  <a href="#" onclick="document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-terms').classList.add('active');window.scrollTo(0,0);return false">Terms</a>
-  </div>
-  </div>
-  </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><div class="nav-logo-dot"></div>GLP-1 Price Finder</div>
+          <p>An independent price comparison and navigation tool for cash-pay patients seeking GLP-1 medications. Not affiliated with any manufacturer, pharmacy, or telehealth platform.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="#" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'));return false">Price Comparison Tool</a>
+          <a href="#" onclick="showArticle(2);return false">Insurance Appeal Guide</a>
+          <a href="#" onclick="showArticle(3);return false">Telehealth Guide</a>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <a href="#" onclick="showPage('about',document.querySelector('.nav-link:nth-child(4)'));return false">About</a>
+          <a href="#" onclick="showPage('about',document.querySelector('.nav-link:nth-child(4)'));return false">Disclaimer</a>
+          <a href="#" onclick="document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-terms').classList.add('active');window.scrollTo(0,0);return false">Affiliate Disclosure</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>⚠️ This site is for informational purposes only and does not constitute medical advice. Prices verified March 2026. We may earn referral fees from telehealth platforms — this does not affect our rankings or pricing data.</p>
+        <p style="font-size:11px;color:var(--ink-faint);margin-top:8px;">Impact-Site-Verification: d8ffcc2f-a49f-4ef1-8bfa-7c05d0eaf5f5</p>
+        <div class="footer-bottom-links">
+          <a href="#" onclick="document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-privacy').classList.add('active');window.scrollTo(0,0);return false">Privacy</a>
+          <a href="#" onclick="document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-terms').classList.add('active');window.scrollTo(0,0);return false">Terms</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
 </div><!-- /home -->
 
 <!-- ══════════════════════════════════════
-  COMPARE PAGE
+   COMPARE PAGE
 ══════════════════════════════════════ -->
 <div class="page" id="page-compare">
   <div class="compare-hero">
-  <div class="container-narrow">
-  <h1>GLP-1 Price Comparison Tool</h1>
-  <p>Answer 3 questions. Get personalized, dose-accurate pricing across every real option.</p>
-  </div>
+    <div class="container-narrow">
+      <h1>GLP-1 Price Comparison Tool</h1>
+      <p>Answer 3 questions. Get personalized, dose-accurate pricing across every real option.</p>
+    </div>
   </div>
   <div class="tool-wrap">
 
-  <!-- Progress -->
-  <div class="progress">
-  <div class="pdot active" id="d1"><span>1</span></div>
-  <div class="pline" id="l1"></div>
-  <div class="pdot" id="d2"><span>2</span></div>
-  <div class="pline" id="l2"></div>
-  <div class="pdot" id="d3"><span>3</span></div>
-  </div>
+    <!-- Progress -->
+    <div class="progress">
+      <div class="pdot active" id="d1"><span>1</span></div>
+      <div class="pline" id="l1"></div>
+      <div class="pdot" id="d2"><span>2</span></div>
+      <div class="pline" id="l2"></div>
+      <div class="pdot" id="d3"><span>3</span></div>
+    </div>
 
-  <!-- Q1 -->
-  <div class="quiz-card" id="s1">
-  <div class="q-step">Question 1 of 3</div>
-  <div class="q-title">What's your insurance situation?</div>
-  <p class="q-hint">This determines which programs and pricing tiers you can access.</p>
-  <div class="q-opts">
-  <button class="q-opt" onclick="pick(1,'none',this)"><div class="q-opt-ico">🚫</div><div class="q-opt-txt"><strong>No insurance</strong><small>Paying fully out of pocket</small></div><div class="q-chk">✓</div></button>
-  <button class="q-opt" onclick="pick(1,'covered',this)"><div class="q-opt-ico">✅</div><div class="q-opt-txt"><strong>Insurance covers it</strong><small>But my copay is still too high</small></div><div class="q-chk">✓</div></button>
-  <button class="q-opt" onclick="pick(1,'denied',this)"><div class="q-opt-ico">❌</div><div class="q-opt-txt"><strong>Insurance denied me</strong><small>Prior auth failed or excluded</small></div><div class="q-chk">✓</div></button>
-  <button class="q-opt" onclick="pick(1,'medicare',this)"><div class="q-opt-ico">🏥</div><div class="q-opt-txt"><strong>Medicare / Medicaid</strong><small>Government coverage</small></div><div class="q-chk">✓</div></button>
-  </div>
-  <div class="q-nav"><div></div><button class="q-next" id="n1" onclick="goStep(2)" disabled>Next →</button></div>
-  </div>
+    <!-- Q1 -->
+    <div class="quiz-card" id="s1">
+      <div class="q-step">Question 1 of 3</div>
+      <div class="q-title">What's your insurance situation?</div>
+      <p class="q-hint">This determines which programs and pricing tiers you can access.</p>
+      <div class="q-opts">
+        <button class="q-opt" onclick="pick(1,'none',this)"><div class="q-opt-ico">🚫</div><div class="q-opt-txt"><strong>No insurance</strong><small>Paying fully out of pocket</small></div><div class="q-chk">✓</div></button>
+        <button class="q-opt" onclick="pick(1,'covered',this)"><div class="q-opt-ico">✅</div><div class="q-opt-txt"><strong>Insurance covers it</strong><small>But my copay is still too high</small></div><div class="q-chk">✓</div></button>
+        <button class="q-opt" onclick="pick(1,'denied',this)"><div class="q-opt-ico">❌</div><div class="q-opt-txt"><strong>Insurance denied me</strong><small>Prior auth failed or excluded</small></div><div class="q-chk">✓</div></button>
+        <button class="q-opt" onclick="pick(1,'medicare',this)"><div class="q-opt-ico">🏥</div><div class="q-opt-txt"><strong>Medicare / Medicaid</strong><small>Government coverage</small></div><div class="q-chk">✓</div></button>
+      </div>
+      <div class="q-nav"><div></div><button class="q-next" id="n1" onclick="goStep(2)" disabled>Next →</button></div>
+    </div>
 
-  <!-- Q2 -->
-  <div class="quiz-card" id="s2" style="display:none">
-  <div class="q-step">Question 2 of 3</div>
-  <div class="q-title">Which medication?</div>
-  <p class="q-hint">Pricing varies significantly by drug — and by dose within each drug.</p>
-  <div class="q-opts">
-  <button class="q-opt" onclick="pick(2,'sema',this)"><div class="q-opt-ico">💉</div><div class="q-opt-txt"><strong>Semaglutide</strong><small>Ozempic / Wegovy injection or pill</small></div><div class="q-chk">✓</div></button>
-  <button class="q-opt" onclick="pick(2,'tirz',this)"><div class="q-opt-ico">💉</div><div class="q-opt-txt"><strong>Tirzepatide</strong><small>Mounjaro / Zepbound — dual-action</small></div><div class="q-chk">✓</div></button>
-  <button class="q-opt" onclick="pick(2,'oral',this)"><div class="q-opt-ico">💊</div><div class="q-opt-txt"><strong>Oral / pill only</strong><small>No injections — oral Wegovy pill</small></div><div class="q-chk">✓</div></button>
-  <button class="q-opt" onclick="pick(2,'unsure',this)"><div class="q-opt-ico">🤔</div><div class="q-opt-txt"><strong>Not sure — show all</strong><small>We'll display every option</small></div><div class="q-chk">✓</div></button>
-  </div>
-  <div class="dose-wrap" id="dose-wrap" style="display:none">
-  <div class="dose-row">
-  <div class="dose-lbl">📊 Select your dose stage</div>
-  <div class="dose-val" id="dose-label">Starting</div>
-  </div>
-  <div class="dose-track" id="dose-track"><div class="dose-fill" id="dose-fill" style="width:0%"></div><div class="dose-thumb" id="dose-thumb" style="left:0%"></div></div>
-  <div class="dose-steps" id="dose-steps"></div>
-  <p class="dose-note" id="dose-note"></p>
-  </div>
-  <div class="q-nav"><button class="q-back" onclick="goStep(1)">← Back</button><button class="q-next" id="n2" onclick="goStep(3)" disabled>Next →</button></div>
-  </div>
+    <!-- Q2 -->
+    <div class="quiz-card" id="s2" style="display:none">
+      <div class="q-step">Question 2 of 3</div>
+      <div class="q-title">Which medication?</div>
+      <p class="q-hint">Pricing varies significantly by drug — and by dose within each drug.</p>
+      <div class="q-opts">
+        <button class="q-opt" onclick="pick(2,'sema',this)"><div class="q-opt-ico">💉</div><div class="q-opt-txt"><strong>Semaglutide</strong><small>Ozempic / Wegovy injection or pill</small></div><div class="q-chk">✓</div></button>
+        <button class="q-opt" onclick="pick(2,'tirz',this)"><div class="q-opt-ico">💉</div><div class="q-opt-txt"><strong>Tirzepatide</strong><small>Mounjaro / Zepbound — dual-action</small></div><div class="q-chk">✓</div></button>
+        <button class="q-opt" onclick="pick(2,'oral',this)"><div class="q-opt-ico">💊</div><div class="q-opt-txt"><strong>Oral / pill only</strong><small>No injections — oral Wegovy pill</small></div><div class="q-chk">✓</div></button>
+        <button class="q-opt" onclick="pick(2,'unsure',this)"><div class="q-opt-ico">🤔</div><div class="q-opt-txt"><strong>Not sure — show all</strong><small>We'll display every option</small></div><div class="q-chk">✓</div></button>
+      </div>
+      <div class="dose-wrap" id="dose-wrap" style="display:none">
+        <div class="dose-row">
+          <div class="dose-lbl">📊 Select your dose stage</div>
+          <div class="dose-val" id="dose-label">Starting</div>
+        </div>
+        <div class="dose-track" id="dose-track"><div class="dose-fill" id="dose-fill" style="width:0%"></div><div class="dose-thumb" id="dose-thumb" style="left:0%"></div></div>
+        <div class="dose-steps" id="dose-steps"></div>
+        <p class="dose-note" id="dose-note"></p>
+      </div>
+      <div class="q-nav"><button class="q-back" onclick="goStep(1)">← Back</button><button class="q-next" id="n2" onclick="goStep(3)" disabled>Next →</button></div>
+    </div>
 
-  <!-- Q3 -->
-  <div class="quiz-card" id="s3" style="display:none">
-  <div class="q-step">Question 3 of 3</div>
-  <div class="q-title">What matters most?</div>
-  <p class="q-hint">We'll sort your results by this priority.</p>
-  <div class="q-opts">
-  <button class="q-opt" onclick="pick(3,'price',this)"><div class="q-opt-ico">💰</div><div class="q-opt-txt"><strong>Lowest monthly cost</strong><small>Show me the cheapest legal option, period</small></div><div class="q-chk">✓</div></button>
-  <button class="q-opt" onclick="pick(3,'brand',this)"><div class="q-opt-ico">🏷️</div><div class="q-opt-txt"><strong>Brand-name only</strong><small>FDA-approved pens — Wegovy, Zepbound</small></div><div class="q-chk">✓</div></button>
-  <button class="q-opt" onclick="pick(3,'telehealth',this)"><div class="q-opt-ico">🩺</div><div class="q-opt-txt"><strong>Telehealth + Rx included</strong><small>All-in-one — doctor visit + medication</small></div><div class="q-chk">✓</div></button>
-  <button class="q-opt" onclick="pick(3,'hrt',this)"><div class="q-opt-ico">⚕️</div><div class="q-opt-txt"><strong>Platform that also offers HRT</strong><small>Manage GLP-1 and hormones in one place</small></div><div class="q-chk">✓</div></button>
-  </div>
-  <div class="q-nav"><button class="q-back" onclick="goStep(2)">← Back</button><button class="q-next" id="n3" onclick="showResults()" disabled>Show My Options →</button></div>
-  </div>
+    <!-- Q3 -->
+    <div class="quiz-card" id="s3" style="display:none">
+      <div class="q-step">Question 3 of 3</div>
+      <div class="q-title">What matters most?</div>
+      <p class="q-hint">We'll sort your results by this priority.</p>
+      <div class="q-opts">
+        <button class="q-opt" onclick="pick(3,'price',this)"><div class="q-opt-ico">💰</div><div class="q-opt-txt"><strong>Lowest monthly cost</strong><small>Show me the cheapest legal option, period</small></div><div class="q-chk">✓</div></button>
+        <button class="q-opt" onclick="pick(3,'brand',this)"><div class="q-opt-ico">🏷️</div><div class="q-opt-txt"><strong>Brand-name only</strong><small>FDA-approved pens — Wegovy, Zepbound</small></div><div class="q-chk">✓</div></button>
+        <button class="q-opt" onclick="pick(3,'telehealth',this)"><div class="q-opt-ico">🩺</div><div class="q-opt-txt"><strong>Telehealth + Rx included</strong><small>All-in-one — doctor visit + medication</small></div><div class="q-chk">✓</div></button>
+        <button class="q-opt" onclick="pick(3,'hrt',this)"><div class="q-opt-ico">⚕️</div><div class="q-opt-txt"><strong>Platform that also offers HRT</strong><small>Manage GLP-1 and hormones in one place</small></div><div class="q-chk">✓</div></button>
+      </div>
+      <div class="q-nav"><button class="q-back" onclick="goStep(2)">← Back</button><button class="q-next" id="n3" onclick="showResults()" disabled>Show My Options →</button></div>
+    </div>
 
-  <!-- Results -->
-  <div id="results-section">
-  <div class="results-head">
-  <h2>Your Best GLP-1 Options</h2>
-  <p>Ranked by fit and price · March 2026 pricing</p>
-  <div class="results-meta" id="rmeta"></div>
-  </div>
-  <div id="rlist"></div>
+    <!-- Results -->
+    <div id="results-section">
+      <div class="results-head">
+        <h2>Your Best GLP-1 Options</h2>
+        <p>Ranked by fit and price · March 2026 pricing</p>
+        <div class="results-meta" id="rmeta"></div>
+      </div>
+      <div id="rlist"></div>
 
-  <!-- Zip finder -->
-  <div class="zip-section">
-  <div class="rsec-head">🏪 Find pharmacies near you</div>
-  <div class="zip-head">Compounding pharmacies + big chains by zip code</div>
-  <div class="zip-sub">Enter your zip to see local 503A/503B compounding pharmacies and cash prices at major chains for your medication.</div>
-  <div class="zip-row">
-  <input class="zip-input" id="zipInput" placeholder="Enter zip code (e.g. 90210)" maxlength="5" oninput="this.value=this.value.replace(/\D/g,'')">
-  <button class="zip-btn" onclick="findPharmacies()">Find Pharmacies</button>
-  </div>
-  <div id="pharma-results"></div>
-  </div>
+      <!-- Zip finder -->
+      <div class="zip-section">
+        <div class="rsec-head">🏪 Find pharmacies near you</div>
+        <div class="zip-head">Compounding pharmacies + big chains by zip code</div>
+        <div class="zip-sub">Enter your zip to see local 503A/503B compounding pharmacies and cash prices at major chains for your medication.</div>
+        <div class="zip-row">
+          <input class="zip-input" id="zipInput" placeholder="Enter zip code (e.g. 90210)" maxlength="5" oninput="this.value=this.value.replace(/\D/g,'')">
+          <button class="zip-btn" onclick="findPharmacies()">Find Pharmacies</button>
+        </div>
+        <div id="pharma-results"></div>
+      </div>
 
-  <div class="tool-disc">⚠️ <strong>Important:</strong> Prices are verified estimates as of March 2026 and may vary by pharmacy, dose, and location. This tool is for informational purposes only — not medical advice. We may earn a referral fee if you sign up through our links. This does not affect rankings or pricing data. Consult a licensed healthcare provider before starting any medication.</div>
-  <button class="btn-restart" onclick="restart()">← Start Over</button>
-  </div>
+      <div class="tool-disc">⚠️ <strong>Important:</strong> Prices are verified estimates as of March 2026 and may vary by pharmacy, dose, and location. This tool is for informational purposes only — not medical advice. We may earn a referral fee if you sign up through our links. This does not affect rankings or pricing data. Consult a licensed healthcare provider before starting any medication.</div>
+      <button class="btn-restart" onclick="restart()">← Start Over</button>
+    </div>
 
   </div>
 </div><!-- /compare -->
 
 <!-- ══════════════════════════════════════
-  ARTICLES PAGE
+   ARTICLES PAGE
 ══════════════════════════════════════ -->
 <div class="page" id="page-articles">
   <div class="articles-hero">
-  <div class="container-narrow">
-  <h1>GLP-1 Resource Guides</h1>
-  <p>Everything you need to understand pricing, navigate insurance, and find access.</p>
-  </div>
+    <div class="container-narrow">
+      <h1>GLP-1 Resource Guides</h1>
+      <p>Everything you need to understand pricing, navigate insurance, and find access.</p>
+    </div>
   </div>
 
   <div class="article-tabs">
-  <button class="article-tab on" onclick="showArticle(0,this)">1 · How to Pay Less</button>
-  <button class="article-tab" onclick="showArticle(1,this)">2 · Which Drug Is Which</button>
-  <button class="article-tab" onclick="showArticle(2,this)">3 · Fight Your Denial</button>
-  <button class="article-tab" onclick="showArticle(3,this)">4 · Get It Online</button>
-  <button class="article-tab" onclick="showArticle(4,this)">5 · Is There a Generic?</button>
-  <button class="article-tab" onclick="showArticle(5,this)">6 · Medicaid by State</button>
+    <button class="article-tab on" onclick="showArticle(0,this)">1 · How to Pay Less</button>
+    <button class="article-tab" onclick="showArticle(1,this)">2 · Which Drug Is Which</button>
+    <button class="article-tab" onclick="showArticle(2,this)">3 · Fight Your Denial</button>
+    <button class="article-tab" onclick="showArticle(3,this)">4 · Get It Online</button>
+    <button class="article-tab" onclick="showArticle(4,this)">5 · Is There a Generic?</button>
+    <button class="article-tab" onclick="showArticle(5,this)">6 · Medicaid by State</button>
   </div>
 
   <!-- Article 1 -->
   <div class="article-content on" id="art-0">
-  <div class="art-cat">Price Guide</div>
-  <h1 class="art-h1">How to Get Ozempic or Wegovy Cheap — Even Without Insurance</h1>
-  <p class="art-deck">The pharmacy sticker price can hit $1,300 a month. But most people are paying way less. Here's every real option — from $99 to $499/month — no insurance needed.</p>
-  <div class="art-meta"><span>Updated March 2026</span><span class="art-meta-dot"></span><span>7 min read</span></div>
-  <div class="art-body">
-  <p>If someone quoted you over $1,000 a month for <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-ozempic-semaglutide-injection" target="_blank">semaglutide</a> (that's the drug inside Ozempic and Wegovy), that's the full retail sticker price — almost nobody actually pays that. The real price depends on which program you use. Most people paying cash in 2026 are spending between <strong>$99 and $499 a month</strong>.</p>
-  <p>Here's every option that actually works, in plain English.</p>
-  <h2>What does it actually cost?</h2>
-  <div class="price-pills">
-  <div class="price-pill"><div class="pp-name">Wegovy shot (retail)</div><div class="pp-price">$1,349</div><div class="pp-note">What the pharmacy charges without any discount</div></div>
-  <div class="price-pill"><div class="pp-name">Wegovy pill (new!)</div><div class="pp-price">$149</div><div class="pp-note">No injection needed — just a daily pill</div></div>
-  <div class="price-pill"><div class="pp-name">Compounded version</div><div class="pp-price">$99–299</div><div class="pp-note">Same drug, made by a licensed pharmacy. Cheaper but not FDA-approved.</div></div>
-  <div class="price-pill"><div class="pp-name">Free program</div><div class="pp-price">FREE</div><div class="pp-note">If your income qualifies you may get it free</div></div>
-  </div>
-  <h2>Every option, cheapest first</h2>
-  <table class="art-tbl">
-  <thead><tr><th>Option</th><th>Price/Month</th><th>Plain English</th></tr></thead>
-  <tbody>
-  <tr class="best"><td><strong>Wegovy pill — NovoCare</strong></td><td class="price">$149</td><td>Brand-name, <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-first-oral-glp-1-medication-chronic-weight-management" target="_blank">FDA-approved</a>, no needle. Take one pill every morning before eating. <a href="https://www.novocare.com" target="_blank">Get it here →</a></td></tr>
-  <tr><td><strong>Noom Med compounded program</strong></td><td class="price">$99</td><td>Cheapest option available. Doctor visit + medication all included. Note: <a href="https://www.fda.gov/consumers/consumer-updates/dont-be-misled-compounded-semaglutide-products" target="_blank">not FDA-approved</a> but made by a licensed pharmacy.</td></tr>
-  <tr><td><strong>Wegovy shot — intro deal</strong></td><td class="price">$199</td><td>Brand-name shot at a discount. This price only lasts your first 2 months. Goes up to $349 after that.</td></tr>
-  <tr><td><strong>Wegovy shot — regular price</strong></td><td class="price">$349</td><td>The ongoing cash price straight from the drug maker. No insurance needed.</td></tr>
-  <tr><td><strong>Wegovy at Costco or Sam's Club</strong></td><td class="price">$499</td><td>You don't need a membership card to use their pharmacy. Just walk up and ask.</td></tr>
-  <tr><td><strong>NovoCare free program</strong></td><td class="price">FREE</td><td>If you're uninsured and your household income is below a certain level, you may qualify for free medication. <a href="https://www.novocare.com/obesity/pap.html" target="_blank">Check if you qualify →</a></td></tr>
-  </tbody>
-  </table>
-  <h2>The Wegovy pill — the biggest news of 2026</h2>
-  <p>In January 2026, a daily Wegovy pill became available for the first time ever. No needle. No refrigerator. Just a pill you swallow every morning before you eat. It costs <strong>$149/month</strong> for the lower starting doses and up to $299 at higher doses. The drug company confirmed it works just as well as the shot for most people.</p>
-  <div class="art-box teal"><span class="art-box-lbl">💡 Tip: You can use your HSA or FSA</span>Most of these programs accept <a href="https://www.irs.gov/publications/p969" target="_blank">HSA and FSA cards</a> (pre-tax money from your employer). That means you're paying with dollars that were never taxed — which makes the real cost even lower.</div>
-  <h2>Online telehealth — doctor visit + medication together</h2>
-  <table class="art-tbl">
-  <thead><tr><th>Platform</th><th>Price/Month</th><th>What's included</th></tr></thead>
-  <tbody>
-  <tr class="best"><td><strong>Noom Med</strong></td><td class="price">$99</td><td>Lowest price. Medication + coaching + doctor visit all in one.</td></tr>
-  <tr><td><strong>Ro Body</strong></td><td class="price">$199–349</td><td>Doctor + medication included. Heads up: there's also a $145/mo membership fee on top.</td></tr>
-  <tr><td><strong>Hims & Hers</strong></td><td class="price">$279+</td><td>All-in price. They also offer hormone therapy (HRT) if you need that too.</td></tr>
-  <tr><td><strong>PlushCare</strong></td><td class="price">$249+</td><td>Good if you want help fighting an insurance denial at the same time.</td></tr>
-  </tbody>
-  </table>
-  <div class="art-box amber"><span class="art-box-lbl">⚠️ Watch out for fakes</span>In March 2026, the <a href="https://www.fda.gov/drugs/drug-safety-and-availability/medications-containing-semaglutide-marketed-type-2-diabetes-or-weight-loss" target="_blank">FDA cracked down on 30+ online companies</a> selling fake or mislabeled versions of these drugs. Stick to platforms that use real licensed pharmacies and can tell you exactly where your medication comes from. If the price seems way too cheap — it probably is.</div>
-  <div class="art-cta"><h3>Not sure which option is right for you?</h3><p>Answer 3 quick questions and we'll show you the best options for your exact situation.</p><button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Find My Best Price →</button></div>
-  <div class="art-disc">This is for information only — not medical advice. Prices verified March 2026 and may change. Talk to a doctor before starting any medication. We may earn a referral fee if you sign up through our links. This doesn't change our rankings or recommendations.</div>
-  </div>
+    <div class="art-cat">Price Guide</div>
+    <h1 class="art-h1">How to Get Ozempic or Wegovy Cheap — Even Without Insurance</h1>
+    <p class="art-deck">The pharmacy sticker price can hit $1,300 a month. But most people are paying way less. Here's every real option — from $99 to $499/month — no insurance needed.</p>
+    <div class="art-meta"><span>Updated March 2026</span><span class="art-meta-dot"></span><span>7 min read</span></div>
+    <div class="art-body">
+      <p>If someone quoted you over $1,000 a month for <a href="https://www.fda.gov/drugs/drug-safety-and-availability/fda-drug-safety-communication-ozempic-semaglutide-injection" target="_blank">semaglutide</a> (that's the drug inside Ozempic and Wegovy), that's the full retail sticker price — almost nobody actually pays that. The real price depends on which program you use. Most people paying cash in 2026 are spending between <strong>$99 and $499 a month</strong>.</p>
+      <p>Here's every option that actually works, in plain English.</p>
+      <h2>What does it actually cost?</h2>
+      <div class="price-pills">
+        <div class="price-pill"><div class="pp-name">Wegovy shot (retail)</div><div class="pp-price">$1,349</div><div class="pp-note">What the pharmacy charges without any discount</div></div>
+        <div class="price-pill"><div class="pp-name">Wegovy pill (new!)</div><div class="pp-price">$149</div><div class="pp-note">No injection needed — just a daily pill</div></div>
+        <div class="price-pill"><div class="pp-name">Compounded version</div><div class="pp-price">$99–299</div><div class="pp-note">Same drug, made by a licensed pharmacy. Cheaper but not FDA-approved.</div></div>
+        <div class="price-pill"><div class="pp-name">Free program</div><div class="pp-price">FREE</div><div class="pp-note">If your income qualifies you may get it free</div></div>
+      </div>
+      <h2>Every option, cheapest first</h2>
+      <table class="art-tbl">
+        <thead><tr><th>Option</th><th>Price/Month</th><th>Plain English</th></tr></thead>
+        <tbody>
+          <tr class="best"><td><strong>Wegovy pill — NovoCare</strong></td><td class="price">$149</td><td>Brand-name, <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-first-oral-glp-1-medication-chronic-weight-management" target="_blank">FDA-approved</a>, no needle. Take one pill every morning before eating. <a href="https://www.novocare.com" target="_blank">Get it here →</a></td></tr>
+          <tr><td><strong>Noom Med compounded program</strong></td><td class="price">$99</td><td>Cheapest option available. Doctor visit + medication all included. Note: <a href="https://www.fda.gov/consumers/consumer-updates/dont-be-misled-compounded-semaglutide-products" target="_blank">not FDA-approved</a> but made by a licensed pharmacy.</td></tr>
+          <tr><td><strong>Wegovy shot — intro deal</strong></td><td class="price">$199</td><td>Brand-name shot at a discount. This price only lasts your first 2 months. Goes up to $349 after that.</td></tr>
+          <tr><td><strong>Wegovy shot — regular price</strong></td><td class="price">$349</td><td>The ongoing cash price straight from the drug maker. No insurance needed.</td></tr>
+          <tr><td><strong>Wegovy at Costco or Sam's Club</strong></td><td class="price">$499</td><td>You don't need a membership card to use their pharmacy. Just walk up and ask.</td></tr>
+          <tr><td><strong>NovoCare free program</strong></td><td class="price">FREE</td><td>If you're uninsured and your household income is below a certain level, you may qualify for free medication. <a href="https://www.novocare.com/obesity/pap.html" target="_blank">Check if you qualify →</a></td></tr>
+        </tbody>
+      </table>
+      <h2>The Wegovy pill — the biggest news of 2026</h2>
+      <p>In January 2026, a daily Wegovy pill became available for the first time ever. No needle. No refrigerator. Just a pill you swallow every morning before you eat. It costs <strong>$149/month</strong> for the lower starting doses and up to $299 at higher doses. The drug company confirmed it works just as well as the shot for most people.</p>
+      <div class="art-box teal"><span class="art-box-lbl">💡 Tip: You can use your HSA or FSA</span>Most of these programs accept <a href="https://www.irs.gov/publications/p969" target="_blank">HSA and FSA cards</a> (pre-tax money from your employer). That means you're paying with dollars that were never taxed — which makes the real cost even lower.</div>
+      <h2>Online telehealth — doctor visit + medication together</h2>
+      <table class="art-tbl">
+        <thead><tr><th>Platform</th><th>Price/Month</th><th>What's included</th></tr></thead>
+        <tbody>
+          <tr class="best"><td><strong>Noom Med</strong></td><td class="price">$99</td><td>Lowest price. Medication + coaching + doctor visit all in one.</td></tr>
+          <tr><td><strong>Ro Body</strong></td><td class="price">$199–349</td><td>Doctor + medication included. Heads up: there's also a $145/mo membership fee on top.</td></tr>
+          <tr><td><strong>Hims & Hers</strong></td><td class="price">$279+</td><td>All-in price. They also offer hormone therapy (HRT) if you need that too.</td></tr>
+          <tr><td><strong>PlushCare</strong></td><td class="price">$249+</td><td>Good if you want help fighting an insurance denial at the same time.</td></tr>
+        </tbody>
+      </table>
+      <div class="art-box amber"><span class="art-box-lbl">⚠️ Watch out for fakes</span>In March 2026, the <a href="https://www.fda.gov/drugs/drug-safety-and-availability/medications-containing-semaglutide-marketed-type-2-diabetes-or-weight-loss" target="_blank">FDA cracked down on 30+ online companies</a> selling fake or mislabeled versions of these drugs. Stick to platforms that use real licensed pharmacies and can tell you exactly where your medication comes from. If the price seems way too cheap — it probably is.</div>
+      <div class="art-cta"><h3>Not sure which option is right for you?</h3><p>Answer 3 quick questions and we'll show you the best options for your exact situation.</p><button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Find My Best Price →</button></div>
+      <div class="art-disc">This is for information only — not medical advice. Prices verified March 2026 and may change. Talk to a doctor before starting any medication. We may earn a referral fee if you sign up through our links. This doesn't change our rankings or recommendations.</div>
+    </div>
   </div>
 
   <!-- Article 2 -->
   <div class="article-content" id="art-1">
-  <div class="art-cat">Cost Comparison</div>
-  <h1 class="art-h1">Ozempic vs. Wegovy vs. Mounjaro — What's the Difference and Which Is Cheapest?</h1>
-  <p class="art-deck">They're all called "GLP-1 drugs" but they're not the same thing. Here's the plain English breakdown of what each drug does, who it's for, and what it actually costs in 2026.</p>
-  <div class="art-meta"><span>Updated March 2026</span><span class="art-meta-dot"></span><span>8 min read</span></div>
-  <div class="art-body">
-  <p>Here's something that confuses a lot of people: Ozempic and Wegovy are literally the same drug (called <a href="https://www.fda.gov/drugs/new-drugs-fda-cders-new-molecular-entities-and-new-therapeutic-biological-products/novel-drug-approvals-2021" target="_blank">semaglutide</a>) — just sold under different brand names for different purposes. Same goes for Mounjaro and Zepbound (both contain <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-medication-chronic-weight-management" target="_blank">tirzepatide</a>). The brand name affects the price and what your insurance will cover.</p>
-  <h2>Which drug is which — in plain English</h2>
-  <table class="art-tbl">
-  <thead><tr><th>Brand Name</th><th>Drug Inside It</th><th>What It's For</th><th>How You Take It</th></tr></thead>
-  <tbody>
-  <tr><td><strong>Ozempic</strong></td><td>Semaglutide</td><td>Type 2 diabetes (insurance usually covers this)</td><td>Weekly shot</td></tr>
-  <tr><td><strong>Wegovy (shot)</strong></td><td>Semaglutide</td><td>Weight loss, heart disease prevention</td><td>Weekly shot</td></tr>
-  <tr class="best"><td><strong>Wegovy (pill)</strong></td><td>Semaglutide</td><td>Weight loss — NEW in 2026</td><td>Daily pill — no needle!</td></tr>
-  <tr><td><strong>Mounjaro</strong></td><td>Tirzepatide</td><td>Type 2 diabetes (insurance usually covers this)</td><td>Weekly shot</td></tr>
-  <tr><td><strong>Zepbound</strong></td><td>Tirzepatide</td><td>Weight loss, sleep apnea</td><td>Weekly shot or vial</td></tr>
-  </tbody>
-  </table>
-  <h2>What you'll actually pay without insurance</h2>
-  <table class="art-tbl">
-  <thead><tr><th>Drug</th><th>Pharmacy sticker price</th><th>Best cash-pay price</th><th>Where to get it</th></tr></thead>
-  <tbody>
-  <tr class="best"><td><strong>Wegovy pill</strong></td><td>$900+</td><td class="price">$149–299</td><td><a href="https://www.novocare.com" target="_blank">NovoCare</a> or GoodRx</td></tr>
-  <tr><td><strong>Wegovy shot</strong></td><td>$1,349/mo</td><td class="price">$199–349</td><td><a href="https://www.novocare.com" target="_blank">NovoCare program</a></td></tr>
-  <tr><td><strong>Ozempic</strong></td><td>$935/mo</td><td class="price">$350</td><td>TrumpRx or NovoCare</td></tr>
-  <tr><td><strong>Zepbound (vials)</strong></td><td>$1,069/mo</td><td class="price">$299–449</td><td><a href="https://www.lillydirect.com" target="_blank">LillyDirect</a> — price depends on your dose</td></tr>
-  <tr><td><strong>Mounjaro</strong></td><td>$1,069/mo</td><td class="price">$995+</td><td>No cash deal exists — use Zepbound instead (same drug, better price)</td></tr>
-  </tbody>
-  </table>
-  <div class="art-box teal"><span class="art-box-lbl">💡 The Mounjaro trick</span>Mounjaro and Zepbound have the exact same drug inside them. But Mounjaro has no cash-pay discount program. So if you're paying out of pocket and want tirzepatide, always get <strong>Zepbound</strong> — you get the same drug for $299–449/month instead of $995+.</div>
-  <h2>Which one works better for weight loss?</h2>
-  <p>Both drugs work well. But clinical trials show tirzepatide (Zepbound/Mounjaro) tends to produce slightly more weight loss on average:</p>
-  <ul>
-  <li><strong>Wegovy shot (2.4mg):</strong> People lost about 15% of their body weight on average over 68 weeks (<a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2032183" target="_blank">source: STEP trial</a>)</li>
-  <li><strong>New Wegovy HD shot (7.2mg, approved March 2026):</strong> About 20.7% average weight loss over 72 weeks</li>
-  <li><strong>Wegovy pill:</strong> About 13.6% average weight loss over 64 weeks</li>
-  <li><strong>Zepbound (10–15mg):</strong> About 20–21% average weight loss over 72 weeks (<a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2206038" target="_blank">source: SURMOUNT trial</a>)</li>
-  </ul>
-  <p>The higher the dose, the more weight loss — but also more side effects. Your doctor will help you figure out the right starting point.</p>
-  <div class="art-cta"><h3>Which one is cheapest for YOUR situation?</h3><p>Answer 3 questions and we rank every option based on your insurance status and which drug you want.</p><button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Compare Prices Now →</button></div>
-  <div class="art-disc">Prices verified March 2026. Weight loss data from <a href="https://clinicaltrials.gov" target="_blank">published clinical trials</a>. Not medical advice. Talk to your doctor before starting or changing any medication.</div>
-  </div>
+    <div class="art-cat">Cost Comparison</div>
+    <h1 class="art-h1">Ozempic vs. Wegovy vs. Mounjaro — What's the Difference and Which Is Cheapest?</h1>
+    <p class="art-deck">They're all called "GLP-1 drugs" but they're not the same thing. Here's the plain English breakdown of what each drug does, who it's for, and what it actually costs in 2026.</p>
+    <div class="art-meta"><span>Updated March 2026</span><span class="art-meta-dot"></span><span>8 min read</span></div>
+    <div class="art-body">
+      <p>Here's something that confuses a lot of people: Ozempic and Wegovy are literally the same drug (called <a href="https://www.fda.gov/drugs/new-drugs-fda-cders-new-molecular-entities-and-new-therapeutic-biological-products/novel-drug-approvals-2021" target="_blank">semaglutide</a>) — just sold under different brand names for different purposes. Same goes for Mounjaro and Zepbound (both contain <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-new-medication-chronic-weight-management" target="_blank">tirzepatide</a>). The brand name affects the price and what your insurance will cover.</p>
+      <h2>Which drug is which — in plain English</h2>
+      <table class="art-tbl">
+        <thead><tr><th>Brand Name</th><th>Drug Inside It</th><th>What It's For</th><th>How You Take It</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Ozempic</strong></td><td>Semaglutide</td><td>Type 2 diabetes (insurance usually covers this)</td><td>Weekly shot</td></tr>
+          <tr><td><strong>Wegovy (shot)</strong></td><td>Semaglutide</td><td>Weight loss, heart disease prevention</td><td>Weekly shot</td></tr>
+          <tr class="best"><td><strong>Wegovy (pill)</strong></td><td>Semaglutide</td><td>Weight loss — NEW in 2026</td><td>Daily pill — no needle!</td></tr>
+          <tr><td><strong>Mounjaro</strong></td><td>Tirzepatide</td><td>Type 2 diabetes (insurance usually covers this)</td><td>Weekly shot</td></tr>
+          <tr><td><strong>Zepbound</strong></td><td>Tirzepatide</td><td>Weight loss, sleep apnea</td><td>Weekly shot or vial</td></tr>
+        </tbody>
+      </table>
+      <h2>What you'll actually pay without insurance</h2>
+      <table class="art-tbl">
+        <thead><tr><th>Drug</th><th>Pharmacy sticker price</th><th>Best cash-pay price</th><th>Where to get it</th></tr></thead>
+        <tbody>
+          <tr class="best"><td><strong>Wegovy pill</strong></td><td>$900+</td><td class="price">$149–299</td><td><a href="https://www.novocare.com" target="_blank">NovoCare</a> or GoodRx</td></tr>
+          <tr><td><strong>Wegovy shot</strong></td><td>$1,349/mo</td><td class="price">$199–349</td><td><a href="https://www.novocare.com" target="_blank">NovoCare program</a></td></tr>
+          <tr><td><strong>Ozempic</strong></td><td>$935/mo</td><td class="price">$350</td><td>TrumpRx or NovoCare</td></tr>
+          <tr><td><strong>Zepbound (vials)</strong></td><td>$1,069/mo</td><td class="price">$299–449</td><td><a href="https://www.lillydirect.com" target="_blank">LillyDirect</a> — price depends on your dose</td></tr>
+          <tr><td><strong>Mounjaro</strong></td><td>$1,069/mo</td><td class="price">$995+</td><td>No cash deal exists — use Zepbound instead (same drug, better price)</td></tr>
+        </tbody>
+      </table>
+      <div class="art-box teal"><span class="art-box-lbl">💡 The Mounjaro trick</span>Mounjaro and Zepbound have the exact same drug inside them. But Mounjaro has no cash-pay discount program. So if you're paying out of pocket and want tirzepatide, always get <strong>Zepbound</strong> — you get the same drug for $299–449/month instead of $995+.</div>
+      <h2>Which one works better for weight loss?</h2>
+      <p>Both drugs work well. But clinical trials show tirzepatide (Zepbound/Mounjaro) tends to produce slightly more weight loss on average:</p>
+      <ul>
+        <li><strong>Wegovy shot (2.4mg):</strong> People lost about 15% of their body weight on average over 68 weeks (<a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2032183" target="_blank">source: STEP trial</a>)</li>
+        <li><strong>New Wegovy HD shot (7.2mg, approved March 2026):</strong> About 20.7% average weight loss over 72 weeks</li>
+        <li><strong>Wegovy pill:</strong> About 13.6% average weight loss over 64 weeks</li>
+        <li><strong>Zepbound (10–15mg):</strong> About 20–21% average weight loss over 72 weeks (<a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2206038" target="_blank">source: SURMOUNT trial</a>)</li>
+      </ul>
+      <p>The higher the dose, the more weight loss — but also more side effects. Your doctor will help you figure out the right starting point.</p>
+      <div class="art-cta"><h3>Which one is cheapest for YOUR situation?</h3><p>Answer 3 questions and we rank every option based on your insurance status and which drug you want.</p><button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Compare Prices Now →</button></div>
+      <div class="art-disc">Prices verified March 2026. Weight loss data from <a href="https://clinicaltrials.gov" target="_blank">published clinical trials</a>. Not medical advice. Talk to your doctor before starting or changing any medication.</div>
+    </div>
   </div>
 
   <!-- Article 3 -->
   <div class="article-content" id="art-2">
-  <div class="art-cat">Insurance Guide</div>
-  <h1 class="art-h1">Insurance Denied Your GLP-1? Here's How to Fight Back (and Win)</h1>
-  <p class="art-deck">Most people give up after getting denied. Don't. Up to 80% of people who appeal actually win. Here's exactly what to do — step by step.</p>
-  <div class="art-meta"><span>Updated March 2026</span><span class="art-meta-dot"></span><span>10 min read</span></div>
-  <div class="art-body">
-  <div class="art-box teal"><span class="art-box-lbl">📊 Real numbers</span>In 2024, insurance companies denied 62% of GLP-1 requests. But up to 80% of people who actually appealed won their case. The problem? Only 15% of people even try to appeal. Don't be in the 85% who just give up.</div>
-  <h2>First — why did they say no?</h2>
-  <p>Your denial letter has to tell you the exact reason by law. The most common ones are:</p>
-  <ul>
-  <li><strong>"Not medically necessary"</strong> — They're saying your doctor didn't prove you need it badly enough</li>
-  <li><strong>"Step therapy required"</strong> — They want you to try cheaper drugs first and fail before approving the expensive one</li>
-  <li><strong>"Plan exclusion"</strong> — Your plan simply doesn't cover weight loss drugs at all</li>
-  <li><strong>Wrong diagnosis code</strong> — The code your doctor used doesn't match what your plan covers (this is fixable!)</li>
-  <li><strong>Missing paperwork</strong> — The <a href="https://www.healthcare.gov/glossary/prior-authorization/" target="_blank">prior authorization</a> form was incomplete or never submitted</li>
-  </ul>
-  <h2>The diagnosis codes that get it covered</h2>
-  <p>This is the most important thing on this page. Insurance companies use <a href="https://www.cdc.gov/nchs/icd/icd-10-cm.htm" target="_blank">ICD-10 codes</a> — basically a numbered list of medical conditions — to decide what they'll pay for. The exact same medication can be approved or denied just by changing which code your doctor uses. Show this table to your doctor.</p>
-  <table class="art-tbl">
-  <thead><tr><th>Code</th><th>What it means in plain English</th><th>Regular insurance</th><th>Medicare</th><th>Notes</th></tr></thead>
-  <tbody>
-  <tr class="best"><td><span class="icd-code">E11.9</span></td><td>Type 2 diabetes</td><td><span class="ctag ctag-yes">✓ Covered</span></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Best shot at getting approved. Ozempic and Mounjaro often covered at just $25/mo with a savings card.</td></tr>
-  <tr><td><span class="icd-code">E11.65</span></td><td>Type 2 diabetes with high blood sugar</td><td><span class="ctag ctag-yes">✓ Covered</span></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Use this if your A1C blood sugar test is high — makes a stronger case.</td></tr>
-  <tr><td><span class="icd-code">G47.33</span></td><td>Sleep apnea</td><td><span class="ctag ctag-yes">✓ Covered</span></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Zepbound is officially approved for sleep apnea. If you have sleep apnea AND obesity, this is one of your best paths — even for Medicare.</td></tr>
-  <tr><td><span class="icd-code">I25.10</span></td><td>Heart disease (coronary artery disease)</td><td><span class="ctag ctag-yes">✓ Covered</span></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Wegovy is approved to reduce heart attack risk. If you have heart disease history, ask your doctor about this code.</td></tr>
-  <tr><td><span class="icd-code">I21.9</span></td><td>History of heart attack</td><td><span class="ctag ctag-yes">✓ Covered</span></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Past heart attack supports the Wegovy cardiovascular approval path.</td></tr>
-  <tr><td><span class="icd-code">K75.81</span></td><td>Fatty liver disease (MASH)</td><td><span class="ctag ctag-yes">✓ Covered</span></td><td><span class="ctag ctag-new">★ July 2026</span></td><td>Wegovy is now <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-treatment-liver-scarring-due-metabolic-associated-steatohepatitis" target="_blank">FDA-approved for fatty liver disease</a>. Often overlooked.</td></tr>
-  <tr><td><span class="icd-code">I10</span></td><td>High blood pressure</td><td><span class="ctag ctag-maybe">~ Helps your case</span></td><td><span class="ctag ctag-new">★ July 2026</span></td><td>If your BMI is 30+ and you have high blood pressure, you'll qualify for the new Medicare $50/mo program starting July 2026.</td></tr>
-  <tr><td><span class="icd-code">E78.5</span></td><td>High cholesterol</td><td><span class="ctag ctag-maybe">~ Helps your case</span></td><td><span class="ctag ctag-new">★ July 2026</span></td><td>Same as above — BMI 30+ with high cholesterol qualifies for the July 2026 Medicare program.</td></tr>
-  <tr><td><span class="icd-code">E66.01</span></td><td>Severe obesity (BMI 40+)</td><td><span class="ctag ctag-maybe">~ Depends on your plan</span></td><td><span class="ctag ctag-no">✗ Not covered alone</span></td><td>Some private plans cover this. Medicare won't cover it based on obesity alone — you need a second condition too.</td></tr>
-  <tr><td><span class="icd-code">Z68.30–39</span></td><td>BMI between 30–39</td><td><span class="ctag ctag-maybe">~ Supporting code</span></td><td><span class="ctag ctag-new">★ Supporting</span></td><td>Always add this code alongside your main condition. Some insurers use it in their automatic approval systems.</td></tr>
-  </tbody>
-  </table>
-  <div class="art-box amber"><span class="art-box-lbl">🔑 Two codes most people miss</span><strong>Sleep apnea (G47.33):</strong> If you have sleep apnea AND obesity, Zepbound is specifically approved for this. Medicare covers it right now — before the July 2026 program even starts. This is the most underused approval path out there.<br><br><strong>Heart disease (I25.10):</strong> If you've had a heart attack, stroke, or been diagnosed with coronary artery disease, Wegovy is approved to reduce your heart attack risk. Most private insurance and Medicare will cover it for this reason.</div>
-  <h2>How to appeal — step by step</h2>
-  <ol class="art-steps">
-  <li><strong>Read your denial letter carefully</strong><p>It must tell you the exact reason they said no. It also must tell you the deadline to appeal — usually 30 to 180 days. Miss that deadline and you lose your right to appeal. Read it today.</p></li>
-  <li><strong>Call your doctor right away</strong><p>Your doctor needs to write a <a href="https://www.cms.gov/medicare/appeals-and-grievances/medicareappealsprocess" target="_blank">Letter of Medical Necessity</a> — basically a letter explaining why you need this medication specifically. This is the most important piece of your appeal.</p></li>
-  <li><strong>Pull together your records</strong><p>Get your most recent blood sugar test (A1C), your weight history, any sleep study results if you have sleep apnea, and records of any other weight loss methods you've tried that didn't work.</p></li>
-  <li><strong>Double-check the diagnosis codes</strong><p>Show your doctor the table above. Ask them to confirm the codes on your prescription match a condition your insurance actually covers. One wrong code can get you denied automatically.</p></li>
-  <li><strong>Send in everything at once</strong><p>Don't just resubmit the same request with nothing new. Your appeal needs to directly answer the reason they gave for denying you — with real records, not just your word.</p></li>
-  <li><strong>Ask for a doctor-to-doctor review</strong><p>Your doctor can request a "peer-to-peer review" — a phone call between your doctor and the insurance company's doctor. This alone reverses a lot of denials because it's harder to say no to another physician than to an automated form.</p></li>
-  <li><strong>If they still say no — request an external review</strong><p>Under <a href="https://www.healthcare.gov/appeal-insurance-company-decision/external-review/" target="_blank">federal law (the ACA)</a>, you can request an independent third party to review your case. The insurance company has to follow their decision. About 40% of external reviews go in the patient's favor.</p></li>
-  </ol>
-  <h2>What about Medicare in 2026?</h2>
-  <ul>
-  <li><strong>Right now:</strong> Medicare covers Wegovy if you have established heart disease, and Zepbound if you have sleep apnea. That's it.</li>
-  <li><strong>July 2026:</strong> A new <a href="https://www.cms.gov/medicare/coverage/prescription-drug-coverage/medicare-glp-1-bridge" target="_blank">Medicare GLP-1 Bridge program</a> launches — $50/month copay for people with BMI 30+ who also have high blood pressure, prediabetes, high cholesterol, or heart disease.</li>
-  <li><strong>January 2027:</strong> The BALANCE Model expands coverage even further through Medicare Part D and Medicaid.</li>
-  </ul>
-  <div class="art-cta"><h3>If the appeal doesn't work out</h3><p>There are cash-pay options starting at $99/month that don't need insurance at all. See what's available for your situation.</p><button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Find Cash-Pay Options →</button></div>
-  <div class="art-disc">This is for information only — not legal or medical advice. Diagnosis codes and coverage rules change by insurer and by year. Always work with your doctor and read your actual plan documents before appealing.</div>
-  </div>
+    <div class="art-cat">Insurance Guide</div>
+    <h1 class="art-h1">Insurance Denied Your GLP-1? Here's How to Fight Back (and Win)</h1>
+    <p class="art-deck">Most people give up after getting denied. Don't. Up to 80% of people who appeal actually win. Here's exactly what to do — step by step.</p>
+    <div class="art-meta"><span>Updated March 2026</span><span class="art-meta-dot"></span><span>10 min read</span></div>
+    <div class="art-body">
+      <div class="art-box teal"><span class="art-box-lbl">📊 Real numbers</span>In 2024, insurance companies denied 62% of GLP-1 requests. But up to 80% of people who actually appealed won their case. The problem? Only 15% of people even try to appeal. Don't be in the 85% who just give up.</div>
+      <h2>First — why did they say no?</h2>
+      <p>Your denial letter has to tell you the exact reason by law. The most common ones are:</p>
+      <ul>
+        <li><strong>"Not medically necessary"</strong> — They're saying your doctor didn't prove you need it badly enough</li>
+        <li><strong>"Step therapy required"</strong> — They want you to try cheaper drugs first and fail before approving the expensive one</li>
+        <li><strong>"Plan exclusion"</strong> — Your plan simply doesn't cover weight loss drugs at all</li>
+        <li><strong>Wrong diagnosis code</strong> — The code your doctor used doesn't match what your plan covers (this is fixable!)</li>
+        <li><strong>Missing paperwork</strong> — The <a href="https://www.healthcare.gov/glossary/prior-authorization/" target="_blank">prior authorization</a> form was incomplete or never submitted</li>
+      </ul>
+      <h2>The diagnosis codes that get it covered</h2>
+      <p>This is the most important thing on this page. Insurance companies use <a href="https://www.cdc.gov/nchs/icd/icd-10-cm.htm" target="_blank">ICD-10 codes</a> — basically a numbered list of medical conditions — to decide what they'll pay for. The exact same medication can be approved or denied just by changing which code your doctor uses. Show this table to your doctor.</p>
+      <table class="art-tbl">
+        <thead><tr><th>Code</th><th>What it means in plain English</th><th>Regular insurance</th><th>Medicare</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr class="best"><td><span class="icd-code">E11.9</span></td><td>Type 2 diabetes</td><td><span class="ctag ctag-yes">✓ Covered</span></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Best shot at getting approved. Ozempic and Mounjaro often covered at just $25/mo with a savings card.</td></tr>
+          <tr><td><span class="icd-code">E11.65</span></td><td>Type 2 diabetes with high blood sugar</td><td><span class="ctag ctag-yes">✓ Covered</span></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Use this if your A1C blood sugar test is high — makes a stronger case.</td></tr>
+          <tr><td><span class="icd-code">G47.33</span></td><td>Sleep apnea</td><td><span class="ctag ctag-yes">✓ Covered</span></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Zepbound is officially approved for sleep apnea. If you have sleep apnea AND obesity, this is one of your best paths — even for Medicare.</td></tr>
+          <tr><td><span class="icd-code">I25.10</span></td><td>Heart disease (coronary artery disease)</td><td><span class="ctag ctag-yes">✓ Covered</span></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Wegovy is approved to reduce heart attack risk. If you have heart disease history, ask your doctor about this code.</td></tr>
+          <tr><td><span class="icd-code">I21.9</span></td><td>History of heart attack</td><td><span class="ctag ctag-yes">✓ Covered</span></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Past heart attack supports the Wegovy cardiovascular approval path.</td></tr>
+          <tr><td><span class="icd-code">K75.81</span></td><td>Fatty liver disease (MASH)</td><td><span class="ctag ctag-yes">✓ Covered</span></td><td><span class="ctag ctag-new">★ July 2026</span></td><td>Wegovy is now <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-treatment-liver-scarring-due-metabolic-associated-steatohepatitis" target="_blank">FDA-approved for fatty liver disease</a>. Often overlooked.</td></tr>
+          <tr><td><span class="icd-code">I10</span></td><td>High blood pressure</td><td><span class="ctag ctag-maybe">~ Helps your case</span></td><td><span class="ctag ctag-new">★ July 2026</span></td><td>If your BMI is 30+ and you have high blood pressure, you'll qualify for the new Medicare $50/mo program starting July 2026.</td></tr>
+          <tr><td><span class="icd-code">E78.5</span></td><td>High cholesterol</td><td><span class="ctag ctag-maybe">~ Helps your case</span></td><td><span class="ctag ctag-new">★ July 2026</span></td><td>Same as above — BMI 30+ with high cholesterol qualifies for the July 2026 Medicare program.</td></tr>
+          <tr><td><span class="icd-code">E66.01</span></td><td>Severe obesity (BMI 40+)</td><td><span class="ctag ctag-maybe">~ Depends on your plan</span></td><td><span class="ctag ctag-no">✗ Not covered alone</span></td><td>Some private plans cover this. Medicare won't cover it based on obesity alone — you need a second condition too.</td></tr>
+          <tr><td><span class="icd-code">Z68.30–39</span></td><td>BMI between 30–39</td><td><span class="ctag ctag-maybe">~ Supporting code</span></td><td><span class="ctag ctag-new">★ Supporting</span></td><td>Always add this code alongside your main condition. Some insurers use it in their automatic approval systems.</td></tr>
+        </tbody>
+      </table>
+      <div class="art-box amber"><span class="art-box-lbl">🔑 Two codes most people miss</span><strong>Sleep apnea (G47.33):</strong> If you have sleep apnea AND obesity, Zepbound is specifically approved for this. Medicare covers it right now — before the July 2026 program even starts. This is the most underused approval path out there.<br><br><strong>Heart disease (I25.10):</strong> If you've had a heart attack, stroke, or been diagnosed with coronary artery disease, Wegovy is approved to reduce your heart attack risk. Most private insurance and Medicare will cover it for this reason.</div>
+      <h2>How to appeal — step by step</h2>
+      <ol class="art-steps">
+        <li><strong>Read your denial letter carefully</strong><p>It must tell you the exact reason they said no. It also must tell you the deadline to appeal — usually 30 to 180 days. Miss that deadline and you lose your right to appeal. Read it today.</p></li>
+        <li><strong>Call your doctor right away</strong><p>Your doctor needs to write a <a href="https://www.cms.gov/medicare/appeals-and-grievances/medicareappealsprocess" target="_blank">Letter of Medical Necessity</a> — basically a letter explaining why you need this medication specifically. This is the most important piece of your appeal.</p></li>
+        <li><strong>Pull together your records</strong><p>Get your most recent blood sugar test (A1C), your weight history, any sleep study results if you have sleep apnea, and records of any other weight loss methods you've tried that didn't work.</p></li>
+        <li><strong>Double-check the diagnosis codes</strong><p>Show your doctor the table above. Ask them to confirm the codes on your prescription match a condition your insurance actually covers. One wrong code can get you denied automatically.</p></li>
+        <li><strong>Send in everything at once</strong><p>Don't just resubmit the same request with nothing new. Your appeal needs to directly answer the reason they gave for denying you — with real records, not just your word.</p></li>
+        <li><strong>Ask for a doctor-to-doctor review</strong><p>Your doctor can request a "peer-to-peer review" — a phone call between your doctor and the insurance company's doctor. This alone reverses a lot of denials because it's harder to say no to another physician than to an automated form.</p></li>
+        <li><strong>If they still say no — request an external review</strong><p>Under <a href="https://www.healthcare.gov/appeal-insurance-company-decision/external-review/" target="_blank">federal law (the ACA)</a>, you can request an independent third party to review your case. The insurance company has to follow their decision. About 40% of external reviews go in the patient's favor.</p></li>
+      </ol>
+      <h2>What about Medicare in 2026?</h2>
+      <ul>
+        <li><strong>Right now:</strong> Medicare covers Wegovy if you have established heart disease, and Zepbound if you have sleep apnea. That's it.</li>
+        <li><strong>July 2026:</strong> A new <a href="https://www.cms.gov/medicare/coverage/prescription-drug-coverage/medicare-glp-1-bridge" target="_blank">Medicare GLP-1 Bridge program</a> launches — $50/month copay for people with BMI 30+ who also have high blood pressure, prediabetes, high cholesterol, or heart disease.</li>
+        <li><strong>January 2027:</strong> The BALANCE Model expands coverage even further through Medicare Part D and Medicaid.</li>
+      </ul>
+      <div class="art-cta"><h3>If the appeal doesn't work out</h3><p>There are cash-pay options starting at $99/month that don't need insurance at all. See what's available for your situation.</p><button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Find Cash-Pay Options →</button></div>
+      <div class="art-disc">This is for information only — not legal or medical advice. Diagnosis codes and coverage rules change by insurer and by year. Always work with your doctor and read your actual plan documents before appealing.</div>
+    </div>
   </div>
 
   <!-- Article 4 -->
   <div class="article-content" id="art-3">
-  <div class="art-cat">Access Guide</div>
-  <h1 class="art-h1">How to Get a GLP-1 Prescription Online — No Doctor's Office Required</h1>
-  <p class="art-deck">You don't have to wait months for an appointment. You can get evaluated, get a prescription, and have medication at your door — all from your phone or computer.</p>
-  <div class="art-meta"><span>Updated March 2026</span><span class="art-meta-dot"></span><span>6 min read</span></div>
-  <div class="art-body">
-  <p>A few years ago, getting Ozempic or Wegovy meant calling your doctor, waiting weeks for an appointment, getting a referral, waiting more, and then fighting with your insurance. In 2026, you can skip most of that. Online health companies (called <a href="https://www.fda.gov/consumers/consumer-updates/telehealth-delivering-health-care-convenience-you" target="_blank">telehealth platforms</a>) let you fill out a health form online, get reviewed by a real doctor, and have your medication shipped directly to your house.</p>
-  <p>Here's exactly how it works.</p>
-  <h2>How it works — step by step</h2>
-  <ol class="art-steps">
-  <li><strong>Fill out a health form online</strong><p>Takes about 15-20 minutes. They ask about your weight, height, medical history, and any health conditions. This replaces the in-person intake appointment.</p></li>
-  <li><strong>A real doctor or nurse reviews your info</strong><p>A licensed <a href="https://www.medscape.com/viewarticle/glp-1-telehealth" target="_blank">healthcare provider</a> looks at your form — some get back to you within hours. Good platforms do a video call if your case is more complex.</p></li>
-  <li><strong>You get a prescription sent to the pharmacy</strong><p>If you qualify, your prescription goes straight to the platform's pharmacy partner. Nothing to print, nothing to pick up.</p></li>
-  <li><strong>Medication comes to your door</strong><p>Most ship within 3–7 days for your first order. Refills are usually faster. A few platforms offer same-week delivery.</p></li>
-  </ol>
-  <h2>Do you qualify? Here's what they look for</h2>
-  <p>Every platform follows <a href="https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/wegovy-semaglutide-injection-information" target="_blank">FDA guidelines</a> for who can be prescribed these medications. You generally need one of these:</p>
-  <ul>
-  <li>A <a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmi-m.htm" target="_blank">BMI</a> of 30 or higher (what doctors call obesity), OR</li>
-  <li>A BMI of 27 or higher PLUS at least one weight-related health problem — like high blood pressure, type 2 diabetes, high cholesterol, sleep apnea, or heart disease</li>
-  </ul>
-  <p>You don't need a prior diagnosis. The telehealth doctor makes that call after reviewing your health form.</p>
-  <h2>Which platforms are the best right now?</h2>
-  <table class="art-tbl">
-  <thead><tr><th>Platform</th><th>Price/Month</th><th>Also offers HRT?</th><th>Type of medication</th></tr></thead>
-  <tbody>
-  <tr class="best"><td><strong>Noom Med / GoodRx</strong></td><td class="price">$99</td><td>No</td><td>Compounded semaglutide (not FDA-approved)</td></tr>
-  <tr><td><strong>Ro Body</strong></td><td class="price">$199/mo + $145 membership</td><td>Yes — estrogen, progesterone, testosterone</td><td>Brand-name or compounded</td></tr>
-  <tr><td><strong>Hims & Hers</strong></td><td class="price">$279+</td><td>Yes — via Hers platform</td><td>Brand-name or compounded</td></tr>
-  <tr><td><strong>PlushCare</strong></td><td class="price">$249+</td><td>Yes</td><td>Brand-name only</td></tr>
-  <tr><td><strong>LifeMD</strong></td><td class="price">$299+</td><td>Yes</td><td>Brand-name or compounded</td></tr>
-  <tr><td><strong>Eden Health</strong></td><td class="price">$249</td><td>No</td><td>Compounded — flat price, never goes up as dose increases</td></tr>
-  <tr><td><strong>MEDVi</strong></td><td class="price">$179</td><td>No</td><td>Compounded — no membership fee, free shipping</td></tr>
-  </tbody>
-  </table>
-  <h2>How long until you get your first dose?</h2>
-  <ul>
-  <li><strong>Day 1:</strong> Fill out health form online (15–20 minutes)</li>
-  <li><strong>Day 1–2:</strong> Doctor reviews and sends prescription if approved</li>
-  <li><strong>Day 2–3:</strong> Pharmacy fills your prescription</li>
-  <li><strong>Day 3–7:</strong> Medication arrives at your door</li>
-  <li><strong>Every month after:</strong> Quick check-in required to get your refill</li>
-  </ul>
-  <div class="art-box amber"><span class="art-box-lbl">⚠️ Red flag to watch for</span>In March 2026, the <a href="https://www.fda.gov/drugs/drug-safety-and-availability/medications-containing-semaglutide-marketed-type-2-diabetes-or-weight-loss" target="_blank">FDA took action against 30+ online companies</a> for selling fake or mislabeled GLP-1 medications. Before using any platform, ask them which pharmacy they use and whether it's a licensed <a href="https://www.fda.gov/drugs/human-drug-compounding/outsourcing-facilities-under-section-503b-fdca" target="_blank">503A or 503B facility</a>. If they can't answer that, don't use them.</div>
-  <div class="art-cta"><h3>See which platform is cheapest for you</h3><p>Prices vary depending on what drug you want and whether you have insurance. Our tool shows you the real numbers.</p><button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Compare Platforms →</button></div>
-  <div class="art-disc">This is for information only — not medical advice. GLP-1 medications require a real prescription from a licensed provider. Platform availability and pricing change frequently.</div>
-  </div>
+    <div class="art-cat">Access Guide</div>
+    <h1 class="art-h1">How to Get a GLP-1 Prescription Online — No Doctor's Office Required</h1>
+    <p class="art-deck">You don't have to wait months for an appointment. You can get evaluated, get a prescription, and have medication at your door — all from your phone or computer.</p>
+    <div class="art-meta"><span>Updated March 2026</span><span class="art-meta-dot"></span><span>6 min read</span></div>
+    <div class="art-body">
+      <p>A few years ago, getting Ozempic or Wegovy meant calling your doctor, waiting weeks for an appointment, getting a referral, waiting more, and then fighting with your insurance. In 2026, you can skip most of that. Online health companies (called <a href="https://www.fda.gov/consumers/consumer-updates/telehealth-delivering-health-care-convenience-you" target="_blank">telehealth platforms</a>) let you fill out a health form online, get reviewed by a real doctor, and have your medication shipped directly to your house.</p>
+      <p>Here's exactly how it works.</p>
+      <h2>How it works — step by step</h2>
+      <ol class="art-steps">
+        <li><strong>Fill out a health form online</strong><p>Takes about 15-20 minutes. They ask about your weight, height, medical history, and any health conditions. This replaces the in-person intake appointment.</p></li>
+        <li><strong>A real doctor or nurse reviews your info</strong><p>A licensed <a href="https://www.medscape.com/viewarticle/glp-1-telehealth" target="_blank">healthcare provider</a> looks at your form — some get back to you within hours. Good platforms do a video call if your case is more complex.</p></li>
+        <li><strong>You get a prescription sent to the pharmacy</strong><p>If you qualify, your prescription goes straight to the platform's pharmacy partner. Nothing to print, nothing to pick up.</p></li>
+        <li><strong>Medication comes to your door</strong><p>Most ship within 3–7 days for your first order. Refills are usually faster. A few platforms offer same-week delivery.</p></li>
+      </ol>
+      <h2>Do you qualify? Here's what they look for</h2>
+      <p>Every platform follows <a href="https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/wegovy-semaglutide-injection-information" target="_blank">FDA guidelines</a> for who can be prescribed these medications. You generally need one of these:</p>
+      <ul>
+        <li>A <a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmi-m.htm" target="_blank">BMI</a> of 30 or higher (what doctors call obesity), OR</li>
+        <li>A BMI of 27 or higher PLUS at least one weight-related health problem — like high blood pressure, type 2 diabetes, high cholesterol, sleep apnea, or heart disease</li>
+      </ul>
+      <p>You don't need a prior diagnosis. The telehealth doctor makes that call after reviewing your health form.</p>
+      <h2>Which platforms are the best right now?</h2>
+      <table class="art-tbl">
+        <thead><tr><th>Platform</th><th>Price/Month</th><th>Also offers HRT?</th><th>Type of medication</th></tr></thead>
+        <tbody>
+          <tr class="best"><td><strong>Noom Med / GoodRx</strong></td><td class="price">$99</td><td>No</td><td>Compounded semaglutide (not FDA-approved)</td></tr>
+          <tr><td><strong>Ro Body</strong></td><td class="price">$199/mo + $145 membership</td><td>Yes — estrogen, progesterone, testosterone</td><td>Brand-name or compounded</td></tr>
+          <tr><td><strong>Hims & Hers</strong></td><td class="price">$279+</td><td>Yes — via Hers platform</td><td>Brand-name or compounded</td></tr>
+          <tr><td><strong>PlushCare</strong></td><td class="price">$249+</td><td>Yes</td><td>Brand-name only</td></tr>
+          <tr><td><strong>LifeMD</strong></td><td class="price">$299+</td><td>Yes</td><td>Brand-name or compounded</td></tr>
+          <tr><td><strong>Eden Health</strong></td><td class="price">$249</td><td>No</td><td>Compounded — flat price, never goes up as dose increases</td></tr>
+          <tr><td><strong>MEDVi</strong></td><td class="price">$179</td><td>No</td><td>Compounded — no membership fee, free shipping</td></tr>
+        </tbody>
+      </table>
+      <h2>How long until you get your first dose?</h2>
+      <ul>
+        <li><strong>Day 1:</strong> Fill out health form online (15–20 minutes)</li>
+        <li><strong>Day 1–2:</strong> Doctor reviews and sends prescription if approved</li>
+        <li><strong>Day 2–3:</strong> Pharmacy fills your prescription</li>
+        <li><strong>Day 3–7:</strong> Medication arrives at your door</li>
+        <li><strong>Every month after:</strong> Quick check-in required to get your refill</li>
+      </ul>
+      <div class="art-box amber"><span class="art-box-lbl">⚠️ Red flag to watch for</span>In March 2026, the <a href="https://www.fda.gov/drugs/drug-safety-and-availability/medications-containing-semaglutide-marketed-type-2-diabetes-or-weight-loss" target="_blank">FDA took action against 30+ online companies</a> for selling fake or mislabeled GLP-1 medications. Before using any platform, ask them which pharmacy they use and whether it's a licensed <a href="https://www.fda.gov/drugs/human-drug-compounding/outsourcing-facilities-under-section-503b-fdca" target="_blank">503A or 503B facility</a>. If they can't answer that, don't use them.</div>
+      <div class="art-cta"><h3>See which platform is cheapest for you</h3><p>Prices vary depending on what drug you want and whether you have insurance. Our tool shows you the real numbers.</p><button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Compare Platforms →</button></div>
+      <div class="art-disc">This is for information only — not medical advice. GLP-1 medications require a real prescription from a licensed provider. Platform availability and pricing change frequently.</div>
+    </div>
   </div>
 
   <!-- Article 5 -->
   <div class="article-content" id="art-4">
-  <div class="art-cat">Breaking News</div>
-  <h1 class="art-h1">Is There a Generic Ozempic or Wegovy Yet? (The Honest Answer for 2026)</h1>
-  <p class="art-deck">You've probably seen ads for "generic semaglutide." Here's what's actually going on — and what you can do right now to pay less.</p>
-  <div class="art-meta"><span>Updated March 2026</span><span class="art-meta-dot"></span><span>7 min read</span></div>
-  <div class="art-body">
-  <div class="art-box amber"><span class="art-box-lbl">⚠️ Bottom line up front</span>As of March 2026, there is <strong>no FDA-approved generic Ozempic or Wegovy in the United States.</strong> The <a href="https://www.fda.gov/drugs/pharmaceutical-science-and-research/generic-drug-facts" target="_blank">patent</a> on semaglutide protects it until at least 2031–2032. What companies are selling as "generic semaglutide" is actually something called compounded semaglutide — which is different, cheaper, but not FDA-approved.</div>
-  <h2>What's a generic drug, and why doesn't one exist yet?</h2>
-  <p>A <a href="https://www.fda.gov/drugs/pharmaceutical-science-and-research/generic-drug-facts" target="_blank">generic drug</a> is an exact copy of a brand-name drug that another company is allowed to make and sell — usually at a much lower price. But companies can only make generics after the original drug's patent expires. Novo Nordisk (the company that makes Ozempic and Wegovy) holds patents on semaglutide that are expected to last until 2031–2032 in the US. Until then, no true generic is coming.</p>
-  <h2>So what is "compounded semaglutide" then?</h2>
-  <p>Compounded semaglutide is a version of the drug made by a licensed pharmacy instead of the drug manufacturer. It's not a generic — it hasn't gone through the same safety testing. But it uses the same active ingredient and costs a lot less ($99–299/month vs $1,300+). It's legal under specific <a href="https://www.fda.gov/drugs/human-drug-compounding/fda-human-drug-compounding" target="_blank">FDA rules about drug shortages</a> — but those rules can change.</p>
-  <h2>What has actually changed in 2026</h2>
-  <h3>A Wegovy pill is now available (January 2026)</h3>
-  <p>This is the biggest price change in years. The FDA approved a <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-first-oral-glp-1-medication-chronic-weight-management" target="_blank">daily Wegovy pill</a> in December 2025. It launched in January 2026 starting at <strong>$149/month</strong> — the cheapest brand-name semaglutide ever sold in the US. No shot needed.</p>
-  <h3>A stronger Wegovy shot was approved (March 2026)</h3>
-  <p>The FDA <a href="https://www.fda.gov" target="_blank">approved Wegovy HD</a> at 7.2mg on March 19, 2026. It produces about 20.7% average weight loss — similar to the strongest tirzepatide doses. A single-dose pen is expected to launch in April 2026.</p>
-  <h3>India got real generics — but the US didn't</h3>
-  <p>Semaglutide's patent expired in India on March 20, 2026. Indian drug companies launched versions of it priced about 90% lower than the brand name. Canada may also get generics later in 2026. But <strong>none of these are legal to buy in the United States.</strong></p>
-  <h2>When will the US actually get a real generic?</h2>
-  <p>Realistically — not before 2033 to 2036. Novo Nordisk has layered patents protecting different parts of the drug (the molecule itself, the formulation, the delivery device). Even after the first patents expire, it takes years for a competitor to develop and get an FDA-approved version to market.</p>
-  <h2>What you can do right now to pay less</h2>
-  <table class="art-tbl">
-  <thead><tr><th>Option</th><th>Price/Month</th><th>FDA Approved?</th><th>Available Now?</th></tr></thead>
-  <tbody>
-  <tr class="best"><td><strong>Wegovy pill — starting doses</strong></td><td class="price">$149</td><td>Yes</td><td>Yes — since January 2026</td></tr>
-  <tr><td><strong>Wegovy pill — higher doses</strong></td><td class="price">$299</td><td>Yes</td><td>Yes</td></tr>
-  <tr><td><strong>Wegovy shot — NovoCare deal</strong></td><td class="price">$199–349</td><td>Yes</td><td>Yes</td></tr>
-  <tr><td><strong>Zepbound vials — LillyDirect</strong></td><td class="price">$299–449</td><td>Yes</td><td>Yes</td></tr>
-  <tr><td><strong>Medicare GLP-1 Bridge</strong></td><td class="price">$50</td><td>Yes</td><td>Launching July 2026</td></tr>
-  <tr><td><strong>Lilly Cares free program</strong></td><td class="price">FREE</td><td>Yes</td><td>Yes — if your income qualifies</td></tr>
-  <tr><td><strong>Compounded semaglutide (telehealth)</strong></td><td class="price">$99–299</td><td>No — but from licensed pharmacies</td><td>Yes — check platform status</td></tr>
-  </tbody>
-  </table>
-  <div class="art-cta"><h3>Find the cheapest option for your situation right now</h3><p>We check prices monthly so you don't have to. Answer 3 questions and see what you'd actually pay.</p><button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Find My Best Price →</button></div>
-  <div class="art-disc">This is for information only — not medical advice. No FDA-approved generic semaglutide exists in the US as of March 2026. Talk to a doctor before starting or changing any medication.</div>
-  </div>
+    <div class="art-cat">Breaking News</div>
+    <h1 class="art-h1">Is There a Generic Ozempic or Wegovy Yet? (The Honest Answer for 2026)</h1>
+    <p class="art-deck">You've probably seen ads for "generic semaglutide." Here's what's actually going on — and what you can do right now to pay less.</p>
+    <div class="art-meta"><span>Updated March 2026</span><span class="art-meta-dot"></span><span>7 min read</span></div>
+    <div class="art-body">
+      <div class="art-box amber"><span class="art-box-lbl">⚠️ Bottom line up front</span>As of March 2026, there is <strong>no FDA-approved generic Ozempic or Wegovy in the United States.</strong> The <a href="https://www.fda.gov/drugs/pharmaceutical-science-and-research/generic-drug-facts" target="_blank">patent</a> on semaglutide protects it until at least 2031–2032. What companies are selling as "generic semaglutide" is actually something called compounded semaglutide — which is different, cheaper, but not FDA-approved.</div>
+      <h2>What's a generic drug, and why doesn't one exist yet?</h2>
+      <p>A <a href="https://www.fda.gov/drugs/pharmaceutical-science-and-research/generic-drug-facts" target="_blank">generic drug</a> is an exact copy of a brand-name drug that another company is allowed to make and sell — usually at a much lower price. But companies can only make generics after the original drug's patent expires. Novo Nordisk (the company that makes Ozempic and Wegovy) holds patents on semaglutide that are expected to last until 2031–2032 in the US. Until then, no true generic is coming.</p>
+      <h2>So what is "compounded semaglutide" then?</h2>
+      <p>Compounded semaglutide is a version of the drug made by a licensed pharmacy instead of the drug manufacturer. It's not a generic — it hasn't gone through the same safety testing. But it uses the same active ingredient and costs a lot less ($99–299/month vs $1,300+). It's legal under specific <a href="https://www.fda.gov/drugs/human-drug-compounding/fda-human-drug-compounding" target="_blank">FDA rules about drug shortages</a> — but those rules can change.</p>
+      <h2>What has actually changed in 2026</h2>
+      <h3>A Wegovy pill is now available (January 2026)</h3>
+      <p>This is the biggest price change in years. The FDA approved a <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-first-oral-glp-1-medication-chronic-weight-management" target="_blank">daily Wegovy pill</a> in December 2025. It launched in January 2026 starting at <strong>$149/month</strong> — the cheapest brand-name semaglutide ever sold in the US. No shot needed.</p>
+      <h3>A stronger Wegovy shot was approved (March 2026)</h3>
+      <p>The FDA <a href="https://www.fda.gov" target="_blank">approved Wegovy HD</a> at 7.2mg on March 19, 2026. It produces about 20.7% average weight loss — similar to the strongest tirzepatide doses. A single-dose pen is expected to launch in April 2026.</p>
+      <h3>India got real generics — but the US didn't</h3>
+      <p>Semaglutide's patent expired in India on March 20, 2026. Indian drug companies launched versions of it priced about 90% lower than the brand name. Canada may also get generics later in 2026. But <strong>none of these are legal to buy in the United States.</strong></p>
+      <h2>When will the US actually get a real generic?</h2>
+      <p>Realistically — not before 2033 to 2036. Novo Nordisk has layered patents protecting different parts of the drug (the molecule itself, the formulation, the delivery device). Even after the first patents expire, it takes years for a competitor to develop and get an FDA-approved version to market.</p>
+      <h2>What you can do right now to pay less</h2>
+      <table class="art-tbl">
+        <thead><tr><th>Option</th><th>Price/Month</th><th>FDA Approved?</th><th>Available Now?</th></tr></thead>
+        <tbody>
+          <tr class="best"><td><strong>Wegovy pill — starting doses</strong></td><td class="price">$149</td><td>Yes</td><td>Yes — since January 2026</td></tr>
+          <tr><td><strong>Wegovy pill — higher doses</strong></td><td class="price">$299</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td><strong>Wegovy shot — NovoCare deal</strong></td><td class="price">$199–349</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td><strong>Zepbound vials — LillyDirect</strong></td><td class="price">$299–449</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td><strong>Medicare GLP-1 Bridge</strong></td><td class="price">$50</td><td>Yes</td><td>Launching July 2026</td></tr>
+          <tr><td><strong>Lilly Cares free program</strong></td><td class="price">FREE</td><td>Yes</td><td>Yes — if your income qualifies</td></tr>
+          <tr><td><strong>Compounded semaglutide (telehealth)</strong></td><td class="price">$99–299</td><td>No — but from licensed pharmacies</td><td>Yes — check platform status</td></tr>
+        </tbody>
+      </table>
+      <div class="art-cta"><h3>Find the cheapest option for your situation right now</h3><p>We check prices monthly so you don't have to. Answer 3 questions and see what you'd actually pay.</p><button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Find My Best Price →</button></div>
+      <div class="art-disc">This is for information only — not medical advice. No FDA-approved generic semaglutide exists in the US as of March 2026. Talk to a doctor before starting or changing any medication.</div>
+    </div>
   </div>
 
   <!-- Article 6 -->
   <div class="article-content" id="art-5">
-  <div class="art-cat">State Guide</div>
-  <h1 class="art-h1">Does Medicaid Cover Ozempic or Wegovy in Your State? (2026 State-by-State Guide)</h1>
-  <p class="art-deck">Medicaid coverage for GLP-1 weight loss drugs is a mess right now — some states cover it, many just cut it, and it's changing fast. Here's exactly where each state stands as of March 2026.</p>
-  <div class="art-meta"><span>Updated March 2026</span><span class="art-meta-dot"></span><span>8 min read</span></div>
-  <div class="art-body">
-  <div class="art-box amber"><span class="art-box-lbl">⚠️ This changes constantly</span>States are cutting GLP-1 Medicaid coverage fast to save money. This guide is verified as of March 2026 but check with your state Medicaid program directly before making any decisions. Call the number on your Medicaid card or go to your state's Medicaid website.</div>
+    <div class="art-cat">State Guide</div>
+    <h1 class="art-h1">Does Medicaid Cover Ozempic or Wegovy in Your State? (2026 State-by-State Guide)</h1>
+    <p class="art-deck">Medicaid coverage for GLP-1 weight loss drugs is a mess right now — some states cover it, many just cut it, and it's changing fast. Here's exactly where each state stands as of March 2026.</p>
+    <div class="art-meta"><span>Updated March 2026</span><span class="art-meta-dot"></span><span>8 min read</span></div>
+    <div class="art-body">
+      <div class="art-box amber"><span class="art-box-lbl">⚠️ This changes constantly</span>States are cutting GLP-1 Medicaid coverage fast to save money. This guide is verified as of March 2026 but check with your state Medicaid program directly before making any decisions. Call the number on your Medicaid card or go to your state's Medicaid website.</div>
 
-  <h2>The short answer</h2>
-  <p>As of March 2026, <strong>only about 13 states</strong> cover GLP-1 medications for weight loss under Medicaid. That's down from 16 states just a few months ago — California, Pennsylvania, New Hampshire, and South Carolina all dropped coverage on January 1, 2026. The main reason? These drugs cost over $1,000/month at retail, and states are struggling with budget pressures.</p>
-  <p>The good news: <strong>every single state</strong> covers GLP-1s if you have type 2 diabetes. And a new federal program launching in <strong>May 2026</strong> could expand coverage significantly for Medicaid patients.</p>
+      <h2>The short answer</h2>
+      <p>As of March 2026, <strong>only about 13 states</strong> cover GLP-1 medications for weight loss under Medicaid. That's down from 16 states just a few months ago — California, Pennsylvania, New Hampshire, and South Carolina all dropped coverage on January 1, 2026. The main reason? These drugs cost over $1,000/month at retail, and states are struggling with budget pressures.</p>
+      <p>The good news: <strong>every single state</strong> covers GLP-1s if you have type 2 diabetes. And a new federal program launching in <strong>May 2026</strong> could expand coverage significantly for Medicaid patients.</p>
 
-  <h2>State-by-state coverage — March 2026</h2>
-  <table class="art-tbl">
-  <thead><tr><th>State</th><th>Weight Loss Coverage</th><th>What to Know</th></tr></thead>
-  <tbody>
-  <tr class="best"><td><strong>New York</strong></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Most generous state — no prior authorization required. Just fill your prescription like any other drug.</td></tr>
-  <tr><td><strong>Massachusetts</strong></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Covered with prior auth. Zepbound is the preferred drug for adults.</td></tr>
-  <tr><td><strong>Minnesota</strong></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Covered with prior authorization. BMI and comorbidity requirements apply.</td></tr>
-  <tr><td><strong>Mississippi</strong></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Covered with prior authorization.</td></tr>
-  <tr><td><strong>North Carolina</strong></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Coverage was cut in late 2025, then reinstated December 2025. Currently active.</td></tr>
-  <tr><td><strong>Wisconsin</strong></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Covered with prior authorization. Under review for possible restrictions.</td></tr>
-  <tr><td><strong>Texas</strong></td><td><span class="ctag ctag-maybe">~ Partial</span></td><td>Partial coverage — some GLP-1s covered for certain conditions. Check with your plan.</td></tr>
-  <tr><td><strong>Washington</strong></td><td><span class="ctag ctag-maybe">~ Partial</span></td><td>Partial coverage with prior authorization required.</td></tr>
-  <tr><td><strong>Arizona</strong></td><td><span class="ctag ctag-maybe">~ Partial</span></td><td>Partial coverage. Check your specific managed care plan.</td></tr>
-  <tr><td><strong>Kansas</strong></td><td><span class="ctag ctag-maybe">~ CVD only</span></td><td>Covers Wegovy only for heart disease risk reduction — not weight loss alone.</td></tr>
-  <tr><td><strong>Vermont</strong></td><td><span class="ctag ctag-maybe">~ CVD only</span></td><td>Covers Wegovy for cardiovascular risk reduction only. Not covered for weight loss alone.</td></tr>
-  <tr><td><strong>California</strong></td><td><span class="ctag ctag-no">✗ Ended Jan 2026</span></td><td>Medi-Cal cut weight loss coverage January 1, 2026. Still covers for diabetes, heart disease, and sleep apnea.</td></tr>
-  <tr><td><strong>Pennsylvania</strong></td><td><span class="ctag ctag-no">✗ Ended Jan 2026</span></td><td>Ended coverage for adults 21+ for weight loss. Children under 21 may still qualify under EPSDT federal law.</td></tr>
-  <tr><td><strong>Michigan</strong></td><td><span class="ctag ctag-no">✗ Restricted Jan 2026</span></td><td>Now only covers people with severe obesity (BMI 40+). Previously covered all qualifying patients.</td></tr>
-  <tr><td><strong>New Hampshire</strong></td><td><span class="ctag ctag-no">✗ Ended Jan 2026</span></td><td>Coverage ended January 1, 2026.</td></tr>
-  <tr><td><strong>South Carolina</strong></td><td><span class="ctag ctag-no">✗ Ended Jan 2026</span></td><td>Coverage ended January 1, 2026.</td></tr>
-  <tr><td><strong>All other states</strong></td><td><span class="ctag ctag-no">✗ Not covered</span></td><td>GLP-1s for weight loss not covered under Medicaid. Covered for diabetes and other approved medical conditions.</td></tr>
-  </tbody>
-  </table>
+      <h2>State-by-state coverage — March 2026</h2>
+      <table class="art-tbl">
+        <thead><tr><th>State</th><th>Weight Loss Coverage</th><th>What to Know</th></tr></thead>
+        <tbody>
+          <tr class="best"><td><strong>New York</strong></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Most generous state — no prior authorization required. Just fill your prescription like any other drug.</td></tr>
+          <tr><td><strong>Massachusetts</strong></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Covered with prior auth. Zepbound is the preferred drug for adults.</td></tr>
+          <tr><td><strong>Minnesota</strong></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Covered with prior authorization. BMI and comorbidity requirements apply.</td></tr>
+          <tr><td><strong>Mississippi</strong></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Covered with prior authorization.</td></tr>
+          <tr><td><strong>North Carolina</strong></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Coverage was cut in late 2025, then reinstated December 2025. Currently active.</td></tr>
+          <tr><td><strong>Wisconsin</strong></td><td><span class="ctag ctag-yes">✓ Covered</span></td><td>Covered with prior authorization. Under review for possible restrictions.</td></tr>
+          <tr><td><strong>Texas</strong></td><td><span class="ctag ctag-maybe">~ Partial</span></td><td>Partial coverage — some GLP-1s covered for certain conditions. Check with your plan.</td></tr>
+          <tr><td><strong>Washington</strong></td><td><span class="ctag ctag-maybe">~ Partial</span></td><td>Partial coverage with prior authorization required.</td></tr>
+          <tr><td><strong>Arizona</strong></td><td><span class="ctag ctag-maybe">~ Partial</span></td><td>Partial coverage. Check your specific managed care plan.</td></tr>
+          <tr><td><strong>Kansas</strong></td><td><span class="ctag ctag-maybe">~ CVD only</span></td><td>Covers Wegovy only for heart disease risk reduction — not weight loss alone.</td></tr>
+          <tr><td><strong>Vermont</strong></td><td><span class="ctag ctag-maybe">~ CVD only</span></td><td>Covers Wegovy for cardiovascular risk reduction only. Not covered for weight loss alone.</td></tr>
+          <tr><td><strong>California</strong></td><td><span class="ctag ctag-no">✗ Ended Jan 2026</span></td><td>Medi-Cal cut weight loss coverage January 1, 2026. Still covers for diabetes, heart disease, and sleep apnea.</td></tr>
+          <tr><td><strong>Pennsylvania</strong></td><td><span class="ctag ctag-no">✗ Ended Jan 2026</span></td><td>Ended coverage for adults 21+ for weight loss. Children under 21 may still qualify under EPSDT federal law.</td></tr>
+          <tr><td><strong>Michigan</strong></td><td><span class="ctag ctag-no">✗ Restricted Jan 2026</span></td><td>Now only covers people with severe obesity (BMI 40+). Previously covered all qualifying patients.</td></tr>
+          <tr><td><strong>New Hampshire</strong></td><td><span class="ctag ctag-no">✗ Ended Jan 2026</span></td><td>Coverage ended January 1, 2026.</td></tr>
+          <tr><td><strong>South Carolina</strong></td><td><span class="ctag ctag-no">✗ Ended Jan 2026</span></td><td>Coverage ended January 1, 2026.</td></tr>
+          <tr><td><strong>All other states</strong></td><td><span class="ctag ctag-no">✗ Not covered</span></td><td>GLP-1s for weight loss not covered under Medicaid. Covered for diabetes and other approved medical conditions.</td></tr>
+        </tbody>
+      </table>
 
-  <div class="art-box teal"><span class="art-box-lbl">💡 Important: Every state covers GLP-1s for diabetes</span>Even if your state doesn't cover weight loss, if you have type 2 diabetes your Medicaid plan covers Ozempic and Mounjaro. If you have both diabetes and obesity, this is often your best path to coverage. Ask your doctor to prescribe it for diabetes management.</div>
+      <div class="art-box teal"><span class="art-box-lbl">💡 Important: Every state covers GLP-1s for diabetes</span>Even if your state doesn't cover weight loss, if you have type 2 diabetes your Medicaid plan covers Ozempic and Mounjaro. If you have both diabetes and obesity, this is often your best path to coverage. Ask your doctor to prescribe it for diabetes management.</div>
 
-  <h2>Big change coming: The BALANCE Model (May 2026)</h2>
-  <p>In December 2025, the federal government announced a new program called the <a href="https://www.cms.gov/priorities/innovation/innovation-models/balance" target="_blank">BALANCE Model</a> that could dramatically expand Medicaid coverage for GLP-1s. Here's what it means:</p>
-  <ul>
-  <li><strong>May 2026:</strong> State Medicaid programs can start joining the BALANCE Model voluntarily. States that join get federal help negotiating lower drug prices.</li>
-  <li><strong>January 2027:</strong> Medicare Part D plans can also join. This is when coverage could expand significantly.</li>
-  <li><strong>The catch:</strong> It's voluntary — states have to choose to participate. Not all states will join right away.</li>
-  <li><strong>If your state joins:</strong> You could get GLP-1s covered at a much lower copay, with lifestyle support programs included.</li>
-  </ul>
+      <h2>Big change coming: The BALANCE Model (May 2026)</h2>
+      <p>In December 2025, the federal government announced a new program called the <a href="https://www.cms.gov/priorities/innovation/innovation-models/balance" target="_blank">BALANCE Model</a> that could dramatically expand Medicaid coverage for GLP-1s. Here's what it means:</p>
+      <ul>
+        <li><strong>May 2026:</strong> State Medicaid programs can start joining the BALANCE Model voluntarily. States that join get federal help negotiating lower drug prices.</li>
+        <li><strong>January 2027:</strong> Medicare Part D plans can also join. This is when coverage could expand significantly.</li>
+        <li><strong>The catch:</strong> It's voluntary — states have to choose to participate. Not all states will join right away.</li>
+        <li><strong>If your state joins:</strong> You could get GLP-1s covered at a much lower copay, with lifestyle support programs included.</li>
+      </ul>
 
-  <h2>What to do if your state doesn't cover it</h2>
-  <ul>
-  <li><strong>Check if you have diabetes or sleep apnea</strong> — these are covered in every state. Talk to your doctor about whether your prescription can be written for those conditions instead.</li>
-  <li><strong>Apply to manufacturer programs</strong> — NovoCare and LillyDirect offer cash-pay prices starting at $149/month regardless of your state.</li>
-  <li><strong>Check income limits for free programs</strong> — Lilly Cares Foundation and NovoCare Patient Assistance offer free medication if your income qualifies.</li>
-  <li><strong>Watch for BALANCE Model updates in your state</strong> — sign up for our price alerts and we'll let you know when your state joins.</li>
-  </ul>
+      <h2>What to do if your state doesn't cover it</h2>
+      <ul>
+        <li><strong>Check if you have diabetes or sleep apnea</strong> — these are covered in every state. Talk to your doctor about whether your prescription can be written for those conditions instead.</li>
+        <li><strong>Apply to manufacturer programs</strong> — NovoCare and LillyDirect offer cash-pay prices starting at $149/month regardless of your state.</li>
+        <li><strong>Check income limits for free programs</strong> — Lilly Cares Foundation and NovoCare Patient Assistance offer free medication if your income qualifies.</li>
+        <li><strong>Watch for BALANCE Model updates in your state</strong> — sign up for our price alerts and we'll let you know when your state joins.</li>
+      </ul>
 
-  <div class="art-box amber"><span class="art-box-lbl">📞 How to check your state's current coverage</span>Coverage changes so fast that even this guide may be slightly out of date. To get the most accurate answer: Call the number on the back of your Medicaid card and ask "Does my plan cover Wegovy or Zepbound for weight loss?" Get the answer in writing if possible.</div>
+      <div class="art-box amber"><span class="art-box-lbl">📞 How to check your state's current coverage</span>Coverage changes so fast that even this guide may be slightly out of date. To get the most accurate answer: Call the number on the back of your Medicaid card and ask "Does my plan cover Wegovy or Zepbound for weight loss?" Get the answer in writing if possible.</div>
 
-  <div class="art-cta"><h3>Your state doesn't cover it? Here are your cash-pay options.</h3><p>Answer 3 questions and we'll show you the best affordable options for your situation — starting at $99/month.</p><button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Find My Best Price →</button></div>
-  <div class="art-disc">State coverage information verified March 2026 using KFF, CMS, and state Medicaid program announcements. Coverage changes frequently — always verify with your state Medicaid program directly. This is for informational purposes only and is not legal or medical advice.</div>
-  </div>
+      <div class="art-cta"><h3>Your state doesn't cover it? Here are your cash-pay options.</h3><p>Answer 3 questions and we'll show you the best affordable options for your situation — starting at $99/month.</p><button class="btn-primary" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Find My Best Price →</button></div>
+      <div class="art-disc">State coverage information verified March 2026 using KFF, CMS, and state Medicaid program announcements. Coverage changes frequently — always verify with your state Medicaid program directly. This is for informational purposes only and is not legal or medical advice.</div>
+    </div>
   </div>
 
 </div><!-- /articles -->
 
 <!-- ══════════════════════════════════════
-  PRIVACY POLICY PAGE
+   PRIVACY POLICY PAGE
 ══════════════════════════════════════ -->
 <div class="page" id="page-privacy">
   <div class="about-page">
-  <h1>Privacy Policy</h1>
-  <p><em>Last updated: March 2026</em></p>
-  <p>GLP-1 Price Finder ("we," "us," or "our") operates glp1pricefinder.com. This Privacy Policy explains how we collect, use, and protect your information when you visit our website.</p>
+    <h1>Privacy Policy</h1>
+    <p><em>Last updated: March 2026</em></p>
+    <p>GLP-1 Price Finder ("we," "us," or "our") operates glp1pricefinder.com. This Privacy Policy explains how we collect, use, and protect your information when you visit our website.</p>
 
-  <h2>Information We Collect</h2>
-  <p><strong>Information you provide:</strong> If you sign up for our email list, we collect your email address. We do not collect your name, address, phone number, or payment information.</p>
-  <p><strong>Information collected automatically:</strong> When you visit our site, we may automatically collect information such as your browser type, device type, pages visited, and how you found us. This is done through analytics tools like Google Analytics.</p>
-  <p><strong>Cookies:</strong> Our site uses cookies — small text files stored on your device — to help us understand how visitors use our site. You can disable cookies in your browser settings at any time.</p>
+    <h2>Information We Collect</h2>
+    <p><strong>Information you provide:</strong> If you sign up for our email list, we collect your email address. We do not collect your name, address, phone number, or payment information.</p>
+    <p><strong>Information collected automatically:</strong> When you visit our site, we may automatically collect information such as your browser type, device type, pages visited, and how you found us. This is done through analytics tools like Google Analytics.</p>
+    <p><strong>Cookies:</strong> Our site uses cookies — small text files stored on your device — to help us understand how visitors use our site. You can disable cookies in your browser settings at any time.</p>
 
-  <h2>How We Use Your Information</h2>
-  <ul>
-  <li>To send you price alerts and updates if you signed up for our email list</li>
-  <li>To understand how visitors use our site so we can improve it</li>
-  <li>To comply with legal obligations</li>
-  </ul>
-  <p>We do not sell your personal information to anyone. Ever.</p>
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li>To send you price alerts and updates if you signed up for our email list</li>
+      <li>To understand how visitors use our site so we can improve it</li>
+      <li>To comply with legal obligations</li>
+    </ul>
+    <p>We do not sell your personal information to anyone. Ever.</p>
 
-  <h2>Affiliate Links</h2>
-  <p>Our website contains affiliate links to third-party platforms. When you click these links and make a purchase or sign up, we may earn a commission. This does not cost you anything extra. We only recommend platforms we have researched and believe are legitimate.</p>
-  <p>When you click an affiliate link and visit a third-party site, that site's own privacy policy applies. We are not responsible for the privacy practices of any third-party websites.</p>
+    <h2>Affiliate Links</h2>
+    <p>Our website contains affiliate links to third-party platforms. When you click these links and make a purchase or sign up, we may earn a commission. This does not cost you anything extra. We only recommend platforms we have researched and believe are legitimate.</p>
+    <p>When you click an affiliate link and visit a third-party site, that site's own privacy policy applies. We are not responsible for the privacy practices of any third-party websites.</p>
 
-  <h2>Email List</h2>
-  <p>If you sign up for our email list, we use your email address only to send you GLP-1 pricing updates and alerts. We do not share your email address with third parties. You can unsubscribe at any time by clicking the unsubscribe link in any email we send you.</p>
+    <h2>Email List</h2>
+    <p>If you sign up for our email list, we use your email address only to send you GLP-1 pricing updates and alerts. We do not share your email address with third parties. You can unsubscribe at any time by clicking the unsubscribe link in any email we send you.</p>
 
-  <h2>Third-Party Services</h2>
-  <p>We use the following third-party services that may collect information:</p>
-  <ul>
-  <li><strong>Google Analytics</strong> — tracks site usage anonymously. See <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a></li>
-  <li><strong>Netlify</strong> — hosts our website. See <a href="https://www.netlify.com/privacy/" target="_blank">Netlify's Privacy Policy</a></li>
-  </ul>
+    <h2>Third-Party Services</h2>
+    <p>We use the following third-party services that may collect information:</p>
+    <ul>
+      <li><strong>Google Analytics</strong> — tracks site usage anonymously. See <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a></li>
+      <li><strong>Netlify</strong> — hosts our website. See <a href="https://www.netlify.com/privacy/" target="_blank">Netlify's Privacy Policy</a></li>
+    </ul>
 
-  <h2>Children's Privacy</h2>
-  <p>Our site is not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
+    <h2>Children's Privacy</h2>
+    <p>Our site is not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
 
-  <h2>Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. We will post the updated policy on this page with a new "last updated" date.</p>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will post the updated policy on this page with a new "last updated" date.</p>
 
-  <h2>Contact Us</h2>
-  <p>Questions about this Privacy Policy? Email us at <a href="mailto:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e3848f93d293918a8086858a8d878691a3848e828a8fcd808c8e">[email&#160;protected]</a>"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="accbc0dc9ddcdec5cfc9cac5c2c8c9deeccbc1cdc5c082cfc3c1">[email&#160;protected]</a></a></p>
+    <h2>Contact Us</h2>
+    <p>Questions about this Privacy Policy? Email us at <a href="mailto:glp1pricefinder@gmail.com">glp1pricefinder@gmail.com</a></p>
   </div>
 </div>
 
 <!-- ══════════════════════════════════════
-  TERMS OF SERVICE PAGE
+   TERMS OF SERVICE PAGE
 ══════════════════════════════════════ -->
 <div class="page" id="page-terms">
   <div class="about-page">
-  <h1>Terms of Service</h1>
-  <p><em>Last updated: March 2026</em></p>
-  <p>By using glp1pricefinder.com, you agree to these Terms of Service. Please read them carefully.</p>
+    <h1>Terms of Service</h1>
+    <p><em>Last updated: March 2026</em></p>
+    <p>By using glp1pricefinder.com, you agree to these Terms of Service. Please read them carefully.</p>
 
-  <h2>What This Site Is</h2>
-  <p>GLP-1 Price Finder is an independent price comparison and information resource. We provide general information about GLP-1 medication pricing, telehealth platforms, insurance coverage, and access programs. We are not a pharmacy, telehealth provider, insurance company, or medical practice.</p>
+    <h2>What This Site Is</h2>
+    <p>GLP-1 Price Finder is an independent price comparison and information resource. We provide general information about GLP-1 medication pricing, telehealth platforms, insurance coverage, and access programs. We are not a pharmacy, telehealth provider, insurance company, or medical practice.</p>
 
-  <h2>Not Medical Advice</h2>
-  <p>Nothing on this website is medical advice. All content is for informational purposes only. Always consult a licensed healthcare provider before starting, stopping, or changing any medication. Never disregard professional medical advice or delay seeking it because of something you read on this site.</p>
+    <h2>Not Medical Advice</h2>
+    <p>Nothing on this website is medical advice. All content is for informational purposes only. Always consult a licensed healthcare provider before starting, stopping, or changing any medication. Never disregard professional medical advice or delay seeking it because of something you read on this site.</p>
 
-  <h2>Not Legal or Financial Advice</h2>
-  <p>Nothing on this site is legal or financial advice. Insurance coverage information is provided for general informational purposes and may not apply to your specific plan. Always verify coverage details directly with your insurance company.</p>
+    <h2>Not Legal or Financial Advice</h2>
+    <p>Nothing on this site is legal or financial advice. Insurance coverage information is provided for general informational purposes and may not apply to your specific plan. Always verify coverage details directly with your insurance company.</p>
 
-  <h2>Pricing Accuracy</h2>
-  <p>We work hard to keep pricing information accurate and up to date. However, prices change frequently. All prices shown are estimates verified at the time of publication and may not reflect current pricing. Always verify prices directly with the platform or pharmacy before making any decisions.</p>
+    <h2>Pricing Accuracy</h2>
+    <p>We work hard to keep pricing information accurate and up to date. However, prices change frequently. All prices shown are estimates verified at the time of publication and may not reflect current pricing. Always verify prices directly with the platform or pharmacy before making any decisions.</p>
 
-  <h2>Affiliate Disclosure</h2>
-  <p>GLP-1 Price Finder participates in affiliate programs. When you click certain links on our site and make a purchase or sign up for a service, we may earn a referral commission. This does not cost you anything extra. Our affiliate relationships do not influence our rankings, recommendations, or pricing data. We disclose affiliate relationships in accordance with the <a href="https://www.ftc.gov/business-guidance/resources/ftc-endorsement-guides-what-people-are-asking" target="_blank">FTC's Endorsement Guidelines</a>.</p>
+    <h2>Affiliate Disclosure</h2>
+    <p>GLP-1 Price Finder participates in affiliate programs. When you click certain links on our site and make a purchase or sign up for a service, we may earn a referral commission. This does not cost you anything extra. Our affiliate relationships do not influence our rankings, recommendations, or pricing data. We disclose affiliate relationships in accordance with the <a href="https://www.ftc.gov/business-guidance/resources/ftc-endorsement-guides-what-people-are-asking" target="_blank">FTC's Endorsement Guidelines</a>.</p>
 
-  <h2>Third-Party Links</h2>
-  <p>Our site links to third-party websites including telehealth platforms, pharmacies, and manufacturer programs. We are not responsible for the content, accuracy, or privacy practices of any third-party websites. Visiting third-party sites is at your own risk.</p>
+    <h2>Third-Party Links</h2>
+    <p>Our site links to third-party websites including telehealth platforms, pharmacies, and manufacturer programs. We are not responsible for the content, accuracy, or privacy practices of any third-party websites. Visiting third-party sites is at your own risk.</p>
 
-  <h2>Intellectual Property</h2>
-  <p>All content on glp1pricefinder.com — including text, tools, and design — is owned by GLP-1 Price Finder. You may not reproduce, distribute, or use our content without written permission.</p>
+    <h2>Intellectual Property</h2>
+    <p>All content on glp1pricefinder.com — including text, tools, and design — is owned by GLP-1 Price Finder. You may not reproduce, distribute, or use our content without written permission.</p>
 
-  <h2>Limitation of Liability</h2>
-  <p>GLP-1 Price Finder is provided "as is" without any warranties. We are not liable for any damages arising from your use of this site or reliance on information provided here. This includes but is not limited to health decisions, financial decisions, or insurance decisions made based on information from this site.</p>
+    <h2>Limitation of Liability</h2>
+    <p>GLP-1 Price Finder is provided "as is" without any warranties. We are not liable for any damages arising from your use of this site or reliance on information provided here. This includes but is not limited to health decisions, financial decisions, or insurance decisions made based on information from this site.</p>
 
-  <h2>Changes to These Terms</h2>
-  <p>We may update these Terms at any time. Continued use of the site after changes constitutes acceptance of the new Terms.</p>
+    <h2>Changes to These Terms</h2>
+    <p>We may update these Terms at any time. Continued use of the site after changes constitutes acceptance of the new Terms.</p>
 
-  <h2>Contact Us</h2>
-  <p>Questions about these Terms? Email us at <a href="mailto:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d7a716d2c6d6f747e787b747379786f5d7a707c7471337e7270">[email&#160;protected]</a>"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="95f2f9e5a4e5e7fcf6f0f3fcfbf1f0e7d5f2f8f4fcf9bbf6faf8">[email&#160;protected]</a></a></p>
+    <h2>Contact Us</h2>
+    <p>Questions about these Terms? Email us at <a href="mailto:glp1pricefinder@gmail.com">glp1pricefinder@gmail.com</a></p>
   </div>
 </div>
 
 <!-- ══════════════════════════════════════
-  ABOUT PAGE
+   ABOUT PAGE
 ══════════════════════════════════════ -->
 <div class="page" id="page-about">
   <div class="about-page">
-  <h1>About GLP-1 Price Finder</h1>
-  <p>GLP-1 Price Finder is an independent price comparison and navigation platform for cash-pay consumers seeking GLP-1 medications. We built this tool because navigating GLP-1 pricing is genuinely confusing — the same drug can cost $99 or $1,349 depending on which program you use, and most people have no idea the affordable options exist.</p>
-  <h2>Our Mission</h2>
-  <p>To be the most trustworthy, thorough, and transparent resource for GLP-1 pricing in the US. We verify pricing monthly, we don't accept payment to influence our rankings, and we clearly disclose every affiliate relationship.</p>
-  <h2>Editorial Standards</h2>
-  <p>All pricing data is verified from primary sources — manufacturer websites, telehealth platform pricing pages, and pharmacy direct programs. We update prices monthly. If something is outdated, email us and we'll fix it within 24 hours.</p>
-  <h2>Affiliate Disclosure</h2>
-  <p>GLP-1 Price Finder may earn referral fees when you click through to telehealth platforms and sign up. This is how we fund the research and development of this tool. Our affiliate relationships do not affect the rankings, pricing data, or recommendations in our comparison tool — options are ranked by fit and price, not by commission rate.</p>
-  <h2>Medical Disclaimer</h2>
-  <p>All content on this site is for informational purposes only and does not constitute medical advice, diagnosis, or treatment. Always consult a licensed healthcare provider before starting, stopping, or changing any medication. Prices shown are estimates and may vary by location, dose, and program availability.</p>
-  <h2>Contact</h2>
-  <p>Questions, corrections, or partnership inquiries: <a href="mailto:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="71161d0140010318121417181f15140331161c10181d5f121e1c">[email&#160;protected]</a>"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8bece7fbbafbf9e2e8eeede2e5efeef9cbece6eae2e7a5e8e4e6">[email&#160;protected]</a></a></p>
+    <h1>About GLP-1 Price Finder</h1>
+    <p>GLP-1 Price Finder is an independent price comparison and navigation platform for cash-pay consumers seeking GLP-1 medications. We built this tool because navigating GLP-1 pricing is genuinely confusing — the same drug can cost $99 or $1,349 depending on which program you use, and most people have no idea the affordable options exist.</p>
+    <h2>Our Mission</h2>
+    <p>To be the most trustworthy, thorough, and transparent resource for GLP-1 pricing in the US. We verify pricing monthly, we don't accept payment to influence our rankings, and we clearly disclose every affiliate relationship.</p>
+    <h2>Editorial Standards</h2>
+    <p>All pricing data is verified from primary sources — manufacturer websites, telehealth platform pricing pages, and pharmacy direct programs. We update prices monthly. If something is outdated, email us and we'll fix it within 24 hours.</p>
+    <h2>Affiliate Disclosure</h2>
+    <p>GLP-1 Price Finder may earn referral fees when you click through to telehealth platforms and sign up. This is how we fund the research and development of this tool. Our affiliate relationships do not affect the rankings, pricing data, or recommendations in our comparison tool — options are ranked by fit and price, not by commission rate.</p>
+    <h2>Medical Disclaimer</h2>
+    <p>All content on this site is for informational purposes only and does not constitute medical advice, diagnosis, or treatment. Always consult a licensed healthcare provider before starting, stopping, or changing any medication. Prices shown are estimates and may vary by location, dose, and program availability.</p>
+    <h2>Contact</h2>
+    <p>Questions, corrections, or partnership inquiries: <a href="mailto:glp1pricefinder@gmail.com">glp1pricefinder@gmail.com</a></p>
   </div>
 </div>
 
@@ -1316,7 +1308,7 @@ function showArticle(idx, btn) {
   const tabs = document.querySelectorAll('.article-tab');
   if (tabs[idx]) tabs[idx].classList.add('on');
   if (!document.getElementById('page-articles').classList.contains('active')) {
-  showPage('articles', document.querySelector('.nav-link:nth-child(3)'));
+    showPage('articles', document.querySelector('.nav-link:nth-child(3)'));
   }
   window.scrollTo(0,0);
 }
@@ -1339,19 +1331,19 @@ function toggleMobileNav() {
 // ── DOSE CONFIGS ──
 const DOSES = {
   sema: {
-  steps:['Starting\n0.25mg','Low\n0.5mg','Mid\n1mg','Maintenance\n1.7mg','Max\n2.4mg'],
-  prices:[199,199,349,349,349],
-  notes:['First 2 months intro price via NovoCare/GoodRx','Still intro-eligible dose','Moving to maintenance pricing','Standard maintenance — $349/mo cash','Max dose — same $349/mo cash pricing'],
+    steps:['Starting\n0.25mg','Low\n0.5mg','Mid\n1mg','Maintenance\n1.7mg','Max\n2.4mg'],
+    prices:[199,199,349,349,349],
+    notes:['First 2 months intro price via NovoCare/GoodRx','Still intro-eligible dose','Moving to maintenance pricing','Standard maintenance — $349/mo cash','Max dose — same $349/mo cash pricing'],
   },
   tirz: {
-  steps:['Starting\n2.5mg','Low\n5mg','Mid\n7.5mg','Maintenance\n10mg','Max\n15mg'],
-  prices:[299,399,399,449,449],
-  notes:['Lowest dose via LillyDirect vials','Price jumps at 5mg+','Mid titration range','Common maintenance target','Highest dose — most potent'],
+    steps:['Starting\n2.5mg','Low\n5mg','Mid\n7.5mg','Maintenance\n10mg','Max\n15mg'],
+    prices:[299,399,399,449,449],
+    notes:['Lowest dose via LillyDirect vials','Price jumps at 5mg+','Mid titration range','Common maintenance target','Highest dose — most potent'],
   },
   oral: {
-  steps:['Low\n1.5mg','Mid\n4mg','High\n9mg','Max\n25mg'],
-  prices:[149,149,299,299],
-  notes:['Oral Wegovy starting dose — most affordable','Same low-tier pricing','Higher dose — $299/mo','Maximum oral dose — $299/mo'],
+    steps:['Low\n1.5mg','Mid\n4mg','High\n9mg','Max\n25mg'],
+    prices:[149,149,299,299],
+    notes:['Oral Wegovy starting dose — most affordable','Same low-tier pricing','Higher dose — $299/mo','Maximum oral dose — $299/mo'],
   },
 };
 
@@ -1363,9 +1355,9 @@ function pick(q, val, btn) {
   A['q'+q] = val;
   document.getElementById('n'+q).disabled = false;
   if (q===2) {
-  const dw = document.getElementById('dose-wrap');
-  if (val==='unsure') { dw.style.display='none'; A.dose=0; }
-  else { dw.style.display='block'; initSlider(val); }
+    const dw = document.getElementById('dose-wrap');
+    if (val==='unsure') { dw.style.display='none'; A.dose=0; }
+    else { dw.style.display='block'; initSlider(val); }
   }
 }
 
@@ -1378,9 +1370,9 @@ function initSlider(drug) {
   const track = document.getElementById('dose-track');
   const n = cfg.steps.length - 1;
   track.onclick = function(e) {
-  const rect = track.getBoundingClientRect();
-  const pct = Math.max(0, Math.min(1, (e.clientX-rect.left)/rect.width));
-  setDose(Math.round(pct*n), drug);
+    const rect = track.getBoundingClientRect();
+    const pct = Math.max(0, Math.min(1, (e.clientX-rect.left)/rect.width));
+    setDose(Math.round(pct*n), drug);
   };
 }
 
@@ -1400,10 +1392,10 @@ function setDose(idx, drug) {
 function goStep(step) {
   const prev = step - 1;
   if (prev > 0) {
-  document.getElementById('s'+prev).style.display = 'none';
-  const d = document.getElementById('d'+prev);
-  d.classList.remove('active'); d.classList.add('done');
-  if (prev < 3) document.getElementById('l'+prev).classList.add('done');
+    document.getElementById('s'+prev).style.display = 'none';
+    const d = document.getElementById('d'+prev);
+    d.classList.remove('active'); d.classList.add('done');
+    if (prev < 3) document.getElementById('l'+prev).classList.add('done');
   }
   const card = document.getElementById('s'+step);
   card.style.display = 'block';
@@ -1424,13 +1416,11 @@ const OPTIONS = [
   {id:'cms',name:'Medicare GLP-1 Bridge',type:'Medicare pilot — launching July 2026',pricingType:'💊 Medication only — Medicare copay',basePrices:{sema:50,tirz:50,oral:null,unsure:50},tags:['brand','ins'],hrt:false,telehealth:false,ins:['medicare'],drugs:['sema','tirz','unsure'],pri:{price:0,brand:0,telehealth:6,hrt:6},url:'https://www.cms.gov',hrtInfo:null,doseNote:'$50/mo copay · Launching July 2026 — get on waitlist now',hsafsa:false},
   {id:'lifemd',name:'LifeMD',type:'Telehealth platform',pricingType:'🔁 All-in — consultation + medication bundled',basePrices:{sema:299,tirz:299,oral:299,unsure:299},tags:['brand','compound','coach'],hrt:true,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:4,brand:4,telehealth:4,hrt:2},url:'https://www.lifemd.com',hrtInfo:'HRT — estrogen and testosterone management alongside GLP-1',doseNote:null,hsafsa:true},
   {id:'shed',name:'Shed',type:'Telehealth — compounded + brand name options',pricingType:'🔁 All-in — medication + optional coaching ($49.99/mo extra)',basePrices:{sema:199,tirz:199,oral:null,unsure:199},tags:['brand','compound'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:2,brand:3,telehealth:2,hrt:5},url:'https://tryshed.com',hrtInfo:null,doseNote:'$199 starting dose · $299 maintenance dose · No hidden fees',hsafsa:true},
-  {id:'eden',name:'Eden Health',type:'Telehealth — flat pricing at every dose',pricingType:'🔁 All-in — same price from starting dose to max',basePrices:{sema:249,tirz:249,oral:null,unsure:249},tags:['compound','coach'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:3,brand:5,telehealth:2,hrt:5},url:'https://track.revoffers.com/SH5I9',hrtInfo:null,doseNote:'Flat rate — price never increases as dose goes up. Rare.',hsafsa:true},
+  {id:'eden',name:'Eden Health',type:'Telehealth — flat pricing at every dose',pricingType:'🔁 All-in — same price from starting dose to max',basePrices:{sema:249,tirz:249,oral:null,unsure:249},tags:['compound','coach'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:3,brand:5,telehealth:2,hrt:5},url:'https://www.edenhealth.com',hrtInfo:null,doseNote:'Flat rate — price never increases as dose goes up. Rare.',hsafsa:true},
   {id:'medvi',name:'MEDVi',type:'Telehealth — no membership fees',pricingType:'🔁 All-in — no membership fee, free shipping included',basePrices:{sema:179,tirz:299,oral:null,unsure:179},tags:['compound'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:1,brand:5,telehealth:1,hrt:5},url:'https://www.medvi.com',hrtInfo:null,doseNote:'No membership fee · Free shipping · Fast approval',hsafsa:true},
   {id:'lemonaid',name:'Lemonaid Health',type:'Telehealth — $49/mo membership + medication',pricingType:'➕ $49/mo membership + medication billed separately',basePrices:{sema:199,tirz:199,oral:null,unsure:199},tags:['compound','coach'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:2,brand:5,telehealth:2,hrt:5},url:'https://www.lemonaidhealth.com',hrtInfo:null,doseNote:'Starting at $129/mo · $49/mo membership on top',hsafsa:true},
   {id:'walgreens',name:'Walgreens Weight Management',type:'Pharmacy telehealth — brand name only',pricingType:'🔁 All-in — telehealth + brand name medication',basePrices:{sema:149,tirz:299,oral:149,unsure:149},tags:['brand'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','oral','unsure'],pri:{price:1,brand:1,telehealth:2,hrt:5},url:'https://www.walgreens.com/topic/virtual-healthcare/weight-loss.jsp',hrtInfo:null,doseNote:'Oral Wegovy $149/mo through Aug 2026 · Zepbound vials $299/mo',hsafsa:false},
   {id:'trimrx',name:'TrimRx',type:'Telehealth — no membership fees, compounded',pricingType:'🔁 All-in — no membership fee',basePrices:{sema:199,tirz:299,oral:null,unsure:199},tags:['compound'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:2,brand:5,telehealth:2,hrt:5},url:'https://trimrx.com',hrtInfo:null,doseNote:'Transparent pricing · No surprise fees · Licensed 503A pharmacies',hsafsa:true},
-    {id:'directmeds',name:'DirectMeds',type:'Telehealth — compounded GLP-1',pricingType:'🔁 All-in — consultation + medication bundled',basePrices:{sema:280,tirz:280,oral:null,unsure:280},tags:['compound'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:2,brand:5,telehealth:2,hrt:5},url:'https://track.revoffers.com/SH5IA',hrtInfo:null,doseNote:'Licensed telehealth provider · Compounded semaglutide and tirzepatide',hsafsa:true},
-  {id:'carebarerx',name:'CareBareRx',type:'Telehealth — compounded GLP-1',pricingType:'🔁 All-in — consultation + medication bundled',basePrices:{sema:300,tirz:300,oral:null,unsure:300},tags:['compound'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:3,brand:5,telehealth:3,hrt:5},url:'https://track.revoffers.com/SH5I8',hrtInfo:null,doseNote:'Licensed telehealth provider · Compounded semaglutide and tirzepatide',hsafsa:true},
   {id:'gobymeds',name:'GobyMeds',type:'Telehealth — 3-month starter bundle',pricingType:'🔁 All-in — medication + telehealth bundled',basePrices:{sema:119,tirz:166,oral:null,unsure:119},tags:['compound'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:1,brand:5,telehealth:1,hrt:5},url:'https://www.gobymeds.com',hrtInfo:null,doseNote:'$119/mo 3-month starter bundle · Dose increases from 0.25mg to 1.0mg',hsafsa:true},
 ];
 
@@ -1459,23 +1449,23 @@ function renderResults() {
   document.getElementById('rmeta').innerHTML = [q1,q2,q3].map(k=>`<div class="rmeta-tag">${lmap[k]||k}</div>`).join('');
 
   let filtered = OPTIONS.filter(o => {
-  const insOk = o.ins.includes(q1);
-  const drugOk = q2==='unsure' || o.drugs.includes(q2) || o.drugs.includes('unsure');
-  return insOk && drugOk;
+    const insOk = o.ins.includes(q1);
+    const drugOk = q2==='unsure' || o.drugs.includes(q2) || o.drugs.includes('unsure');
+    return insOk && drugOk;
   });
 
   filtered.sort((a,b) => {
-  const pa = a.pri[q3]??5, pb = b.pri[q3]??5;
-  if (pa!==pb) return pa-pb;
-  const ap = a.basePrices[q2]??a.basePrices.unsure??999;
-  const bp = b.basePrices[q2]??b.basePrices.unsure??999;
-  return ap-bp;
+    const pa = a.pri[q3]??5, pb = b.pri[q3]??5;
+    if (pa!==pb) return pa-pb;
+    const ap = a.basePrices[q2]??a.basePrices.unsure??999;
+    const bp = b.basePrices[q2]??b.basePrices.unsure??999;
+    return ap-bp;
   });
 
   if (q3==='hrt') filtered.sort((a,b) => {
-  if (a.hrt&&!b.hrt) return -1;
-  if (!a.hrt&&b.hrt) return 1;
-  return (a.pri.hrt??5)-(b.pri.hrt??5);
+    if (a.hrt&&!b.hrt) return -1;
+    if (!a.hrt&&b.hrt) return 1;
+    return (a.pri.hrt??5)-(b.pri.hrt??5);
   });
 
   const list = document.getElementById('rlist');
@@ -1483,48 +1473,48 @@ function renderResults() {
   if (!filtered.length) { list.innerHTML='<div class="quiz-card"><p style="color:#78716c">No results matched your filters — try adjusting your selections.</p></div>'; return; }
 
   filtered.forEach((o,i) => {
-  const isTop = i===0;
-  const rawPrice = o.basePrices[q2]??o.basePrices.unsure;
-  const showDosePrice = dosePrice && (o.id==='novocare'||o.id==='lilly') && q2!=='unsure';
-  const priceHTML = rawPrice===0
-  ? `<div class="pamount free">FREE</div><div class="pper">if you qualify</div>`
-  : rawPrice==null ? `<div class="pamount" style="font-size:1rem;color:#78716c">Via insurance</div>`
-  : `<div class="pamount">$${rawPrice}</div><div class="pper">/month est.</div>`;
+    const isTop = i===0;
+    const rawPrice = o.basePrices[q2]??o.basePrices.unsure;
+    const showDosePrice = dosePrice && (o.id==='novocare'||o.id==='lilly') && q2!=='unsure';
+    const priceHTML = rawPrice===0
+      ? `<div class="pamount free">FREE</div><div class="pper">if you qualify</div>`
+      : rawPrice==null ? `<div class="pamount" style="font-size:1rem;color:#78716c">Via insurance</div>`
+      : `<div class="pamount">$${rawPrice}</div><div class="pper">/month est.</div>`;
 
-  const doseCallout = showDosePrice
-  ? `<div class="dose-callout">💊 At your dose: <strong>$${dosePrice}/mo</strong></div>`
-  : o.doseNote ? `<div class="dose-callout amber">⚡ ${o.doseNote}</div>` : '';
+    const doseCallout = showDosePrice
+      ? `<div class="dose-callout">💊 At your dose: <strong>$${dosePrice}/mo</strong></div>`
+      : o.doseNote ? `<div class="dose-callout amber">⚡ ${o.doseNote}</div>` : '';
 
-  const tagHTML = [
-  o.hrt ? `<span class="rtag rtag-hrt">+ HRT available</span>` : '',
-  o.telehealth ? `<span class="rtag rtag-rx">Rx included</span>` : '',
-  o.tags.includes('coach') ? `<span class="rtag rtag-coach">Coaching</span>` : '',
-  o.tags.includes('brand')&&!o.tags.includes('compound') ? `<span class="rtag rtag-brand">Brand-name</span>` : '',
-  o.tags.includes('compound') ? `<span class="rtag rtag-comp">Compounded option</span>` : '',
-  o.tags.includes('ins') ? `<span class="rtag rtag-ins">Insurance nav</span>` : '',
-  o.tags.includes('free') ? `<span class="rtag rtag-free">May be free</span>` : '',
-  o.hsafsa ? `<span class="rtag rtag-hsa">✓ HSA/FSA eligible</span>` : '',
-  ].filter(Boolean).join('');
+    const tagHTML = [
+      o.hrt ? `<span class="rtag rtag-hrt">+ HRT available</span>` : '',
+      o.telehealth ? `<span class="rtag rtag-rx">Rx included</span>` : '',
+      o.tags.includes('coach') ? `<span class="rtag rtag-coach">Coaching</span>` : '',
+      o.tags.includes('brand')&&!o.tags.includes('compound') ? `<span class="rtag rtag-brand">Brand-name</span>` : '',
+      o.tags.includes('compound') ? `<span class="rtag rtag-comp">Compounded option</span>` : '',
+      o.tags.includes('ins') ? `<span class="rtag rtag-ins">Insurance nav</span>` : '',
+      o.tags.includes('free') ? `<span class="rtag rtag-free">May be free</span>` : '',
+      o.hsafsa ? `<span class="rtag rtag-hsa">✓ HSA/FSA eligible</span>` : '',
+    ].filter(Boolean).join('');
 
-  const hrtLine = o.hrt&&o.hrtInfo ? `<div class="hrt-line">⚕️ ${o.hrtInfo}</div>` : '';
-  const pricingLine = o.pricingType ? `<div style="font-size:11.5px;color:#64748b;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:4px 10px;margin-bottom:8px;width:fit-content;font-weight:400;">${o.pricingType}</div>` : '';
-  const visitBtn = o.url
-  ? `<a href="${o.url}" target="_blank" class="btn-visit">Visit site ↗</a>`
-  : `<span style="font-size:11px;color:#d97706;display:block;margin-top:6px;">🔔 Set a Google Alert — launching soon</span>`;
+    const hrtLine = o.hrt&&o.hrtInfo ? `<div class="hrt-line">⚕️ ${o.hrtInfo}</div>` : '';
+    const pricingLine = o.pricingType ? `<div style="font-size:11.5px;color:#64748b;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:4px 10px;margin-bottom:8px;width:fit-content;font-weight:400;">${o.pricingType}</div>` : '';
+    const visitBtn = o.url
+      ? `<a href="${o.url}" target="_blank" class="btn-visit">Visit site ↗</a>`
+      : `<span style="font-size:11px;color:#d97706;display:block;margin-top:6px;">🔔 Set a Google Alert — launching soon</span>`;
 
-  list.innerHTML += `
-  <div class="rcard${isTop?' top':''}">
-  ${isTop?'<div class="top-badge">Best Match</div>':''}
-  <div class="rrank${isTop?' first':''}">${i+1}</div>
-  <div class="rinfo">
-  <div class="rname">${o.name}</div>
-  <div class="rtype">${o.type}</div>
-  <div class="rtags">${tagHTML}</div>
-  ${pricingLine}${hrtLine}${doseCallout}
-  <div style="margin-top:8px;">${visitBtn}</div>
-  </div>
-  <div class="rprice">${priceHTML}</div>
-  </div>`;
+    list.innerHTML += `
+      <div class="rcard${isTop?' top':''}">
+        ${isTop?'<div class="top-badge">Best Match</div>':''}
+        <div class="rrank${isTop?' first':''}">${i+1}</div>
+        <div class="rinfo">
+          <div class="rname">${o.name}</div>
+          <div class="rtype">${o.type}</div>
+          <div class="rtags">${tagHTML}</div>
+          ${pricingLine}${hrtLine}${doseCallout}
+          <div style="margin-top:8px;">${visitBtn}</div>
+        </div>
+        <div class="rprice">${priceHTML}</div>
+      </div>`;
   });
 }
 
@@ -1547,15 +1537,15 @@ async function findPharmacies() {
   const drugName = {sema:'semaglutide',tirz:'tirzepatide',oral:'semaglutide',unsure:'semaglutide'}[drug];
 
   div.innerHTML = `
-  <div style="font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#78716c;margin:18px 0 10px;padding-bottom:8px;border-bottom:1px solid #e7e5e4;">🧪 Compounding pharmacies near ${zip}</div>
-  <div class="pharma-card"><div class="pharma-ico">🏺</div><div class="pharma-info"><div class="pharma-name">APC Compounding Pharmacy Locator</div><div class="pharma-addr">Alliance for Pharmacy Compounding — verified 503A/503B directory</div><div class="pharma-price">Find vetted compounders near ${zip} → typically $150–350/mo for ${drugName}</div><div style="margin-top:8px;"><a href="https://a4pc.org/find-a-compounder" target="_blank" class="btn-visit">Search APC Locator ↗</a></div></div></div>
-  <div class="pharma-card"><div class="pharma-ico">💊</div><div class="pharma-info"><div class="pharma-name">Empower Pharmacy (ships to ${zip})</div><div class="pharma-addr">503A + 503B certified · Ships to all 50 states</div><div class="pharma-price">Compounded ${drugName} · Rx required · ~$150–300/mo est.</div><div style="margin-top:8px;"><a href="https://www.empowerpharmacy.com" target="_blank" class="btn-visit">Visit Empower ↗</a></div></div></div>
-  <div class="pharma-card"><div class="pharma-ico">🔍</div><div class="pharma-info"><div class="pharma-name">GoodRx — Local Pharmacy Search near ${zip}</div><div class="pharma-addr">Brand-name ${drugName} with GoodRx discount pricing</div><div class="pharma-price">Prices vary by location — check your zip for exact savings</div><div style="margin-top:8px;"><a href="https://www.goodrx.com/${drugName}?zip=${zip}" target="_blank" class="btn-visit">Search near ${zip} ↗</a></div></div></div>
-  <div style="font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#78716c;margin:18px 0 10px;padding-bottom:8px;border-bottom:1px solid #e7e5e4;">🏪 Major chain cash prices for ${drugName}</div>
-  <div class="chain-grid">
-  ${chains.map(c=>`<div class="chain-card"><div style="flex:1"><div class="chain-name">${c.name}</div><div class="chain-note">${c.note}</div></div><div style="text-align:right"><div class="chain-price">${c.price}</div><div class="chain-note">/mo</div></div></div>`).join('')}
-  </div>
-  <p style="font-size:11px;color:#a8a29e;margin-top:10px;line-height:1.55;">💡 Always ask your pharmacist about manufacturer savings cards — NovoCare and LillyDirect cards can reduce brand-name costs to $99–349/mo even at retail chains.</p>
+    <div style="font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#78716c;margin:18px 0 10px;padding-bottom:8px;border-bottom:1px solid #e7e5e4;">🧪 Compounding pharmacies near ${zip}</div>
+    <div class="pharma-card"><div class="pharma-ico">🏺</div><div class="pharma-info"><div class="pharma-name">APC Compounding Pharmacy Locator</div><div class="pharma-addr">Alliance for Pharmacy Compounding — verified 503A/503B directory</div><div class="pharma-price">Find vetted compounders near ${zip} → typically $150–350/mo for ${drugName}</div><div style="margin-top:8px;"><a href="https://a4pc.org/find-a-compounder" target="_blank" class="btn-visit">Search APC Locator ↗</a></div></div></div>
+    <div class="pharma-card"><div class="pharma-ico">💊</div><div class="pharma-info"><div class="pharma-name">Empower Pharmacy (ships to ${zip})</div><div class="pharma-addr">503A + 503B certified · Ships to all 50 states</div><div class="pharma-price">Compounded ${drugName} · Rx required · ~$150–300/mo est.</div><div style="margin-top:8px;"><a href="https://www.empowerpharmacy.com" target="_blank" class="btn-visit">Visit Empower ↗</a></div></div></div>
+    <div class="pharma-card"><div class="pharma-ico">🔍</div><div class="pharma-info"><div class="pharma-name">GoodRx — Local Pharmacy Search near ${zip}</div><div class="pharma-addr">Brand-name ${drugName} with GoodRx discount pricing</div><div class="pharma-price">Prices vary by location — check your zip for exact savings</div><div style="margin-top:8px;"><a href="https://www.goodrx.com/${drugName}?zip=${zip}" target="_blank" class="btn-visit">Search near ${zip} ↗</a></div></div></div>
+    <div style="font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#78716c;margin:18px 0 10px;padding-bottom:8px;border-bottom:1px solid #e7e5e4;">🏪 Major chain cash prices for ${drugName}</div>
+    <div class="chain-grid">
+      ${chains.map(c=>`<div class="chain-card"><div style="flex:1"><div class="chain-name">${c.name}</div><div class="chain-note">${c.note}</div></div><div style="text-align:right"><div class="chain-price">${c.price}</div><div class="chain-note">/mo</div></div></div>`).join('')}
+    </div>
+    <p style="font-size:11px;color:#a8a29e;margin-top:10px;line-height:1.55;">💡 Always ask your pharmacist about manufacturer savings cards — NovoCare and LillyDirect cards can reduce brand-name costs to $99–349/mo even at retail chains.</p>
   `;
 }
 
@@ -1563,9 +1553,9 @@ async function findPharmacies() {
 function restart() {
   A.q1=A.q2=A.q3=null; A.dose=0;
   ['d1','d2','d3'].forEach((id,i) => {
-  const d = document.getElementById(id);
-  d.className = 'pdot';
-  d.innerHTML = `<span>${i+1}</span>`;
+    const d = document.getElementById(id);
+    d.className = 'pdot';
+    d.innerHTML = `<span>${i+1}</span>`;
   });
   ['l1','l2'].forEach(id => document.getElementById(id).classList.remove('done'));
   document.getElementById('d1').classList.add('active');
@@ -1579,3 +1569,16 @@ function restart() {
   document.getElementById("zipInput").value="";
   document.getElementById("results-section").style.display="none";
 }
+
+// ── EMAIL ──
+function handleEmailSubmit(btn) {
+  const input = btn.previousElementSibling;
+  if (!input.value.includes("@")) { alert("Please enter a valid email address."); return; }
+  btn.textContent = "✓ You are on the list!";
+  btn.style.background = "#166534";
+  btn.disabled = true;
+  input.disabled = true;
+}
+</script>
+</body>
+</html>
