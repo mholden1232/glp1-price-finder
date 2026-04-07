@@ -789,19 +789,8 @@ footer {
   </div>
   <div class="tool-wrap">
 
-    <!-- RxGo Prescription Price Search -->
-    <div style="background:var(--off);border:1.5px solid var(--border);border-radius:14px;padding:22px 26px;margin-bottom:24px;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
-        <span style="font-size:1.2rem;">💊</span>
-        <div style="font-family:'Libre Baskerville',serif;font-size:1.05rem;font-weight:700;color:var(--ink);">Already have a prescription? Find the cheapest retail price.</div>
-      </div>
-      <p style="font-size:13px;color:var(--ink-dim);margin-bottom:14px;">Search Wegovy, Ozempic, Zepbound, or Mounjaro prices at pharmacies near you — often up to 80% off retail with a free discount card.</p>
-      <rxgo-widget partner-id="1259"></rxgo-widget>
-      <p style="font-size:12px;color:var(--ink-faint);margin-top:8px;">Powered by <a href="https://www.rxgo.com/1259" target="_blank" style="color:var(--teal);">RxGo</a> · Free, no signup required</p>
-    </div>
-
     <!-- View Toggle -->
-    <div style="display:flex;gap:10px;justify-content:center;margin-bottom:20px;">
+    <div style="display:flex;gap:10px;justify-content:center;margin-bottom:16px;">
       <button id="btn-quiz" onclick="showQuizView()" style="padding:9px 22px;border-radius:8px;border:2px solid var(--teal);background:var(--teal);color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">🎯 Find My Best Match</button>
       <button id="btn-all" onclick="showAllVendors()" style="padding:9px 22px;border-radius:8px;border:2px solid var(--border);background:var(--white);color:var(--ink-mid);font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">📋 View All Vendors</button>
     </div>
@@ -880,6 +869,17 @@ footer {
         <button class="q-opt" onclick="pick(3,'hrt',this)"><div class="q-opt-ico">⚕️</div><div class="q-opt-txt"><strong>Platform that also offers HRT</strong><small>Manage GLP-1 and hormones in one place</small></div><div class="q-chk">✓</div></button>
       </div>
       <div class="q-nav"><button class="q-back" onclick="goStep(2)">← Back</button><button class="q-next" id="n3" onclick="showResults()" disabled>Show My Options →</button></div>
+    </div>
+
+    <!-- RxGo Prescription Price Search -->
+    <div style="background:var(--off);border:1.5px solid var(--border);border-radius:14px;padding:20px 24px;margin:20px 0;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+        <span style="font-size:1.1rem;">💊</span>
+        <div style="font-weight:700;font-size:14px;color:var(--ink);">Already have a prescription? Find the cheapest retail price.</div>
+      </div>
+      <p style="font-size:13px;color:var(--ink-dim);margin-bottom:12px;">Search Wegovy, Ozempic, Zepbound, or Mounjaro prices at pharmacies near you — often up to 80% off retail with a free discount card.</p>
+      <rxgo-widget partner-id="1259"></rxgo-widget>
+      <p style="font-size:11px;color:var(--ink-faint);margin-top:8px;">Powered by <a href="https://www.rxgo.com/1259" target="_blank" style="color:var(--teal);">RxGo</a> · Free, no signup required</p>
     </div>
 
     <!-- Results -->
