@@ -495,6 +495,11 @@ footer {
 /* ══════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════ */
+.nav-dropdown { position:relative; display:inline-block; }
+.nav-dropdown-menu { display:none; position:absolute; top:100%; left:0; background:var(--white); border:1.5px solid var(--border); border-radius:10px; box-shadow:var(--shadow-sm); min-width:180px; z-index:100; padding:6px 0; margin-top:4px; }
+.nav-dropdown:hover .nav-dropdown-menu { display:block; }
+.nav-dropdown-item { display:block; width:100%; padding:10px 16px; font-size:13px; font-weight:500; color:var(--ink); background:none; border:none; text-align:left; cursor:pointer; font-family:'DM Sans',sans-serif; transition:background .15s; }
+.nav-dropdown-item:hover { background:var(--off); color:var(--teal); }
 @media(max-width:768px){
   .features-grid { grid-template-columns:1fr; }
   .preview-grid { grid-template-columns:1fr; }
@@ -516,6 +521,7 @@ footer {
   .stats-bar .container { flex-direction:column; gap:20px; }
 }
 </style>
+  <script type="module" src="https://unpkg.com/@rxgo/rxgo-widget@2.0.9/dist/rxgo-widget.bundled.js"></script>
 </head>
 <body>
 
@@ -533,7 +539,13 @@ footer {
       <button class="nav-link" onclick="showPage('compare',this)">Find My Best Option</button>
       <button class="nav-link" onclick="showPage('articles',this)">Guides</button>
       <button class="nav-link" onclick="showPage('about',this)">About</button>
-      <button class="nav-link" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'));setTimeout(showAllVendors,50)">View All Options</button>
+      <div class="nav-dropdown">
+        <button class="nav-link">View All Options ▾</button>
+        <div class="nav-dropdown-menu">
+          <button class="nav-dropdown-item" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'));setTimeout(showAllVendors,50)">💊 GLP-1 Providers</button>
+          <button class="nav-dropdown-item" onclick="showPage('hrt',this)">🌸 HRT Providers</button>
+        </div>
+      </div>
       <button class="nav-cta" onclick="showPage('compare',document.querySelector('.nav-link:nth-child(2)'))">Find My Price →</button>
     </div>
     <button class="nav-mobile-toggle" onclick="toggleMobileNav()">
@@ -777,6 +789,17 @@ footer {
   </div>
   <div class="tool-wrap">
 
+    <!-- RxGo Prescription Price Search -->
+    <div style="background:var(--off);border:1.5px solid var(--border);border-radius:14px;padding:22px 26px;margin-bottom:24px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+        <span style="font-size:1.2rem;">💊</span>
+        <div style="font-family:'Libre Baskerville',serif;font-size:1.05rem;font-weight:700;color:var(--ink);">Already have a prescription? Find the cheapest retail price.</div>
+      </div>
+      <p style="font-size:13px;color:var(--ink-dim);margin-bottom:14px;">Search Wegovy, Ozempic, Zepbound, or Mounjaro prices at pharmacies near you — often up to 80% off retail with a free discount card.</p>
+      <rxgo-widget partner-id="1259"></rxgo-widget>
+      <p style="font-size:12px;color:var(--ink-faint);margin-top:8px;">Powered by <a href="https://www.rxgo.com/1259" target="_blank" style="color:var(--teal);">RxGo</a> · Free, no signup required</p>
+    </div>
+
     <!-- View Toggle -->
     <div style="display:flex;gap:10px;justify-content:center;margin-bottom:20px;">
       <button id="btn-quiz" onclick="showQuizView()" style="padding:9px 22px;border-radius:8px;border:2px solid var(--teal);background:var(--teal);color:#fff;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;">🎯 Find My Best Match</button>
@@ -880,6 +903,12 @@ footer {
           <button class="zip-btn" onclick="findPharmacies()" style="background:var(--teal);">Find Pharmacies →</button>
         </div>
         <div id="pharma-results"></div>
+        <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
+          <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;">💊 Search Brand-Name Prescription Prices</div>
+          <p style="font-size:13px;color:var(--ink-dim);margin-bottom:14px;">Already have a prescription for Wegovy, Ozempic, Zepbound, or Mounjaro? Use the RxGo tool below to compare cash prices at pharmacies near you — often up to 80% off retail.</p>
+          <rxgo-widget partner-id="1259"></rxgo-widget>
+          <p style="font-size:12px;color:var(--ink-faint);margin-top:10px;">Or visit <a href="https://www.rxgo.com/1259" target="_blank" style="color:var(--teal);">rxgo.com</a> directly to search prescription prices.</p>
+        </div>
       </div>
 
       <div class="tool-disc">⚠️ <strong>Important:</strong> Prices are verified estimates as of March 2026 and may vary by pharmacy, dose, and location. This tool is for informational purposes only — not medical advice. We may earn a referral fee if you sign up through our links. This does not affect rankings or pricing data. Consult a licensed healthcare provider before starting any medication.</div>
@@ -888,6 +917,92 @@ footer {
 
   </div>
 </div><!-- /compare -->
+
+
+<!-- ══════════════════════════════════════
+   HRT PAGE
+══════════════════════════════════════ -->
+<div class="page" id="page-hrt">
+  <div class="compare-hero">
+    <div class="container-narrow">
+      <h1>HRT Provider Comparison</h1>
+      <p>Hormone Replacement Therapy often goes hand in hand with GLP-1s — especially for women in perimenopause and menopause. Compare top telehealth HRT providers below.</p>
+    </div>
+  </div>
+  <div class="tool-wrap">
+    <div style="background:var(--teal-lt);border:2px solid var(--teal);border-radius:14px;padding:20px 24px;margin-bottom:28px;font-size:14px;color:var(--ink-mid);line-height:1.6;">
+      🌸 <strong>Why HRT + GLP-1?</strong> Research shows combining HRT with GLP-1 medications can be highly effective for women in midlife. HRT supports metabolic health while GLP-1s manage appetite and blood sugar — a powerful combination for weight management during perimenopause and menopause.
+    </div>
+
+    <!-- Peter MD - already approved -->
+    <div class="rcard">
+      <div class="rrank">1</div>
+      <div class="rinfo">
+        <div class="rname">Peter MD</div>
+        <div class="rtype">Telehealth — GLP-1 + Hormone Optimization</div>
+        <div class="rtags">
+          <span class="rtag rtag-hrt">+ HRT available</span>
+          <span class="rtag rtag-rx">Rx included</span>
+          <span class="rtag rtag-comp">Compounded option</span>
+          <span class="rtag rtag-hsa">✓ HSA/FSA eligible</span>
+        </div>
+        <div style="font-size:13px;color:var(--ink-mid);margin:8px 0;">GLP-1 and hormone optimization for both men and women. 13,985 Trustpilot reviews. Price match guarantee — if you find it cheaper elsewhere they discount 20%.</div>
+        <a href="https://track.revoffers.com/SH5Iv" target="_blank" class="btn-visit">Visit site ↗</a>
+      </div>
+      <div class="rprice"><div class="pamount">$199</div><div class="pper">/month est.</div></div>
+    </div>
+
+    <!-- Winona - pending approval -->
+    <div class="rcard" style="opacity:0.75;">
+      <div class="rrank">2</div>
+      <div class="rinfo">
+        <div class="rname">Winona</div>
+        <div class="rtype">Telehealth — Bioidentical HRT for Menopause</div>
+        <div class="rtags">
+          <span class="rtag rtag-hrt">Menopause specialist</span>
+          <span class="rtag rtag-rx">Rx included</span>
+        </div>
+        <div style="font-size:13px;color:var(--ink-mid);margin:8px 0;">Specializes in bioidentical HRT for perimenopause and menopause. Customized prescriptions, free shipping, unlimited follow-ups.</div>
+        <a href="https://bywinona.com" target="_blank" class="btn-visit">Visit site ↗</a>
+      </div>
+      <div class="rprice"><div class="pamount">$99</div><div class="pper">/month est.</div></div>
+    </div>
+
+    <!-- Wisp - pending approval -->
+    <div class="rcard" style="opacity:0.75;">
+      <div class="rrank">3</div>
+      <div class="rinfo">
+        <div class="rname">Wisp</div>
+        <div class="rtype">Telehealth — Reproductive & Menopause Care</div>
+        <div class="rtags">
+          <span class="rtag rtag-hrt">HRT available</span>
+          <span class="rtag rtag-rx">Rx included</span>
+        </div>
+        <div style="font-size:13px;color:var(--ink-mid);margin:8px 0;">Fast, discreet online menopause care with access to prescription HRT treatments. Focuses on affordability and privacy.</div>
+        <a href="https://hellowisp.com" target="_blank" class="btn-visit">Visit site ↗</a>
+      </div>
+      <div class="rprice"><div class="pamount">varies</div><div class="pper">by treatment</div></div>
+    </div>
+
+    <!-- Midi Health - pending approval -->
+    <div class="rcard" style="opacity:0.75;">
+      <div class="rrank">4</div>
+      <div class="rinfo">
+        <div class="rname">Midi Health</div>
+        <div class="rtype">Telehealth — Women 40+ Specialists</div>
+        <div class="rtags">
+          <span class="rtag rtag-hrt">Menopause specialist</span>
+          <span class="rtag rtag-ins">Insurance accepted</span>
+        </div>
+        <div style="font-size:13px;color:var(--ink-mid);margin:8px 0;">Virtual care clinic created for women 40+. Accepts insurance. Treats perimenopause, menopause, brain fog, insomnia, weight changes, and more.</div>
+        <a href="https://www.joinmidi.com" target="_blank" class="btn-visit">Visit site ↗</a>
+      </div>
+      <div class="rprice"><div class="pamount">$50</div><div class="pper">avg visit w/insurance</div></div>
+    </div>
+
+    <div class="tool-disc">⚠️ <strong>Note:</strong> Pricing shown is estimated and may vary. Affiliate links marked ↗ may earn a referral fee at no cost to you. HRT is a medical decision — consult a licensed provider before starting any hormone therapy.</div>
+  </div>
+</div><!-- /hrt -->
 
 <!-- ══════════════════════════════════════
    ARTICLES PAGE
@@ -906,6 +1021,7 @@ footer {
     <button class="article-tab" onclick="showArticle(2,this)">3 · Appeal a Denial</button>
     <button class="article-tab" onclick="showArticle(3,this)">4 · Telehealth Guide</button>
     <button class="article-tab" onclick="showArticle(4,this)">5 · Generic Semaglutide</button>
+    <button class="article-tab" onclick="showArticle(5,this)">6 · HRT + GLP-1</button>
   </div>
 
   <!-- Article 1 -->
@@ -1130,6 +1246,60 @@ footer {
     </div>
   </div>
 
+  <div class="article-content" id="art-5">
+    <div class="art-cat">Women's Health</div>
+    <h1 class="art-h1">Why HRT and GLP-1s Work Better Together — Especially After 40</h1>
+    <p class="art-deck">A landmark 2026 Mayo Clinic study found women on both therapies lost 35% more weight than those on GLP-1 alone. Here is what the science says and what it means for you.</p>
+    <div class="art-meta"><span>Updated April 2026</span><span class="art-meta-dot"></span><span>10 min read</span></div>
+    <div class="art-body">
+
+      <div class="art-box teal"><span class="art-box-lbl">🌸 Key finding</span>A January 2026 Mayo Clinic study published in <em>The Lancet Obstetrics, Gynaecology & Women's Health</em> found that postmenopausal women on both HRT and tirzepatide lost approximately <strong>35% more weight</strong> than women taking tirzepatide alone.</div>
+
+      <h2>Why Menopause Makes Weight Loss Harder</h2>
+      <p>If you are in your 40s or 50s and finding that the diet and exercise routine that worked for years suddenly stopped working — you are not imagining it. The hormonal changes of perimenopause and menopause fundamentally alter how your body processes and stores fat.</p>
+      <p>As estrogen declines, fat storage shifts from the hips and thighs toward the abdomen. Insulin sensitivity worsens. Muscle mass decreases. Metabolism slows. These are biological changes, not lifestyle failures.</p>
+      <p>This is why many women in midlife struggle with weight gain even when they are doing everything right — and why GLP-1 medications alone may not deliver the same results for postmenopausal women as they do for younger patients.</p>
+
+      <h2>How GLP-1s and HRT Work Together</h2>
+      <p>GLP-1 receptor agonists like semaglutide and tirzepatide work by mimicking a natural gut hormone that signals fullness to the brain, slows digestion, and improves insulin sensitivity. They are powerful tools for weight loss — but their effectiveness depends in part on your hormonal environment.</p>
+      <p>Here is where HRT comes in. Estrogen actually <strong>upregulates GLP-1 receptors</strong> in the gut and brain. More receptors means a stronger signal from the same dose of medication. Estrogen also stimulates your intestinal cells to produce more of your own natural GLP-1 — so you start from a higher baseline.</p>
+      <p>When estrogen drops in menopause, that entire system becomes less efficient. You may need higher doses to get the same effect, or simply not respond as well. Adding HRT can essentially restore the hormonal conditions that allow GLP-1 medications to work the way they did in clinical trials — which were conducted largely in younger, premenopausal women.</p>
+
+      <h2>What the Research Shows</h2>
+      <h3>Mayo Clinic / The Lancet (January 2026)</h3>
+      <p>Researchers reviewed data from 120 postmenopausal participants with overweight or obesity who received tirzepatide for 12 or more months. Women using both tirzepatide and HRT lost approximately 35% more weight than those taking tirzepatide alone. The research team noted "a potential synergy, with estrogen appearing to enhance the appetite-suppressing effects of GLP-1."</p>
+      <h3>Menopause Journal (2024)</h3>
+      <p>A study of postmenopausal women on semaglutide found greater total body weight loss at every checkpoint over 12 months among women who were also using hormone therapy compared to those who were not — with a 16% versus 12% loss at the 12-month mark.</p>
+      <h3>Nature Medicine</h3>
+      <p>Research noted that estrogen and GLP-1 may work together to influence areas of the brain that control eating behavior and energy use — suggesting the synergy operates at a neurological level, not just metabolic.</p>
+
+      <div class="art-box amber"><span class="art-box-lbl">⚠️ Important caveat</span>These studies are observational, not randomized controlled trials. Randomized trials are currently underway. The evidence is clinically meaningful but not yet definitive. HRT is not appropriate for everyone — women with a history of certain cancers, blood clots, or other conditions may not be candidates. Always discuss with a licensed provider.</div>
+
+      <h2>Who This Combination May Help Most</h2>
+      <ul>
+        <li><strong>Women in perimenopause</strong> who are starting to notice weight gain despite no change in habits</li>
+        <li><strong>Postmenopausal women</strong> on a GLP-1 who are not seeing the results they expected</li>
+        <li><strong>Women with menopausal symptoms</strong> like hot flashes, night sweats, and sleep disruption — which independently worsen weight management</li>
+        <li><strong>Women with significant abdominal fat gain</strong> since entering menopause, even without major weight change overall</li>
+      </ul>
+
+      <h2>What to Ask Your Doctor</h2>
+      <p>If you are a perimenopausal or postmenopausal woman considering a GLP-1, it is worth having a conversation with your provider about your hormonal status before starting. Ask whether checking estrogen, progesterone, testosterone, LH, and FSH before beginning a GLP-1 makes sense for your situation. Optimizing hormones may be what makes the treatment work as intended.</p>
+      <p>If you are already on a GLP-1 and not getting the results you expected, bring the Mayo Clinic study to your next appointment. It is a legitimate clinical question worth discussing.</p>
+
+      <h2>Where to Find Combined GLP-1 + HRT Care</h2>
+      <p>Most traditional GLP-1 telehealth providers do not offer HRT alongside their weight loss programs. But a growing number of platforms are beginning to offer both — recognizing that for women in midlife, addressing hormonal and metabolic health together produces better outcomes.</p>
+
+      <div class="art-cta">
+        <h3>Compare GLP-1 and HRT providers side by side</h3>
+        <p>Our new HRT section includes providers that offer hormone therapy alongside or in combination with GLP-1 treatment.</p>
+        <button class="btn-primary" onclick="showPage('hrt',this)">View HRT Providers →</button>
+      </div>
+
+      <div class="art-disc">This article is for informational purposes only and does not constitute medical advice. Always consult a licensed healthcare provider before starting HRT, GLP-1 medications, or any combination therapy. Individual results vary. Sources: Mayo Clinic / The Lancet Obstetrics, Gynaecology & Women's Health (January 2026); Menopause Journal (2024); Nature Medicine.</div>
+    </div>
+  </div>
+
 </div><!-- /articles -->
 
 <!-- ══════════════════════════════════════
@@ -1297,6 +1467,8 @@ const OPTIONS = [
   {id:'quadmedvi',name:'Quad by MEDVi',type:'Telehealth — compounded GLP-1',pricingType:'🔁 All-in — consultation + medication bundled',basePrices:{sema:235,tirz:235,oral:null,unsure:235},tags:['compound'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:2,brand:5,telehealth:2,hrt:5},url:'https://track.revoffers.com/SH5IU',hrtInfo:null,doseNote:'Physician-led GLP-1 weight loss · Personalized consultations',hsafsa:true},
   {id:'enhancemd',name:'Enhance MD',type:'Telehealth — metabolic wellness',pricingType:'🔁 All-in — same price at every dose',basePrices:{sema:212,tirz:280,oral:null,unsure:212},tags:['compound'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:2,brand:5,telehealth:2,hrt:5},url:'https://track.revoffers.com/SH5IV',hrtInfo:null,doseNote:'Same price at every dose · Metabolic lab testing every 6 months',hsafsa:true},
   {id:'breezemeds',name:'Breeze Meds',type:'Telehealth — compounded GLP-1',pricingType:'🔁 All-in — consultation + medication bundled',basePrices:{sema:199,tirz:199,oral:null,unsure:199},tags:['compound'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:2,brand:5,telehealth:2,hrt:5},url:'https://track.revoffers.com/SH5IW',hrtInfo:null,doseNote:'Licensed telehealth provider · Compounded semaglutide and tirzepatide',hsafsa:true},
+  {id:'mystartHealth',name:'MyStart Health',type:'Telehealth — GLP-1 weight loss',pricingType:'🔁 All-in — consultation + medication bundled',basePrices:{sema:199,tirz:249,oral:null,unsure:199},tags:['compound'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:2,brand:5,telehealth:2,hrt:5},url:'https://track.revoffers.com/SH5Iu',hrtInfo:null,doseNote:'Licensed telehealth provider · Compounded semaglutide and tirzepatide',hsafsa:true},
+  {id:'petermd',name:'Peter MD',type:'Telehealth — GLP-1 + hormone optimization',pricingType:'🔁 All-in — price match guarantee',basePrices:{sema:199,tirz:249,oral:null,unsure:199},tags:['compound','hrt'],hrt:true,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:2,brand:4,telehealth:2,hrt:1},url:'https://track.revoffers.com/SH5Iv',hrtInfo:'Offers hormone optimization for men and women alongside GLP-1 treatment',doseNote:'13,985 Trustpilot reviews · Price match guarantee · GLP-1 + HRT available',hsafsa:true},
   {id:'gobymeds',name:'GobyMeds',type:'Telehealth — 3-month starter bundle',pricingType:'🔁 All-in — medication + telehealth bundled',basePrices:{sema:119,tirz:166,oral:null,unsure:119},tags:['compound'],hrt:false,telehealth:true,ins:['none','denied'],drugs:['sema','tirz','unsure'],pri:{price:1,brand:5,telehealth:1,hrt:5},url:'https://www.gobymeds.com',hrtInfo:null,doseNote:'$119/mo 3-month starter bundle · Dose increases from 0.25mg to 1.0mg',hsafsa:true},
 ];
 
