@@ -496,8 +496,10 @@ footer {
    RESPONSIVE
 ══════════════════════════════════════ */
 .nav-dropdown { position:relative; display:inline-block; }
-.nav-dropdown-menu { display:none; position:absolute; top:100%; left:0; background:var(--white); border:1.5px solid var(--border); border-radius:10px; box-shadow:var(--shadow-sm); min-width:180px; z-index:100; padding:6px 0; margin-top:4px; }
+.nav-dropdown-menu { display:none; position:absolute; top:100%; left:0; background:var(--white); border:1.5px solid var(--border); border-radius:10px; box-shadow:var(--shadow-sm); min-width:180px; z-index:100; padding:6px 0; margin-top:0; padding-top:8px; }
+.nav-dropdown::after { content:''; position:absolute; bottom:-8px; left:0; width:100%; height:8px; }
 .nav-dropdown:hover .nav-dropdown-menu { display:block; }
+.nav-dropdown:hover::after { display:block; }
 .nav-dropdown-item { display:block; width:100%; padding:10px 16px; font-size:13px; font-weight:500; color:var(--ink); background:none; border:none; text-align:left; cursor:pointer; font-family:'DM Sans',sans-serif; transition:background .15s; }
 .nav-dropdown-item:hover { background:var(--off); color:var(--teal); }
 @media(max-width:768px){
@@ -875,9 +877,9 @@ footer {
     <div style="background:var(--off);border:1.5px solid var(--border);border-radius:14px;padding:20px 24px;margin:20px 0;">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
         <span style="font-size:1.1rem;">💊</span>
-        <div style="font-weight:700;font-size:14px;color:var(--ink);">Already have a prescription? Find the cheapest retail price.</div>
+        <div style="font-weight:700;font-size:14px;color:var(--ink);">Search real-time discount prices with RxGo</div>
       </div>
-      <p style="font-size:13px;color:var(--ink-dim);margin-bottom:12px;">Search Wegovy, Ozempic, Zepbound, or Mounjaro prices at pharmacies near you — often up to 80% off retail with a free discount card.</p>
+      <p style="font-size:13px;color:var(--ink-dim);margin-bottom:12px;">RxGo searches 10+ discount networks to find the lowest cash price at pharmacies near you — often up to 80% off retail. Free, no signup required.</p>
       <rxgo-widget partner-id="1259"></rxgo-widget>
       <p style="font-size:11px;color:var(--ink-faint);margin-top:8px;">Powered by <a href="https://www.rxgo.com/1259" target="_blank" style="color:var(--teal);">RxGo</a> · Free, no signup required</p>
     </div>
