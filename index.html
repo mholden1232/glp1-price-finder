@@ -205,6 +205,10 @@ button { cursor:pointer; font-family:'DM Sans',sans-serif; }
 .preview-card:nth-child(2){animation-delay:.12s}
 .preview-card:nth-child(3){animation-delay:.19s}
 .preview-card:nth-child(4){animation-delay:.26s}
+.preview-card:nth-child(5){animation-delay:.33s}
+.preview-card:nth-child(6){animation-delay:.40s}
+.preview-card:nth-child(7){animation-delay:.47s}
+.preview-card:nth-child(8){animation-delay:.54s}
 @keyframes fadeSlideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 .preview-card.best { border-color:var(--teal); background:var(--teal-lt); }
 .preview-rank { font-family:'Libre Baskerville',serif; font-size:1.1rem; font-weight:700; color:var(--ink-faint); min-width:20px; }
@@ -534,24 +538,24 @@ footer {
 <body>
 <nav class="navbar">
   <div class="container">
-    <a class="nav-logo" href="index.html" style="text-decoration:none;">
+    <a class='nav-logo' href='/' style='text-decoration:none;'>
       <div class="nav-logo-dot"></div>
       GLP-1 Price Finder
     </a>
     <div class="nav-links" id="navLinks">
-      <a class="nav-link active" href="index.html" style="text-decoration:none;">Home</a>
-      <a class="nav-link" href="compare.html" style="text-decoration:none;">Find My Best Option</a>
-      <a class="nav-link" href="guides.html" style="text-decoration:none;">Guides</a>
-      <a class="nav-link" href="calculator.html" style="text-decoration:none;">💰 Calculator</a>
-      <a class="nav-link" href="about.html" style="text-decoration:none;">About</a>
+      <a class='nav-link active' href='/' style='text-decoration:none;'>Home</a>
+      <a class='nav-link' href='/compare' style='text-decoration:none;'>Find My Best Option</a>
+      <a class='nav-link' href='/guides' style='text-decoration:none;'>Guides</a>
+      <a class='nav-link' href='/calculator' style='text-decoration:none;'>💰 Calculator</a>
+      <a class='nav-link' href='/about' style='text-decoration:none;'>About</a>
       <div class="nav-dropdown" style="position:relative;display:inline-block;">
         <a class="nav-link" href="#" style="text-decoration:none;">View All Options ▾</a>
         <div class="nav-dropdown-menu">
-          <a class="nav-dropdown-item" href="compare.html">💊 GLP-1 Providers</a>
-          <a class="nav-dropdown-item" href="hrt.html">🌸 HRT Providers</a>
+          <a class='nav-dropdown-item' href='/compare'>💊 GLP-1 Providers</a>
+          <a class='nav-dropdown-item' href='/hrt'>🌸 HRT Providers</a>
         </div>
       </div>
-      <a class="nav-cta" href="compare.html" style="text-decoration:none;">Find My Price →</a>
+      <a class='nav-cta' href='/compare' style='text-decoration:none;'>Find My Price →</a>
     </div>
     <button class="nav-mobile-toggle" style="display:none;" onclick="document.getElementById('navLinks').classList.toggle('open')">
       <span></span><span></span><span></span>
@@ -682,6 +686,50 @@ footer {
               <div class="preview-period">if qualified</div>
             </div>
           </div>
+          <a class="preview-card" href="https://track.revoffers.com/SH5R2" target="_blank" rel="noopener sponsored" style="text-decoration:none;color:inherit;cursor:pointer;">
+            <div class="preview-rank">5</div>
+            <div class="preview-info">
+              <div class="preview-name">Willow</div>
+              <div class="preview-type">Telehealth · Injectable or oral · 33 states</div>
+            </div>
+            <div style="text-align:right">
+              <div class="preview-price">$299</div>
+              <div class="preview-period">/month</div>
+            </div>
+          </a>
+          <a class="preview-card" href="https://track.revoffers.com/SH5R3" target="_blank" rel="noopener sponsored" style="text-decoration:none;color:inherit;cursor:pointer;">
+            <div class="preview-rank">6</div>
+            <div class="preview-info">
+              <div class="preview-name">Hers</div>
+              <div class="preview-type">Telehealth · Compounded injectable · Women-focused</div>
+            </div>
+            <div style="text-align:right">
+              <div class="preview-price">$199</div>
+              <div class="preview-period">/month</div>
+            </div>
+          </a>
+          <a class="preview-card" href="https://track.revoffers.com/SH5R4" target="_blank" rel="noopener sponsored" style="text-decoration:none;color:inherit;cursor:pointer;">
+            <div class="preview-rank">7</div>
+            <div class="preview-info">
+              <div class="preview-name">Ivim Health</div>
+              <div class="preview-type">Telehealth · Individualized dosing · 49 states</div>
+            </div>
+            <div style="text-align:right">
+              <div class="preview-price">$75</div>
+              <div class="preview-period">/month</div>
+            </div>
+          </a>
+          <a class="preview-card" href="https://track.revoffers.com/SH5R5" target="_blank" rel="noopener sponsored" style="text-decoration:none;color:inherit;cursor:pointer;">
+            <div class="preview-rank">8</div>
+            <div class="preview-info">
+              <div class="preview-name">Henry Meds</div>
+              <div class="preview-type">Telehealth · Injectable or oral · 41 states</div>
+            </div>
+            <div style="text-align:right">
+              <div class="preview-price">$179</div>
+              <div class="preview-period">/month</div>
+            </div>
+          </a>
         </div>
         <div class="preview-cta">
           <div class="section-label">Your results are personalized</div>
